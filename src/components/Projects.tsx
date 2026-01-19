@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import tourismImg from "@/assets/tourism.jpg";
 import educationImg from "@/assets/education.jpg";
 import cultureImg from "@/assets/culture.jpg";
@@ -9,7 +8,6 @@ import waterImg from "@/assets/water.jpg";
 const Projects = () => {
   const projects = [
     {
-      id: "tourism",
       title: "Tourism",
       description:
         "Promoting travel and engagement with Yoruba landmarks, heritage sites, and cultural destinations.",
@@ -17,7 +15,6 @@ const Projects = () => {
       color: "from-accent to-accent/60",
     },
     {
-      id: "education",
       title: "Educational Sponsorship",
       description:
         "Supporting students through financial aid, scholarships, and educational resources for a brighter future.",
@@ -25,7 +22,6 @@ const Projects = () => {
       color: "from-primary to-primary/60",
     },
     {
-      id: "culture",
       title: "Cultural Promotion",
       description:
         "Hosting events and research initiatives to uphold and celebrate Yoruba heritage and traditions.",
@@ -33,7 +29,6 @@ const Projects = () => {
       color: "from-secondary to-secondary/60",
     },
     {
-      id: "water",
       title: "Water Borehole",
       description:
         "Infrastructure projects providing clean water access to communities in need across Yoruba land.",
@@ -93,12 +88,9 @@ const Projects = () => {
                   <Button
                     variant="heroOutline"
                     className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"
-                    asChild
                   >
-                    <Link to={`/projects#${project.id}`}>
-                      Learn More
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
                   </Button>
                 </div>
               </div>
