@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import tourismImg from "@/assets/tourism.jpg";
 import educationImg from "@/assets/education.jpg";
 import cultureImg from "@/assets/culture.jpg";
@@ -13,6 +14,7 @@ const Projects = () => {
         "Promoting travel and engagement with Yoruba landmarks, heritage sites, and cultural destinations.",
       image: tourismImg,
       color: "from-accent to-accent/60",
+      link: "/projects/tourism",
     },
     {
       title: "Educational Sponsorship",
@@ -20,6 +22,7 @@ const Projects = () => {
         "Supporting students through financial aid, scholarships, and educational resources for a brighter future.",
       image: educationImg,
       color: "from-primary to-primary/60",
+      link: "/projects/education",
     },
     {
       title: "Cultural Promotion",
@@ -27,6 +30,7 @@ const Projects = () => {
         "Hosting events and research initiatives to uphold and celebrate Yoruba heritage and traditions.",
       image: cultureImg,
       color: "from-secondary to-secondary/60",
+      link: "/projects/culture",
     },
     {
       title: "Water Borehole",
@@ -34,6 +38,7 @@ const Projects = () => {
         "Infrastructure projects providing clean water access to communities in need across Yoruba land.",
       image: waterImg,
       color: "from-accent to-primary/60",
+      link: "/projects/water",
     },
   ];
 
@@ -88,9 +93,12 @@ const Projects = () => {
                   <Button
                     variant="heroOutline"
                     className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"
+                    asChild
                   >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" />
+                    <Link to={project.link}>
+                      Learn More
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </Button>
                 </div>
               </div>
