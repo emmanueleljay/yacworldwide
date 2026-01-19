@@ -11,7 +11,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: isHome ? "#home" : "/", isAnchor: isHome },
     { name: "About", href: isHome ? "#about" : "/#about", isAnchor: isHome },
-    { name: "Projects", href: isHome ? "#projects" : "/#projects", isAnchor: isHome },
+    { name: "Projects", href: "/projects", isAnchor: false },
     { name: "Leadership", href: "/leadership", isAnchor: false },
     { name: "Membership", href: "/membership", isAnchor: false },
     { name: "Contact", href: isHome ? "#contact" : "/#contact", isAnchor: isHome },
