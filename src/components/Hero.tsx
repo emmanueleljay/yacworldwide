@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
@@ -163,11 +164,13 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up opacity-0 stagger-4">
-            <Button variant="hero" size="xl" className="group">
-              <Heart className="w-5 h-5" />
-              Support Our Mission
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/donate">
+              <Button variant="hero" size="xl" className="group">
+                <Heart className="w-5 h-5" />
+                Support Our Mission
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             <Button variant="heroOutline" size="xl">
               Learn More About Us
             </Button>
