@@ -90,16 +90,15 @@ const Projects = () => {
                   <p className="text-primary-foreground/90 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                     {project.description}
                   </p>
-                  <Button
-                    variant="heroOutline"
-                    className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"
-                    asChild
-                  >
-                    <Link to={project.link}>
+                  <Link to={project.link}>
+                    <Button
+                      variant="heroOutline"
+                      className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 relative z-10"
+                    >
                       Learn More
                       <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </Button>
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
