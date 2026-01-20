@@ -5,7 +5,6 @@ import mainLogo from "@/assets/main-logo.png";
 
 const Footer = () => {
   const quickLinks = [
-    { name: "About Us", href: "#about" },
     { name: "Our Projects", href: "#projects" },
     { name: "Events", href: "#events" },
     { name: "Donate", href: "#contact" },
