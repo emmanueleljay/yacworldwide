@@ -18,6 +18,7 @@ import Gallery from "./pages/Gallery";
 import Mission from "./pages/Mission";
 import Vision from "./pages/Vision";
 import History from "./pages/History";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

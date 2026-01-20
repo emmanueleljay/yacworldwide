@@ -417,5 +417,72 @@
       "ctaTitle": "Ran Wa Lọ́wọ́ Láti Mú Omi Wá Sí Àwọn Tí Wọ́n Nílò",
       "ctaText": "Gbogbo ẹbùn mú wa sún mọ́ pípèsè àǹfààní omi mímọ́ sí àwùjọ mìíràn. Darapọ̀ mọ́ wa nínú ṣíṣe ìyàtọ̀ pípẹ́."
     }
+  },
+  "faq": {
+    "badge": "Ilé Ìrànlọ́wọ́",
+    "title": "Àwọn Ìbéèrè Tí A Má Ń",
+    "titleHighlight": "Béèrè Lọ́pọ̀ Ìgbà",
+    "subtitle": "Wá àwọn ìdáhùn sí àwọn ìbéèrè pàtàkì nípa Igbimọ Iṣẹ́ Yorùbá, ọmọ ẹgbẹ́, àwọn ẹbùn, àti àwọn iṣẹ́ wa.",
+    "categories": {
+      "general": {
+        "title": "Àwọn Ìbéèrè Gbogbogbò",
+        "q1": {
+          "question": "Kíni Igbimọ Iṣẹ́ Yorùbá (YAC)?",
+          "answer": "Igbimọ Iṣẹ́ Yorùbá (YAC) jẹ́ ẹgbẹ́ àìléròwó 501(c)(3) tí a dá sílẹ̀ ní New Jersey, USA ní May 29, 2018. A yàn ara wa sí ìtẹ̀síwájú ìlọsíwájú àwọn ọmọ ìran Yorùbá ní àgbáyé, títọ́jú àwọn àṣà àtijọ́, àti lílo ìmọ̀ àwọn ọmọ ẹgbẹ́ wa fún ìdàgbàsókè Yorùbá láyé."
+        },
+        "q2": {
+          "question": "Níbo ni YAC wà?",
+          "answer": "Orí ìlú YAC wà ní New Jersey, United States. Àdírẹ́sì ìwé wa ni P.O. Box 3073, East Orange, NJ 07019. Àmọ́, a ń ṣiṣẹ́ ní àgbáyé àti pé a ní àwọn ọmọ ẹgbẹ́ káríkààgùn."
+        },
+        "q3": {
+          "question": "Ṣé YAC jẹ́ ẹgbẹ́ tí kò san owó-òwò?",
+          "answer": "Bẹ́ẹ̀ ni, YAC jẹ́ ẹgbẹ́ tí a forúkọsílẹ̀ tí kò san owó-òwò 501(c)(3). Gbogbo àwọn ẹbùn tí a ṣe sí YAC jẹ́ dídín-owó-òwò sí ìwọ̀n tí òfin gbà láàyè. Àwọn olùfúnní yóò gba àkọsílẹ̀ owó-òwò fún àkọsílẹ̀ wọn."
+        },
+        "q4": {
+          "question": "Báwo ni mo ṣe lè kàn sí YAC?",
+          "answer": "O lè dé ọ̀dọ̀ wa nípasẹ̀ ímeèlì ní info@yacworldwide.org, nípasẹ̀ fóònù ní +1 (862) 250-1791, tàbí nípasẹ̀ fọ́ọ̀mù ìkànsí wa lórí ojú-ìwé Kàn Sí Wa. Àwọn wákàtí ọ́fíìsì wa ni Ọjọ́ Ajé sí Ọjọ́ Ẹtì, 9:00 AM sí 5:00 PM EST."
+        }
+      },
+      "membership": {
+        "title": "Ọmọ Ẹgbẹ́",
+        "q1": {
+          "question": "Tani lè di ọmọ ẹgbẹ́ YAC?",
+          "answer": "Ọmọ ẹgbẹ́ ṣí sílẹ̀ fún gbogbo àwọn ọmọ ìran Yorùbá nípasẹ̀ ìbí tàbí ìgbéyàwó tí wọ́n pín ìran wa láti mú orílẹ̀-èdè Yorùbá lọsíwájú. A gbà àwọn ọmọ ẹgbẹ́ láti gbogbo iṣẹ́ àti àwọn ìpìlẹ̀ tí wọ́n yàn sí iṣẹ́ wa."
+        },
+        "q2": {
+          "question": "Kíni àwọn ẹ̀ka ọmọ ẹgbẹ́?",
+          "answer": "YAC pèsè oríṣiríṣi àwọn ẹ̀ka ọmọ ẹgbẹ́: Àwọn Ọmọ Ẹgbẹ́ Ìpìlẹ̀, ANYAM (Àwọn Ọmọ Àpéjọ Yorùbá Orílẹ̀-èdè Alábàáṣepọ̀), AYM Àgbà (Ọjọ́ orí 50+), AYM Dẹ́ẹ̀dẹ́ẹ́ (Labẹ́ 50), Akẹ́kọ̀ọ́ Àgbà (18-25), Akẹ́kọ̀ọ́ Àbúrò (Labẹ́ 18), àti Àwọn Ọmọ Ẹgbẹ́ Ọ̀làlọ̀la."
+        },
+        "q3": {
+          "question": "Ṣé owó ọmọ ẹgbẹ́ wà?",
+          "answer": "Bẹ́ẹ̀ ni, owó ìforúkọsílẹ̀ ẹ̀ẹ̀kan wà fún gbogbo àwọn ọmọ ẹgbẹ́ àyàfi àwọn ọmọ ẹgbẹ́ ọ̀làlọ̀la. Owó ọdọọdún àti àwọn ojúṣe owó mìíràn lè jẹ́ pínpín nípasẹ̀ àwọn aṣáájú YAC àti fífọwọ́sí nípasẹ̀ àwọn ọmọ ẹgbẹ́."
+        },
+        "q4": {
+          "question": "Báwo ni mo ṣe lè forúkọsílẹ̀ fún ọmọ ẹgbẹ́?",
+          "answer": "O lè forúkọsílẹ̀ fún ọmọ ẹgbẹ́ nípasẹ̀ ṣíṣàbẹ̀wò ojú-ìwé Ọmọ Ẹgbẹ́ wa àti kíkún fọ́ọ̀mù ìforúkọsílẹ̀. Fún àwọn ẹ̀ka ANYAM àti AYM, o nílò ìtọ́kasí láti ọ̀dọ̀ o kere ju àwọn ọmọ ẹgbẹ́ ìpìlẹ̀ méjì tí wọ́n lè jẹ́rìí sí àjogúnbá Yorùbá rẹ."
+        }
+      },
+      "donations": {
+        "title": "Àwọn Ẹbùn & Àtìlẹyìn",
+        "q1": {
+          "question": "Báwo ni mo ṣe lè fúnní sí YAC?",
+          "answer": "O lè fúnní nípasẹ̀ ojú-ìwé Ẹbùn lórí ààyè ayélujára wa. A gbà oríṣiríṣi ọ̀nà ìsanwó. O lè yan láti àwọn iye ẹbùn tí a ṣètò tàbí tẹ iye àdáni tí ó bá ọ mu sílẹ̀."
+        },
+        "q2": {
+          "question": "Níbo ni ẹbùn mi ń lọ?",
+          "answer": "Àwọn ẹbùn rẹ ń ṣe àtìlẹyìn àwọn apá iṣẹ́ mẹ́rin pàtàkì wa: Àtìlẹyìn Ẹ̀kọ́ (àwọn ìfúnní àti àtìlẹyìn ilé-ìwé), Àwọn Iṣẹ́ Ihò Omi (àǹfààní omi mímọ́), Ìgbélarugẹ Àṣà (títọ́jú àjogúnbá Yorùbá), àti Ìgbélarugẹ Irin-àjò (fífi Ilẹ̀ Yorùbá hàn)."
+        },
+        "q3": {
+          "question": "Ṣé mo lè fúnní sí iṣẹ́ kan pàtó?",
+          "answer": "Bẹ́ẹ̀ ni, o lè yan iṣẹ́ kan pàtó fún ẹbùn rẹ. Nígbà tí o bá ń ṣe ẹbùn rẹ, o lè tọ́ka sí ètò wo ni o fẹ́ ṣe àtìlẹyìn, bóyá ẹ̀kọ́, omi, àṣà, tàbí irin-àjò."
+        },
+        "q4": {
+          "question": "Ṣé ọ̀nà mìíràn wà láti ṣe àtìlẹyìn YAC yàtọ̀ sí fífúnní?",
+          "answer": "Dájúdájú! O lè ṣe àtìlẹyìn YAC nípasẹ̀ fífún àkókò àti ọgbọ́n rẹ, dídi ọmọ ẹgbẹ́, títàn ìmọ̀ nípa iṣẹ́ wa, kíkópa nínú àwọn àjọ wa, tàbí ṣíṣàwárí àwọn àǹfààní àjọṣe ilé-iṣẹ́."
+        }
+      }
+    },
+    "ctaTitle": "Ó Ṣì Ní Ìbéèrè?",
+    "ctaText": "Ṣé o kò rí ìdáhùn tí o ń wá? Ẹgbẹ́ wa wà níbí láti ran ọ́ lọ́wọ́. Kàn sí wa, a ó sì dáhùn sí ọ lọ́jọ́ kíkúrú."
   }
 }

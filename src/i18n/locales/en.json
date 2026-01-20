@@ -417,5 +417,72 @@
       "ctaTitle": "Help Us Bring Water to Those in Need",
       "ctaText": "Every donation brings us closer to providing clean water access to another community. Join us in making a lasting difference."
     }
+  },
+  "faq": {
+    "badge": "Help Center",
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "subtitle": "Find answers to common questions about the Yoruba Action Council, membership, donations, and our projects.",
+    "categories": {
+      "general": {
+        "title": "General Questions",
+        "q1": {
+          "question": "What is the Yoruba Action Council (YAC)?",
+          "answer": "The Yoruba Action Council (YAC) is a 501(c)(3) non-profit organization incorporated in New Jersey, USA on May 29th, 2018. We are dedicated to advancing the progress of Yoruba descendants globally, preserving cultural traditions, and deploying the professionalism of our members for global Yoruba development."
+        },
+        "q2": {
+          "question": "Where is YAC located?",
+          "answer": "YAC is headquartered in New Jersey, United States. Our mailing address is P.O. Box 3073, East Orange, NJ 07019. However, we operate globally and have members across multiple continents."
+        },
+        "q3": {
+          "question": "Is YAC a tax-exempt organization?",
+          "answer": "Yes, YAC is a registered 501(c)(3) tax-exempt organization. All donations made to YAC are tax-deductible to the fullest extent allowed by law. Donors will receive a tax receipt for their records."
+        },
+        "q4": {
+          "question": "How can I contact YAC?",
+          "answer": "You can reach us by email at info@yacworldwide.org, by phone at +1 (862) 250-1791, or through our contact form on the Contact Us page. Our office hours are Monday through Friday, 9:00 AM to 5:00 PM EST."
+        }
+      },
+      "membership": {
+        "title": "Membership",
+        "q1": {
+          "question": "Who can become a member of YAC?",
+          "answer": "Membership is open to all Yoruba descendants by birth or marriage who share our vision of advancing the Yoruba nation. We welcome members from all professions and backgrounds who are committed to our mission."
+        },
+        "q2": {
+          "question": "What are the membership categories?",
+          "answer": "YAC offers several membership categories: Foundation Members, ANYAM (Associate National Yoruba Assembly Members), AYM Senior (Aged 50+), AYM Regular (Under 50), Student Senior (18-25), Student Junior (Under 18), and Honorary Members. Each category has different requirements and benefits."
+        },
+        "q3": {
+          "question": "Is there a membership fee?",
+          "answer": "Yes, there is a one-time registration fee required for all members except honorary members. Annual fees and other financial obligations may be determined by the YAC executive and ratified by the membership."
+        },
+        "q4": {
+          "question": "How do I apply for membership?",
+          "answer": "You can apply for membership by visiting our Membership page and filling out the registration form. For ANYAM and AYM categories, you will need a referral from at least two foundation members who can affirm your Yoruba heritage."
+        }
+      },
+      "donations": {
+        "title": "Donations & Support",
+        "q1": {
+          "question": "How can I donate to YAC?",
+          "answer": "You can donate through our website's Donate page. We accept various payment methods. You can choose from preset donation amounts or enter a custom amount that works for you."
+        },
+        "q2": {
+          "question": "Where does my donation go?",
+          "answer": "Your donations support our four main project areas: Educational Sponsorship (scholarships and school support), Water Borehole Projects (clean water access), Cultural Promotion (preserving Yoruba heritage), and Tourism Promotion (showcasing Yorubaland)."
+        },
+        "q3": {
+          "question": "Can I donate to a specific project?",
+          "answer": "Yes, you can designate your donation to a specific project. When making your donation, you can indicate which initiative you'd like to support, whether it's education, water, culture, or tourism."
+        },
+        "q4": {
+          "question": "Are there other ways to support YAC besides donating?",
+          "answer": "Absolutely! You can support YAC by volunteering your time and skills, becoming a member, spreading awareness about our mission, participating in our events, or exploring corporate partnership opportunities."
+        }
+      }
+    },
+    "ctaTitle": "Still Have Questions?",
+    "ctaText": "Can't find the answer you're looking for? Our team is here to help. Reach out to us and we'll get back to you as soon as possible."
   }
 }
