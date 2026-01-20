@@ -115,6 +115,257 @@
     "contactUs": "Contact Us",
     "joinUs": "Join Us",
     "donate": "Donate",
-    "backToHome": "Return to Home"
+    "backToHome": "Back to Home",
+    "becomeMember": "Become a Member",
+    "returnHome": "Return Home"
+  },
+  "membership": {
+    "badge": "Join YAC",
+    "title": "YAC Membership",
+    "subtitle": "Join the Yoruba Advocacy Council and become part of a global movement dedicated to advancing the progress of Yoruba descendants worldwide.",
+    "introLabel": "Membership of the Yoruba Action Council",
+    "introTitle": "Join Our Global Community",
+    "introText1": "The Yoruba Action Council is a 501(c)3 organization set up and registered in New Jersey, United States of America, dedicated to advancing the progress of Yoruba descendants globally.",
+    "introText2": "As a member, you become part of a vibrant community committed to cultural preservation, economic empowerment, and the advancement of Yoruba interests worldwide.",
+    "objectivesLabel": "Our Purpose",
+    "objectivesTitle": "Membership Objectives",
+    "objectivesSubtitle": "As a YAC member, you commit to supporting these 15 core objectives",
+    "categoriesLabel": "Membership Categories",
+    "categoriesTitle": "Choose Your Membership",
+    "categoriesSubtitle": "YAC offers various membership categories to welcome all Yoruba descendants",
+    "youthTier": "Youth Tier",
+    "importantInfo": "Important Information",
+    "infoItems": [
+      "Membership for ANYAM and AYM categories may be obtained only through referral by a minimum of two foundation members affirming the individual as an honorable Yoruba descendant by birth or marriage.",
+      "The YAC registration fee is a one-time payment required of all members except the honorary members.",
+      "Annual fees and other financial obligations may be levied to all categories of the YAC membership as may be determined from time to time by the YAC executive and ratified by the YAC membership."
+    ],
+    "registerLabel": "Get Started",
+    "registerTitle": "Register Your Interest",
+    "registerSubtitle": "Fill out the form below and our membership team will contact you",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "category": "Preferred Membership Category",
+      "selectCategory": "Select a category",
+      "message": "Tell Us About Yourself",
+      "messagePlaceholder": "Share why you're interested in joining YAC and any relevant background...",
+      "submit": "Submit Registration",
+      "submitting": "Submitting..."
+    },
+    "ctaTitle": "Ready to Join?",
+    "ctaText": "For membership inquiries or questions, please contact our membership team directly.",
+    "ctaButton": "Contact Membership Team"
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": "Contact Us",
+    "subtitle": "Have questions or want to get involved? We'd love to hear from you. Reach out to us and let's make a difference together.",
+    "formLabel": "Send a Message",
+    "formTitle": "We'd Love to Hear From You",
+    "formSubtitle": "Fill out the form below and our team will get back to you as soon as possible.",
+    "infoLabel": "Contact Information",
+    "infoTitle": "Get in Touch",
+    "infoSubtitle": "Whether you have questions about membership, want to learn more about our projects, or are interested in volunteering, we're here to help.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "officeHours": "Office Hours",
+    "officeHoursValue": "Monday - Friday: 9:00 AM - 5:00 PM EST",
+    "location": "Our Location",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "subjectPlaceholder": "How can we help?",
+      "messagePlaceholder": "Tell us more about your inquiry...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "toast": {
+      "success": "Message Sent!",
+      "successDescription": "Thank you for contacting us. We'll get back to you soon."
+    }
+  },
+  "donate": {
+    "badge": "Support Our Mission",
+    "title": "Make a Donation",
+    "subtitle": "Your generous contribution helps us advance the progress of Yoruba descendants globally and preserve our rich cultural heritage for future generations.",
+    "impactLabel": "Your Impact",
+    "impactTitle": "Every Contribution Matters",
+    "impactText1": "The Yoruba Action Council is a 501(c)3 nonprofit organization. Your donations are tax-deductible and directly support our mission to empower Yoruba descendants worldwide.",
+    "impactText2": "From educational scholarships to community development projects, your generosity enables us to create meaningful change in the lives of Yoruba people across the globe.",
+    "areasLabel": "Where Your Donation Goes",
+    "areasTitle": "Areas of Impact",
+    "areas": {
+      "education": {
+        "title": "Education",
+        "description": "Supporting scholarships and educational programs for Yoruba youth globally."
+      },
+      "water": {
+        "title": "Water Projects",
+        "description": "Providing clean water through borehole construction in Yoruba communities."
+      },
+      "cultural": {
+        "title": "Cultural Preservation",
+        "description": "Preserving and promoting Yoruba language, arts, and traditions."
+      },
+      "community": {
+        "title": "Community Development",
+        "description": "Empowering Yoruba communities through economic and social initiatives."
+      }
+    },
+    "tiersLabel": "Choose Your Contribution",
+    "tiersTitle": "Donation Options",
+    "tiersSubtitle": "Select a giving level that works for you, or enter a custom amount",
+    "mostPopular": "Most Popular",
+    "tiers": {
+      "supporter": {
+        "name": "Supporter",
+        "amount": "$25",
+        "description": "Help us continue our mission to advance Yoruba heritage and culture worldwide.",
+        "impact": ["Supports educational materials", "Helps fund community events", "Contributes to cultural preservation"]
+      },
+      "advocate": {
+        "name": "Advocate",
+        "amount": "$50",
+        "description": "Your generosity enables us to expand our reach and impact more communities.",
+        "impact": ["Funds youth mentorship programs", "Supports advocacy initiatives", "Enables community outreach"]
+      },
+      "champion": {
+        "name": "Champion",
+        "amount": "$100",
+        "description": "Make a significant impact on our educational and empowerment programs.",
+        "impact": ["Sponsors student scholarships", "Funds leadership development", "Supports educational projects"]
+      },
+      "visionary": {
+        "name": "Visionary",
+        "amount": "$250",
+        "description": "Help us create lasting change through major initiatives and projects.",
+        "impact": ["Funds major project initiatives", "Supports international partnerships", "Enables large-scale impact"]
+      }
+    },
+    "customAmount": "Custom Amount",
+    "customPlaceholder": "Enter amount",
+    "customSubtitle": "Enter any amount you'd like to donate",
+    "donateButton": "Donate",
+    "comingSoon": "Payment processing coming soon",
+    "otherWaysLabel": "Other Ways to Support",
+    "otherWaysTitle": "More Ways to Give",
+    "otherWaysSubtitle": "Beyond monetary donations, there are many ways you can support the Yoruba Action Council's mission.",
+    "volunteer": {
+      "title": "Volunteer",
+      "description": "Share your time and talents to help with events, programs, and initiatives."
+    },
+    "corporate": {
+      "title": "Corporate Partnerships",
+      "description": "Partner with YAC through sponsorships, matching gifts, or cause marketing."
+    },
+    "planned": {
+      "title": "Planned Giving",
+      "description": "Include YAC in your estate planning to leave a lasting legacy."
+    },
+    "contactPrompt": "For questions about donations or giving opportunities, please contact us:",
+    "contactButton": "Contact Our Team",
+    "taxInfo": "The Yoruba Action Council is a registered 501(c)3 nonprofit organization. All donations are tax-deductible to the fullest extent allowed by law. You will receive a tax receipt for your records."
+  },
+  "gallery": {
+    "badge": "Our Gallery",
+    "title": "Moments of",
+    "titleHighlight": "Impact",
+    "subtitle": "Explore our collection of photos showcasing the projects, events, and community impact of the Yoruba Action Council across the globe.",
+    "categories": {
+      "events": "YAC Events & Gatherings",
+      "heritage": "Cultural Heritage",
+      "royal": "Royal & Traditional Leadership",
+      "tourism": "Tourism Promotion",
+      "education": "Educational Sponsorship",
+      "water": "Water Borehole Project"
+    },
+    "ctaTitle": "Share Your Moments",
+    "ctaText": "Have photos from YAC events or projects? We'd love to feature them in our gallery. Contact us to share your memories.",
+    "ctaButton": "Contact Us"
+  },
+  "leadership": {
+    "badge": "Our Team",
+    "title": "Leadership & Board",
+    "subtitle": "Meet the dedicated individuals who guide YAC's mission to advance the progress of the Yoruba nation and preserve our rich cultural heritage.",
+    "executiveLabel": "Executive Team",
+    "executiveTitle": "Executive Leadership",
+    "executiveBoardMember": "Executive Board Member",
+    "ctaTitle": "Join Our Mission",
+    "ctaText": "We're always looking for dedicated individuals to join our cause. Together, we can make a lasting impact on the Yoruba community worldwide."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "subtitle": "Empowering the Yoruba community worldwide through unity, progress, and cultural preservation",
+    "statementTitle": "YAC Mission Statement",
+    "statementText": "The Yoruba Advocacy Congress is committed to advancing the interests of Yoruba people worldwide through intellectual engagement, cultural promotion, and collaborative partnerships. Our 13-point mission outlines our dedication to progress, unity, and global empowerment.",
+    "points": [
+      "To provide assistance in the progress of the Yoruba world",
+      "To use our intellects to support the empowerment of Yorubas globally",
+      "To serve as an advisory organization to other Pan-Yoruba organizations",
+      "To promote and support democracy at all levels and foster Yoruba growth in the political arena",
+      "To encourage and deliberate on issues paramount to the Yoruba people",
+      "To foster the economic empowerment of Yorubas globally",
+      "To work with other organizations across the globe and Nigeria to promote peace, stability, justice, and unity while working fervently for the promotion of Yoruba's interest",
+      "To engage in activities worldwide that promote and ensure social justice, equity, business opportunities, and interests of Yoruba",
+      "To work diligently to bridge the information gap between the Yoruba and the world",
+      "To ensure the advancement of Yoruba traditional institutions",
+      "Promoting the advancement of Yoruba as a giant in politics, economics, and social initiatives",
+      "Providing awareness about our civic rights as Yoruba indigenes",
+      "To honor and respect other peoples and cultures around the world as God's creation"
+    ],
+    "ctaTitle": "Join Us in Our Mission",
+    "ctaText": "Be part of a global movement dedicated to the advancement and empowerment of Yoruba people everywhere."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "subtitle": "Elevating the Yoruba race among the Committee of Nations",
+    "statementTitle": "YAC Vision Statement",
+    "statementText1": "A clear-cut vision of YAC envisaged an enhanced and aloft placement of the Yoruba race among the Committee of Nations within the existing provision of human and natural resources in the cliché of Nigeria contraption.",
+    "statementText2": "This includes brainstorming of like-minded Yoruba professionals in various fields of human development, and in creating a purposive environment that will lead to the growth and development of human capital within Nigeria and the diaspora through micro and macroeconomic indices.",
+    "purposeTitle": "Our Core Purpose",
+    "purposeText": "To make YAC the epitome of services for the advancement of the Yoruba Race globally",
+    "objectivesTitle": "Strategic Objectives",
+    "objectivesSubtitle": "The foundational pillars that guide our vision toward achieving global Yoruba advancement",
+    "objectives": [
+      "To advance and enhance the progress of the Yoruba nation",
+      "Employ and deploy the professionalism of members for the Yoruba global development",
+      "Cooperation with the other Pan Yoruba groups in coordinating pro Yoruba events",
+      "Operate as a link between the Yoruba Nation, the diaspora, and global interaction",
+      "Promote and support Yoruba cultural tradition, and thus, preventing the culture from extinction through research and development"
+    ],
+    "pledgeTitle": "Our Solemn Pledge",
+    "pledgeText": "We commit to the promotion of peace, unity, love, and prosperity for all Yoruba, empowering people at all levels of society.",
+    "ctaTitle": "Be Part of Our Vision",
+    "ctaText": "Join us in building a future where Yoruba excellence is recognized and celebrated worldwide.",
+    "ctaButton": "Join YAC Today"
+  },
+  "history": {
+    "title": "Our History",
+    "subtitle": "Paving the path towards change since 2018",
+    "foundingTitle": "Our Founding Story",
+    "foundingText1": "Yoruba Action Council was officially incorporated in New Jersey, USA on the 29th of May 2018. This historic date marked the formal establishment of an organization dedicated to the welfare and affairs of the Yoruba people worldwide.",
+    "foundingText2": "This enormous task was put together by like-minded Yoruba professionals living in New Jersey, United States of America, united by a common goal: to promote Yoruba interest, uphold and enhance her heritage.",
+    "foundingText3": "YAC is a Non-Governmental Organization with a 501(c)(3) Certificate for the projection of human and community development centered among the Yoruba people in the diaspora and at home in Nigeria.",
+    "timelineTitle": "Milestones & Timeline",
+    "timelineSubtitle": "Key moments in our journey of advancing Yoruba interests globally",
+    "timeline": [
+      { "year": "2018", "title": "Official Incorporation", "date": "May 29, 2018", "description": "Yoruba Action Council was officially incorporated in New Jersey, USA, marking the beginning of a new chapter for Yoruba advocacy in the diaspora." },
+      { "year": "2018", "title": "Founding Vision", "date": "2018", "description": "Like-minded Yoruba professionals living in New Jersey came together to establish YAC with the mission to promote Yoruba interest, uphold and enhance her heritage." },
+      { "year": "2018", "title": "501(c)(3) Status", "date": "2018", "description": "YAC obtained its 501(c)(3) certificate, establishing it as a recognized Non-Governmental Organization for human and community development." },
+      { "year": "2019", "title": "Community Outreach Begins", "date": "2019", "description": "YAC launched its first community outreach programs, connecting Yoruba people across the diaspora and strengthening ties with Nigeria." },
+      { "year": "2020", "title": "Global Expansion", "date": "2020", "description": "Despite global challenges, YAC expanded its reach, establishing connections with Yoruba communities worldwide and launching digital initiatives." },
+      { "year": "2021", "title": "Project Initiatives", "date": "2021", "description": "YAC launched major project initiatives including Tourism Promotion, Educational Sponsorship, Cultural Promotion, and Water Borehole projects." },
+      { "year": "Present", "title": "Continued Growth", "date": "Today", "description": "YAC continues to grow as the epitome of services for the advancement of the Yoruba Race globally, with active programs and an expanding membership." }
+    ],
+    "legacyTitle": "Building a Lasting Legacy",
+    "legacyText": "From our humble beginnings in New Jersey to our current global presence, YAC continues to grow and evolve. Our commitment to the advancement of Yoruba people remains unwavering as we work towards a future where our culture, traditions, and values thrive across generations."
   }
 }
