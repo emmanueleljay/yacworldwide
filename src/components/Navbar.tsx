@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import mainLogo from "@/assets/main-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,9 +25,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-lg">Y</span>
-            </div>
+            <img src={mainLogo} alt="YAC Worldwide Logo" className="h-12 w-auto" />
             <span className="font-serif text-xl font-semibold text-foreground">
               YAC Worldwide
             </span>

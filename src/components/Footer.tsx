@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import mainLogo from "@/assets/main-logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -26,9 +27,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-gold-gradient flex items-center justify-center">
-                  <span className="text-primary-foreground font-serif font-bold text-xl">Y</span>
-                </div>
+                <img src={mainLogo} alt="YAC Worldwide Logo" className="h-16 w-auto" />
                 <div>
                   <span className="font-serif text-2xl font-bold">YAC Worldwide</span>
                   <p className="text-primary-foreground/60 text-sm">Yoruba Action Council</p>
