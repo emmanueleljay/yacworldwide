@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Heart, Calendar, ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
@@ -51,11 +52,13 @@ const CTA = () => {
               <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
                 {t("cta.donate.description")}
               </p>
-              <Button variant="hero" size="lg" className="group">
-                <Heart className="w-5 h-5" />
-                {t("cta.donate.button")}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/donate">
+                <Button variant="hero" size="lg" className="group">
+                  <Heart className="w-5 h-5" />
+                  {t("cta.donate.button")}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
