@@ -7,7 +7,7 @@ const Footer = () => {
     { name: "Our Projects", href: "#projects" },
     { name: "Events", href: "#events" },
     { name: "Donate", href: "#contact" },
-    { name: "Contact Us", href: "/contact", isRoute: true },
+    { name: "Contact Us", href: "/#contact" },
     { name: "Privacy Policy", href: "/privacy-policy", isRoute: true },
   ];
 
