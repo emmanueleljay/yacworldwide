@@ -53,9 +53,11 @@ const Navbar = () => {
                 </Link>
               )
             )}
-            <Button variant="hero" size="lg">
-              Donate Now
-            </Button>
+            <Link to="/donate">
+              <Button variant="hero" size="lg">
+                Donate Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,9 +94,11 @@ const Navbar = () => {
                   </Link>
                 )
               )}
-              <Button variant="hero" size="lg" className="mt-2">
-                Donate Now
-              </Button>
+              <Link to="/donate" onClick={() => setIsOpen(false)}>
+                <Button variant="hero" size="lg" className="mt-2 w-full">
+                  Donate Now
+                </Button>
+              </Link>
             </div>
           </div>
         )}
