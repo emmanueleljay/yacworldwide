@@ -15,6 +15,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs";
 import Donate from "./pages/Donate";
 import Gallery from "./pages/Gallery";
+import Mission from "./pages/Mission";
 import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/who-we-are" element={<WhoWeAre />} />
+          <Route path="/who-we-are/mission" element={<Mission />} />
           <Route path="/projects/tourism" element={<ProjectTourism />} />
           <Route path="/projects/education" element={<ProjectEducation />} />
           <Route path="/projects/culture" element={<ProjectCulture />} />
