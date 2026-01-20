@@ -14,6 +14,7 @@ const Navbar = () => {
     { name: "Who We Are", href: "/who-we-are", isAnchor: false },
     { name: "Leadership", href: "/leadership", isAnchor: false },
     { name: "Membership", href: "/membership", isAnchor: false },
+    { name: "Gallery", href: "/gallery", isAnchor: false },
     { name: "Contact", href: "/contact", isAnchor: false },
   ];
 
@@ -82,6 +83,12 @@ const Navbar = () => {
               className="text-muted-foreground hover:text-primary transition-colors font-medium"
             >
               Membership
+            </Link>
+            <Link
+              to="/gallery"
+              className="text-muted-foreground hover:text-primary transition-colors font-medium"
+            >
+              Gallery
             </Link>
             <Link
               to="/contact"
