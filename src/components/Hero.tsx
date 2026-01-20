@@ -173,9 +173,11 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Button variant="heroOutline" size="xl">
-              {t("hero.learnMore")}
-            </Button>
+            <Link to="/who-we-are">
+              <Button variant="heroOutline" size="xl">
+                {t("hero.learnMore")}
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}
