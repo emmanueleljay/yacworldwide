@@ -245,7 +245,14 @@ const Navbar = () => {
                 className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
-                {t("nav.membership")}
+              {t("nav.membership")}
+            </Link>
+            <Link
+              to="/gallery"
+              className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              {t("nav.gallery")}
               </Link>
               <Link
                 to="/contact"
