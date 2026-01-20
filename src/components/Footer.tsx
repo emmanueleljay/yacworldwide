@@ -10,7 +10,8 @@ const Footer = () => {
   const quickLinks = [
     { nameKey: "footer.links.ourProjects", href: "#projects" },
     { nameKey: "footer.links.events", href: "#events" },
-    { nameKey: "footer.links.donate", href: "#contact" },
+    { nameKey: "footer.links.donate", href: "/donate", isRoute: true },
+    { nameKey: "footer.links.faq", href: "/faq", isRoute: true },
     { nameKey: "footer.links.contactUs", href: "/contact", isRoute: true },
     { nameKey: "footer.links.privacyPolicy", href: "/privacy-policy", isRoute: true },
   ];
