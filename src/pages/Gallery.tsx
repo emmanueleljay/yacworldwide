@@ -7,31 +7,57 @@ import tourismImg from "@/assets/tourism.jpg";
 import educationImg from "@/assets/education.jpg";
 import cultureImg from "@/assets/culture.jpg";
 import waterImg from "@/assets/water.jpg";
+import yorubaDrummers from "@/assets/yoruba-drummers.jpg";
+import egungunMasquerade from "@/assets/egungun-masquerade.jpg";
+import yorubaSculpture from "@/assets/yoruba-sculpture.jpg";
+import yacEvent1 from "@/assets/yac-event-1.jpg";
+import yacEvent2 from "@/assets/yac-event-2.jpg";
+import royalMeeting from "@/assets/royal-meeting.jpg";
+import traditionalAttire from "@/assets/traditional-attire.jpg";
+import culturalCeremony from "@/assets/cultural-ceremony.jpg";
 
 const Gallery = () => {
   const galleryCategories = [
     {
+      title: "YAC Events & Gatherings",
+      images: [
+        { src: yacEvent1, alt: "YAC Think Tank Group annual gathering", caption: "YAC Think Tank Group - Annual gathering featuring leaders and members in traditional attire" },
+        { src: yacEvent2, alt: "YAC leadership at official event", caption: "YAC Leadership - Executive members presenting the YAC Solemn Pledge and Mission" },
+      ],
+    },
+    {
+      title: "Cultural Heritage",
+      images: [
+        { src: yorubaSculpture, alt: "Traditional Yoruba bronze sculpture", caption: "Ancient Yoruba Bronze Art - Twin figures holding ceremonial vessel, showcasing traditional craftsmanship" },
+        { src: cultureImg, alt: "Traditional Yoruba cultural ceremony", caption: "Traditional Yoruba Ceremony - Celebrating our rich cultural heritage" },
+        { src: yorubaDrummers, alt: "Traditional Yoruba drummers", caption: "Yoruba Drummers - The talking drum (Dundun) central to Yoruba cultural celebrations" },
+        { src: egungunMasquerade, alt: "Egungun masquerade performers", caption: "Egungun Masquerade - Sacred ancestral traditions honoring departed spirits" },
+      ],
+    },
+    {
+      title: "Royal & Traditional Leadership",
+      images: [
+        { src: royalMeeting, alt: "Meeting with traditional royalty", caption: "Royal Audience - YAC representatives meeting with traditional Yoruba royalty" },
+        { src: traditionalAttire, alt: "Leaders in traditional Yoruba attire", caption: "Traditional Attire - Leaders adorned in ceremonial Yoruba dress at formal event" },
+        { src: culturalCeremony, alt: "Traditional blessing ceremony", caption: "Cultural Blessing - Traditional ceremony with chiefs bestowing blessings on the youth" },
+      ],
+    },
+    {
       title: "Tourism Promotion",
       images: [
-        { src: tourismImg, alt: "Yoruba heritage site monument", caption: "Traditional Yoruba monument" },
+        { src: tourismImg, alt: "Yoruba heritage site monument", caption: "Heritage Monument - Traditional Yoruba landmark promoting cultural tourism" },
       ],
     },
     {
       title: "Educational Sponsorship",
       images: [
-        { src: educationImg, alt: "Students in classroom", caption: "Students during examination" },
-      ],
-    },
-    {
-      title: "Cultural Promotion",
-      images: [
-        { src: cultureImg, alt: "Traditional Yoruba cultural ceremony", caption: "Traditional Yoruba ceremony" },
+        { src: educationImg, alt: "Students in classroom", caption: "Education Initiative - Students benefiting from YAC educational sponsorship programs" },
       ],
     },
     {
       title: "Water Borehole Project",
       images: [
-        { src: waterImg, alt: "Community water borehole", caption: "Community accessing clean water" },
+        { src: waterImg, alt: "Community water borehole", caption: "Clean Water Access - Communities benefiting from YAC water borehole projects" },
       ],
     },
   ];
@@ -80,9 +106,9 @@ const Gallery = () => {
                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                           />
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                           <div className="absolute bottom-0 left-0 right-0 p-4">
-                            <p className="text-primary-foreground text-sm font-medium">
+                            <p className="text-primary-foreground text-sm font-medium leading-relaxed">
                               {image.caption}
                             </p>
                           </div>
