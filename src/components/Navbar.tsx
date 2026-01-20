@@ -132,12 +132,6 @@ const Navbar = () => {
             >
               {t("nav.contact")}
             </Link>
-            <Link
-              to="/faq"
-              className="text-muted-foreground hover:text-primary transition-colors font-medium"
-            >
-              {t("nav.faq")}
-            </Link>
 
             <Link to="/donate">
               <Button variant="hero" size="lg">
@@ -259,13 +253,6 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 {t("nav.contact")}
-              </Link>
-              <Link
-                to="/faq"
-                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("nav.faq")}
               </Link>
 
               <Link to="/donate" onClick={() => setIsOpen(false)}>
