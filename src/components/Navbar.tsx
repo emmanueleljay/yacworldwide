@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: "Projects", href: isHome ? "#projects" : "/#projects", isAnchor: isHome },
     { name: "Leadership", href: "/leadership", isAnchor: false },
     { name: "Membership", href: "/membership", isAnchor: false },
-    { name: "Contact", href: isHome ? "#contact" : "/#contact", isAnchor: isHome },
+    { name: "Contact", href: "/contact", isAnchor: false },
   ];
 
   return (
