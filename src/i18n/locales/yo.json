@@ -52,11 +52,6 @@
   "about": {
     "sectionTitle": "Nípa Wa",
     "heading": "Títẹ̀síwájú Orílẹ̀-èdè Yorùbá",
-    "description": "Igbimọ Iṣẹ́ Yorùbá (YAC) ti dá sílẹ̀ ní New Jersey, USA ní May 29, 2018 látọwọ́ àwọn ọjọ́gbọ́n Yorùbá tí wọ́n ní ìrònú kan náà láti gbé ìfẹ́ Yorùbá lárugẹ, láti mú àṣà wa dára sí i nípasẹ̀ ìṣèlú àti àtúnṣe orí-ajé-àwùjọ."
-  },
-  "about": {
-    "sectionTitle": "Nípa Wa",
-    "heading": "Títẹ̀síwájú Orílẹ̀-èdè Yorùbá",
     "description": "Igbimọ Iṣẹ́ Yorùbá (YAC) ti dá sílẹ̀ ní New Jersey, USA ní May 29, 2018 látọwọ́ àwọn ọjọ́gbọ́n Yorùbá tí wọ́n ní ìrònú kan náà láti gbé ìfẹ́ Yorùbá lárugẹ.",
     "values": {
       "mission": {
@@ -120,6 +115,295 @@
     "contactUs": "Kàn Sí Wa",
     "joinUs": "Darapọ̀ Mọ́ Wa",
     "donate": "Ṣe Ẹbùn",
-    "backToHome": "Padà Sí Ilé"
+    "backToHome": "Padà Sí Ilé",
+    "viewAllProjects": "Wo Gbogbo Àwọn Iṣẹ́",
+    "becomeMember": "Di Ọmọ Ẹgbẹ́",
+    "returnHome": "Padà Sílé",
+    "donateNow": "Ṣe Ẹbùn Báyìí",
+    "sendMessage": "Fi Ọ̀rọ̀ Ránṣẹ́",
+    "sending": "Ń Ránṣẹ́..."
+  },
+  "membership": {
+    "badge": "Darapọ̀ Mọ́ YAC",
+    "title": "Ọmọ Ẹgbẹ́ YAC",
+    "subtitle": "Darapọ̀ mọ́ Igbimọ Aṣojú Yorùbá kí o sì di apá kan ìgbésẹ̀ àgbáyé tí ó yàn sí ìtẹ̀síwájú ìlọsíwájú àwọn ọmọ ìran Yorùbá ní àgbáyé.",
+    "introLabel": "Ọmọ Ẹgbẹ́ Igbimọ Iṣẹ́ Yorùbá",
+    "introTitle": "Darapọ̀ Mọ́ Àwùjọ Àgbáyé Wa",
+    "introText1": "Igbimọ Iṣẹ́ Yorùbá jẹ́ ẹgbẹ́ 501(c)3 tí a dá sílẹ̀ àti tí a forúkọsílẹ̀ ní New Jersey, United States of America, tí ó yàn sí ìtẹ̀síwájú ìlọsíwájú àwọn ọmọ ìran Yorùbá ní àgbáyé.",
+    "introText2": "Gẹ́gẹ́ bí ọmọ ẹgbẹ́, o di apá kan àwùjọ ọlọ́lá tí ó yàn sí títọ́jú àṣà, gbígbéni lérù nípa ọrọ̀-ajé, àti ìtẹ̀síwájú àwọn ìfẹ́ Yorùbá ní àgbáyé.",
+    "objectivesLabel": "Ète Wa",
+    "objectivesTitle": "Àwọn Ète Ọmọ Ẹgbẹ́",
+    "objectivesSubtitle": "Gẹ́gẹ́ bí ọmọ ẹgbẹ́ YAC, o gbé àdéhùn láti ṣe àtìlẹyìn àwọn ète pàtàkì 15 wọ̀nyí",
+    "categoriesLabel": "Àwọn Ẹ̀ka Ọmọ Ẹgbẹ́",
+    "categoriesTitle": "Yan Ọmọ Ẹgbẹ́ Rẹ",
+    "categoriesSubtitle": "YAC ń pèsè oríṣiríṣi àwọn ẹ̀ka ọmọ ẹgbẹ́ láti gbà gbogbo àwọn ọmọ ìran Yorùbá",
+    "youthTier": "Ìpele Ọ̀dọ́",
+    "importantInfo": "Àlàyé Pàtàkì",
+    "infoItems": [
+      "Ọmọ ẹgbẹ́ fún ANYAM àti AYM lè ṣẹ̀ṣẹ̀ wá nípasẹ̀ ìtọ́kasí láti ọ̀dọ̀ o kere ju àwọn ọmọ ẹgbẹ́ ìpìlẹ̀ méjì tí wọ́n ń jẹ́rìí pé ẹni náà jẹ́ ọmọ ìran Yorùbá olóyè nípasẹ̀ ìbí tàbí ìgbéyàwó.",
+      "Owó ìforúkọsílẹ̀ YAC jẹ́ ìsanwó ẹ̀ẹ̀kan tí gbogbo àwọn ọmọ ẹgbẹ́ yóò san àyàfi àwọn ọmọ ẹgbẹ́ ọ̀làlọ̀la.",
+      "Owó ọdọọdún àti àwọn ojúṣe owó mìíràn lè ṣẹ̀ṣẹ̀ wá sí gbogbo àwọn ẹ̀ka ọmọ ẹgbẹ́ YAC gẹ́gẹ́ bí àwọn aṣáájú YAC ṣe lè pinnu lákòókò àti tí ìjọ ọmọ ẹgbẹ́ YAC bá fọwọ́sí."
+    ],
+    "formLabel": "Bẹ̀rẹ̀",
+    "formTitle": "Forúkọsílẹ̀ Ìfẹ́ Rẹ",
+    "formSubtitle": "Kún fọ́ọ̀mù ìsàlẹ̀ yìí kí ẹgbẹ́ ọmọ ẹgbẹ́ wa lè bá ọ sọ̀rọ̀",
+    "firstName": "Orúkọ Àkọ́kọ́",
+    "lastName": "Orúkọ Ìdílé",
+    "emailAddress": "Àdírẹ́sì Ímeèlì",
+    "phone": "Nọ́mbà Fóònù",
+    "category": "Ẹ̀ka Ọmọ Ẹgbẹ́",
+    "selectCategory": "Yan ẹ̀ka kan",
+    "message": "Ọ̀rọ̀ Àfikún",
+    "messagePlaceholder": "Sọ nípa ara rẹ àti ìdí tí o fi fẹ́ darapọ̀ mọ́ YAC...",
+    "submit": "Fi Ìfúnní Síl̀ẹ",
+    "contactLabel": "Ó Ní Ìbéèrè?",
+    "contactTitle": "Kàn Sí Ẹgbẹ́ Ọmọ Ẹgbẹ́ Wa",
+    "contactText": "Tí o bá ní ìbéèrè kankan nípa ọmọ ẹgbẹ́ tàbí tí o nílò ìrànlọ́wọ́ pẹ̀lú ìfúnní rẹ, jọ̀wọ́ má ṣe lọra láti kàn sí wa."
+  },
+  "leadership": {
+    "badge": "Ẹgbẹ́ Wa",
+    "title": "Aṣáájú & Ìgbìmọ̀",
+    "subtitle": "Pàdé àwọn ènìyàn tí wọ́n yàn ara wọn sí láti tọ́ iṣẹ́ YAC láti mú orílẹ̀-èdè Yorùbá lọsíwájú àti láti tọ́jú àṣà wa olówó iyebíye.",
+    "executiveLabel": "Ẹgbẹ́ Aṣáájú",
+    "executiveTitle": "Aṣáájú Alákòóso",
+    "ctaTitle": "Darapọ̀ Mọ́ Iṣẹ́ Wa",
+    "ctaText": "À ń wá àwọn ènìyàn tí wọ́n yàn ara wọn sí láti darapọ̀ mọ́ ohun tí a ń jà fún. Papọ̀, a lè ṣe ìyípadà tí ó pẹ́ sí àwùjọ Yorùbá ní àgbáyé."
+  },
+  "donate": {
+    "badge": "Ṣe Àtìlẹyìn Iṣẹ́ Wa",
+    "title": "Ṣe Ẹbùn",
+    "subtitle": "Ẹbùn rẹ ọlá-ńlá ń ran wa lọ́wọ́ láti mú ìlọsíwájú àwọn ọmọ ìran Yorùbá sí i ní àgbáyé àti láti tọ́jú àṣà wa olówó iyebíye fún àwọn ìran tí ó ń bọ̀.",
+    "impactLabel": "Ipa Rẹ",
+    "impactTitle": "Gbogbo Ẹbùn Ṣe Pàtàkì",
+    "impactText1": "Igbimọ Iṣẹ́ Yorùbá jẹ́ ẹgbẹ́ àìléròwó 501(c)3. Àwọn ẹbùn rẹ jẹ́ dídín-owó-òwò àti pé wọ́n ń ṣe àtìlẹyìn tààrà fún iṣẹ́ wa láti gbé àwọn ọmọ ìran Yorùbá lérù ní àgbáyé.",
+    "impactText2": "Láti àwọn ìfúnní ẹ̀kọ́ sí àwọn iṣẹ́ ìdàgbàsókè àwùjọ, ẹbùn rẹ ń jẹ́ kí a ṣẹ̀dá ìyípadà pàtàkì nínú ìgbésí ayé àwọn ọmọ Yorùbá káríayé.",
+    "areasLabel": "Ibi Tí Ẹbùn Rẹ Ń Lọ",
+    "areasTitle": "Àwọn Apá Ipa",
+    "areas": {
+      "education": {
+        "title": "Ẹ̀kọ́",
+        "description": "Ṣíṣe àtìlẹyìn àwọn ìfúnní àti àwọn ètò ẹ̀kọ́ fún àwọn ọ̀dọ́ Yorùbá ní àgbáyé."
+      },
+      "water": {
+        "title": "Àwọn Iṣẹ́ Omi",
+        "description": "Pípèsè omi mímọ́ nípasẹ̀ kíkọ́ ihò omi ní àwọn àwùjọ Yorùbá."
+      },
+      "culture": {
+        "title": "Títọ́jú Àṣà",
+        "description": "Títọ́jú àti ìgbélarugẹ èdè, iṣẹ́ ọnà, àti àṣà Yorùbá."
+      },
+      "community": {
+        "title": "Ìdàgbàsókè Àwùjọ",
+        "description": "Gbígbé àwọn àwùjọ Yorùbá lérù nípasẹ̀ àwọn ètò orí-ajé àti àwùjọ."
+      }
+    },
+    "tiersLabel": "Yan Ẹbùn Rẹ",
+    "tiersTitle": "Àwọn Àṣàyàn Ẹbùn",
+    "tiersSubtitle": "Yan ìpele fúnní tí ó bá ọ mu, tàbí tẹ iye àdáni sílẹ̀",
+    "mostPopular": "Gbajúmọ̀ Jùlọ",
+    "tiers": {
+      "supporter": {
+        "name": "Olùṣàtìlẹ́yìn",
+        "description": "Ran wa lọ́wọ́ láti tesíwájú iṣẹ́ wa láti mú àṣà àti àṣà Yorùbá lọsíwájú ní àgbáyé.",
+        "impact": ["Ṣe àtìlẹyìn àwọn ohun èlò ẹ̀kọ́", "Ran àwọn àjọ àwùjọ lọ́wọ́", "Kópa nínú títọ́jú àṣà"]
+      },
+      "advocate": {
+        "name": "Aṣojú",
+        "description": "Ẹbùn rẹ jẹ́ kí a tàn síi kí a sì nípa sí àwọn àwùjọ púpọ̀ síi.",
+        "impact": ["Pèsè owó fún àwọn ètò ìtọ́sọ́nà ọ̀dọ́", "Ṣe àtìlẹyìn àwọn ètò aṣojú", "Jẹ́ kí ìsọ̀rọ̀ àwùjọ ṣeé ṣe"]
+      },
+      "champion": {
+        "name": "Aṣiwájú",
+        "description": "Ṣe ipa pàtàkì sí àwọn ètò ẹ̀kọ́ àti gbígbéni lérù wa.",
+        "impact": ["Pèsè owó fún ìfúnní akẹ́kọ̀ọ́", "Pèsè owó fún ìdàgbàsókè aṣáájú", "Ṣe àtìlẹyìn àwọn iṣẹ́ ẹ̀kọ́"]
+      },
+      "visionary": {
+        "name": "Olúwoye",
+        "description": "Ran wa lọ́wọ́ láti ṣẹ̀dá ìyípadà pípẹ́ nípasẹ̀ àwọn ètò àti iṣẹ́ pàtàkì.",
+        "impact": ["Pèsè owó fún àwọn ètò iṣẹ́ pàtàkì", "Ṣe àtìlẹyìn àwọn àjọṣe àgbáyé", "Jẹ́ kí ipa ńlá ṣeé ṣe"]
+      }
+    },
+    "customTitle": "Iye Àdáni",
+    "customSubtitle": "Tẹ iye èyíkéyìí tí o fẹ́ fúnní sílẹ̀",
+    "enterAmount": "Tẹ iye sílẹ̀",
+    "comingSoon": "Ìṣiṣẹ́ owó ń bọ̀ láìpẹ́",
+    "otherWaysLabel": "Àwọn Ọ̀nà Mìíràn Láti Ṣe Àtìlẹyìn",
+    "otherWaysTitle": "Àwọn Ọ̀nà Mìíràn Láti Fúnní",
+    "otherWaysText": "Yàtọ̀ sí ẹbùn owó, ọ̀pọ̀lọpọ̀ ọ̀nà ni o lè gbà láti ṣe àtìlẹyìn iṣẹ́ Igbimọ Iṣẹ́ Yorùbá.",
+    "volunteer": {
+      "title": "Àyínọmọ́",
+      "description": "Pin àkókò àti ọgbọ́n rẹ láti ran àwọn àjọ, àwọn ètò, àti àwọn ètò lọ́wọ́."
+    },
+    "corporate": {
+      "title": "Àjọṣe Ilé-iṣẹ́",
+      "description": "Ṣe àjọṣe pẹ̀lú YAC nípasẹ̀ àwọn atọ́ka, àwọn ẹbùn ìbámu, tàbí ìpolongo ète."
+    },
+    "planned": {
+      "title": "Fúnní Tí A Gbéròó",
+      "description": "Ṣàfikún YAC nínú ètò ohun-ìní rẹ láti fi àmì tí ó pẹ́ sílẹ̀."
+    },
+    "questionsText": "Fún àwọn ìbéèrè nípa àwọn ẹbùn tàbí àwọn àǹfààní fúnní, jọ̀wọ́ kàn sí wa:",
+    "contactTeam": "Kàn Sí Ẹgbẹ́ Wa",
+    "taxInfo": "Igbimọ Iṣẹ́ Yorùbá jẹ́ ẹgbẹ́ àìléròwó 501(c)3 tí a forúkọsílẹ̀. Gbogbo àwọn ẹbùn jẹ́ dídín-owó-òwò sí ìwọ̀n tí òfin gbà láàyè. O máa gba àkọsílẹ̀ owó-òwò fún àkọsílẹ̀ rẹ."
+  },
+  "contact": {
+    "badge": "Bá Wa Sọ̀rọ̀",
+    "title": "Kàn Sí Wa",
+    "subtitle": "Ó ní ìbéèrè tàbí o fẹ́ kópa? A fẹ́ gbọ́ lọ́wọ́ rẹ. Kàn sí wa kí a sì ṣe ìyàtọ̀ papọ̀.",
+    "formLabel": "Fi Ọ̀rọ̀ Ránṣẹ́",
+    "formTitle": "A Fẹ́ Gbọ́ Lọ́wọ́ Rẹ",
+    "formSubtitle": "Kún fọ́ọ̀mù ìsàlẹ̀ yìí kí ẹgbẹ́ wa lè dáhùn sí ọ lọ́jọ́ kíkúrú.",
+    "yourName": "Orúkọ Rẹ",
+    "emailAddress": "Àdírẹ́sì Ímeèlì",
+    "subject": "Àkọlé",
+    "subjectPlaceholder": "Báwo ni a ṣe lè ràn ọ́ lọ́wọ́?",
+    "message": "Ọ̀rọ̀",
+    "messagePlaceholder": "Sọ síi nípa ìbéèrè rẹ...",
+    "infoLabel": "Àlàyé Ìkànsí",
+    "infoTitle": "Bá Wa Sọ̀rọ̀",
+    "infoSubtitle": "Bóyá o ní ìbéèrè nípa ọmọ ẹgbẹ́, o fẹ́ kọ́ síi nípa àwọn iṣẹ́ wa, tàbí o nífẹ̀ẹ́ sí àyínọmọ́, a wà níbí láti ràn ọ́ lọ́wọ́.",
+    "address": "Àdírẹ́sì",
+    "phone": "Fóònù",
+    "email": "Ímeèlì",
+    "officeHours": "Àwọn Wákàtí Ọ́fíìsì",
+    "officeHoursValue": "Ọjọ́ Ajé - Ọjọ́ Ẹtì: 9:00 AM - 5:00 PM EST",
+    "location": "Ipò Wa",
+    "messageSent": "A Ti Fi Ọ̀rọ̀ Ránṣẹ́!",
+    "messageSentDesc": "O ṣeun fún kíkànsí wa. A ó dáhùn sí ọ láìpẹ́."
+  },
+  "projects": {
+    "tourism": {
+      "badge": "Ètò Irin-àjò",
+      "title": "Ṣàwárí Ẹwà",
+      "titleHighlight": "Ilẹ̀ Yorùbá",
+      "subtitle": "Ní ìrírí ìtàn ọlọ́rọ̀, àṣà ọlọ́lá, àti àwọn ibi ẹwà tí ó yà ẹ lẹ́nu ti àwọn ibi àjogúnbá Yorùbá. Ètò irin-àjò wa ń sopọ̀ àwọn àlejò mọ́ àwọn ìrírí àṣà gidi nígbà tí wọ́n ń ṣe àtìlẹyìn àwọn àwùjọ àdúgbò.",
+      "supportProject": "Ṣe Àtìlẹyìn Iṣẹ́ Yìí",
+      "whatWeOffer": "Ohun Tí A Pèsè",
+      "whatWeOfferSubtitle": "Ètò irin-àjò wa pèsè àwọn ìrírí ní kíkún tí ó ń ṣe ayẹyẹ àti títọ́jú àṣà Yorùbá.",
+      "highlights": {
+        "heritageSites": {
+          "title": "Àwọn Ibi Àjogúnbá",
+          "description": "Ṣàwárí àwọn àáfin àtijọ́, àwọn igbó mímọ́, àti àwọn àmì ìtàn tí ó ń sọ ìtàn àwọn ọmọ Yorùbá."
+        },
+        "culturalExperiences": {
+          "title": "Àwọn Ìrírí Àṣà",
+          "description": "Ṣàfikún ara rẹ nínú àwọn ayẹyẹ, àwọn àṣà àtijọ́, àti àwọn àjọ àṣà Yorùbá gidi."
+        },
+        "guidedTours": {
+          "title": "Àwọn Irin-àjò Amúmọ̀nà",
+          "description": "Darapọ̀ mọ́ àwọn irin-àjò tí a ṣètò tí àwọn amúmọ̀nà onímọ̀ ń darí tí wọ́n ń mú ìtàn wá sí ayé."
+        },
+        "communityImpact": {
+          "title": "Ipa Àwùjọ",
+          "description": "Àbẹ̀wò rẹ ń ṣe àtìlẹyìn àwọn àwùjọ àdúgbò àti ràn wọ́n lọ́wọ́ láti tọ́jú àjogúnbá àṣà fún àwọn ìran tí ó ń bọ̀."
+        }
+      },
+      "destinationsTitle": "Àwọn Ibi Tí A Yàn",
+      "destinationsSubtitle": "Ṣàwárí àwọn ibi ìyanu wọ̀nyí tí ó ń ṣàfihàn ìjìnlẹ̀ àti ẹwà àjogúnbá Yorùbá.",
+      "destinations": {
+        "ileIfe": { "name": "Ilé-Ifẹ̀", "description": "Ilé ẹ̀mí àwọn ọmọ Yorùbá àti ìbẹ̀rẹ̀ ọ̀làjú" },
+        "oyoEmpire": { "name": "Àwọn Ahoro Ilẹ̀ Ọ̀yọ́", "description": "Àwọn àmì ìtàn ti ọ̀kan nínú àwọn ilẹ̀-ọba aláágbára jùlọ ní Ìwọ̀-Oòrùn Áfíríkà" },
+        "osunOsogbo": { "name": "Igbó Mímọ́ Ọ̀ṣun-Oṣogbo", "description": "Ibi Àjogúnbá Àgbáyé UNESCO tí ó ń ṣe ayẹyẹ Ọlọ́sà odò" },
+        "idanreHills": { "name": "Òkè Ìdànrè", "description": "Ẹ̀dá àrà ọ̀run tí ó yà ẹ lẹ́nu pẹ̀lú ìtumọ̀ àṣà ọlọ́rọ̀" }
+      },
+      "heritageSites": "Àwọn Ibi Àjogúnbá",
+      "ctaTitle": "Ṣé O Ti Ṣetán Láti Ṣàwárí Ilẹ̀ Yorùbá?",
+      "ctaText": "Darapọ̀ mọ́ wa nínú ìgbélarugẹ àti títọ́jú àjogúnbá àṣà ọlọ́rọ̀ ti àwọn ọmọ Yorùbá nípasẹ̀ irin-àjò tí ó lè pẹ́."
+    },
+    "education": {
+      "badge": "Àtìlẹyìn Ẹ̀kọ́",
+      "title": "Gbígbéni Lérù Nípasẹ̀",
+      "titleHighlight": "Ẹ̀kọ́",
+      "subtitle": "Ẹ̀kọ́ jẹ́ ìpìlẹ̀ ìlọsíwájú. Ètò àtìlẹyìn wa pèsè àtìlẹyìn owó, àwọn ohun èlò, àti ìtọ́sọ́nà láti ran àwọn akẹ́kọ̀ọ́ Yorùbá lọ́wọ́ láti ṣàṣeyọrí àwọn àlá ẹ̀kọ́ wọn kí wọ́n sì di àwọn aṣáájú ọjọ́ iwájú.",
+      "sponsorStudent": "Ṣe Àtìlẹyìn Akẹ́kọ̀ọ́",
+      "stats": {
+        "studentsSponsored": "Àwọn Akẹ́kọ̀ọ́ Tí A Ṣe Àtìlẹyìn",
+        "schoolsSupported": "Àwọn Ilé-ìwé Tí A Ṣe Àtìlẹyìn",
+        "fundsDistributed": "Owó Tí A Pín",
+        "countriesReached": "Àwọn Orílẹ̀-èdè Tí A Dé"
+      },
+      "programsTitle": "Àwọn Ètò Wa",
+      "programsSubtitle": "A pèsè àtìlẹyìn ẹ̀kọ́ ní kíkún nípasẹ̀ ọ̀pọ̀lọpọ̀ àwọn ètò tí a ṣe láti kojú àwọn àìní àti àwọn ìpele ìdàgbàsókè ẹ̀kọ́ tó yàtọ̀.",
+      "programs": {
+        "scholarships": { "title": "Àwọn Ìfúnní", "description": "Àwọn ìfúnní ní kíkún àti lápá fún àwọn akẹ́kọ̀ọ́ tí wọ́n tọ́ sí láti ilé-ìwé alákọ̀ọ́bẹ̀rẹ̀ títí dé yunifásítì." },
+        "materials": { "title": "Àwọn Ohun Èlò Ẹ̀kọ́", "description": "Pípèsè àwọn ìwé ẹ̀kọ́, àwọn ohun èlò ilé-ìwé, àti àwọn ohun èlò ẹ̀kọ́ fún àwọn akẹ́kọ̀ọ́ tí wọ́n nílò." },
+        "meritAwards": { "title": "Àwọn Ẹ̀bùn Ìyàtọ̀", "description": "Mímọ àti ṣíṣe ẹ̀san fún ìgbéga ẹ̀kọ́ láti ru àsìkò síi." },
+        "mentorship": { "title": "Àwọn Ètò Ìtọ́sọ́nà", "description": "Ṣíṣe àsopọ̀ àwọn akẹ́kọ̀ọ́ pẹ̀lú àwọn ọjọ́gbọ́n fún ìtọ́nisọ́nà àti ìdàgbàsókè iṣẹ́." }
+      },
+      "howToHelpTitle": "Báwo Ni O Ṣe Lè Ran Lọ́wọ́",
+      "howToHelpSubtitle": "Ẹbùn rẹ ń nípa tààrà sí ìgbésí ayé àti ọjọ́ iwájú akẹ́kọ̀ọ́. Èyí ni bí ìlànà àtìlẹyìn ṣe ń ṣiṣẹ́:",
+      "steps": {
+        "choose": { "title": "Yan Ìpele Rẹ", "desc": "Yan ìpele àtìlẹyìn tí ó bá agbára rẹ mu" },
+        "match": { "title": "Bára Akẹ́kọ̀ọ́ Mu", "desc": "A ń sopọ̀ ọ mọ́ akẹ́kọ̀ọ́ tí ó nílò àtìlẹyìn" },
+        "track": { "title": "Tọpa Ìlọsíwájú", "desc": "Gba àwọn ìsọfúnni nípa àwọn àṣeyọrí akẹ́kọ̀ọ́ rẹ" },
+        "impact": { "title": "Rí Ipa Náà", "desc": "Jẹ́rìí sí ìyípadà tí àtìlẹyìn rẹ ń ṣẹ̀dá" }
+      },
+      "ctaTitle": "Yí Ìgbésí Ayé Padà Lónìí",
+      "ctaText": "Gbogbo ẹbùn, láìka ìwọ̀n rẹ̀ sí, ń ran akẹ́kọ̀ọ́ kan lọ́wọ́ láti sún mọ́ àwọn àlá rẹ̀. Darapọ̀ mọ́ wa nínú kíkọ́ àwọn aṣáájú ọjọ́ iwájú ti orílẹ̀-èdè Yorùbá."
+    },
+    "culture": {
+      "badge": "Ìgbélarugẹ Àṣà",
+      "title": "Ṣíṣe Ayẹyẹ",
+      "titleHighlight": "Àjogúnbá Wa",
+      "subtitle": "Ètò ìgbélarugẹ àṣà wa ń ṣiṣẹ́ láti tọ́jú, ṣe ayẹyẹ, àti pín àwọn àṣà ọlọ́rọ̀ ti àwọn ọmọ Yorùbá. Láti èdè àti orin sí iṣẹ́ ọnà àti àṣà, a rí dájú pé àjogúnbá wa ń gbilẹ̀ fún àwọn ìran tí ó ń bọ̀.",
+      "supportCulture": "Ṣe Àtìlẹyìn Àṣà",
+      "initiativesTitle": "Àwọn Ètò Àṣà Wa",
+      "initiativesSubtitle": "A ń ṣiṣẹ́ ní ọ̀pọ̀lọpọ̀ apá láti rí dájú pé àjogúnbá àṣà Yorùbá ń gbilẹ̀ àti pé gbogbo ènìyàn lè lọ́ sí.",
+      "initiatives": {
+        "music": { "title": "Orin & Ijó Àtijọ́", "description": "Títọ́jú àti kíkọ́ni orin, ìlù, àti àwọn irú ijó àtijọ́ Yorùbá fún àwọn ìran tuntun." },
+        "language": { "title": "Títọ́jú Èdè", "description": "Ṣíṣe àgbékalẹ̀ àwọn ohun èlò àti àwọn ètò láti kọ́ni àti láti ṣe ìtọ́jú èdè Yorùbá ní àgbáyé." },
+        "arts": { "title": "Iṣẹ́ Ọnà & Iṣẹ́ Ọwọ́", "description": "Ṣíṣe àtìlẹyìn àwọn oníṣẹ́ ọnà àtijọ́ àti ìgbélarugẹ àwọn irú iṣẹ́ ọnà Yorùbá pẹ̀lú adire, àwọn ere, àti iṣẹ́ ilẹ̀kẹ̀." },
+        "events": { "title": "Àwọn Àjọ Àṣà", "description": "Ṣíṣètò àwọn ayẹyẹ, àwọn àpéjọ, àti àwọn ọdún tí ó mú àwùjọ jọpọ̀." }
+      },
+      "whyMattersTitle": "Ìdí Tí Títọ́jú Àṣà Ṣe Pàtàkì",
+      "whyMattersText": "Àṣà jẹ́ ìpìlẹ̀ ìdánimọ̀. Bí àwọn ọmọ Yorùbá ṣe tànkálẹ̀ káríayé, títọ́jú àwọn àsopọ̀ àṣà wa di ohun pàtàkì jùlọ. Àwọn ètò wa rí dájú pé:",
+      "whyMattersList": [
+        "Àwọn ìran tí ó ń bọ̀ gbọ́ àwọn gbòǹgbò àti àjogúnbá wọn",
+        "Ìmọ̀ àti àṣà àtijọ́ ti wà ní àkọsílẹ̀ àti títọ́jú",
+        "Èdè Yorùbá wà láàyè àti pé ó ń dàgbàsókè",
+        "Àwọn oníṣẹ́ ọnà àti oníṣẹ́ ọwọ́ lè tesíwájú iṣẹ́ àtijọ́ wọn",
+        "Àwùjọ wa wà ní àsopọ̀ káríkààgùn"
+      ],
+      "culturalEvents": "Àwọn Àjọ Àṣà",
+      "upcomingEventsTitle": "Àwọn Àjọ Tí Ó Ń Bọ̀",
+      "upcomingEventsSubtitle": "Darapọ̀ mọ́ wa ní àwọn àjọ àṣà àti àwọn ayẹyẹ tí ó ń bọ̀.",
+      "ctaTitle": "Jẹ́ Apá Kan Àjogúnbá Àṣà Wa",
+      "ctaText": "Ran wa lọ́wọ́ láti tọ́jú àti gbé àjogúnbá àṣà ọlọ́rọ̀ ti àwọn ọmọ Yorùbá lárugẹ. Àtìlẹyìn rẹ ń ṣe ìyàtọ̀ pípẹ́."
+    },
+    "water": {
+      "badge": "Iṣẹ́ Ihò Omi",
+      "title": "Mímú Omi Mímọ́ Wá Sí",
+      "titleHighlight": "Àwọn Àwùjọ",
+      "subtitle": "Àǹfààní sí omi mímọ́ jẹ́ ẹ̀tọ́ ọmọnìyàn pàtàkì. Iṣẹ́ ihò omi wa pèsè àwọn ojútùú omi tí ó lè pẹ́ sí àwọn àwùjọ tí kò ní ẹ̀yìn tó káríayé Ilẹ̀ Yorùbá, yíyí àwọn ìgbésí ayé padà àti jíjẹ́ kí ìdàgbàsókè ṣeé ṣe.",
+      "fundBorehole": "Pèsè Owó Fún Ihò Omi",
+      "stats": {
+        "boreholesInstalled": "Àwọn Ihò Omi Tí A Fi Sílẹ̀",
+        "peopleServed": "Àwọn Ènìyàn Tí A Ń Síni",
+        "communitiesReached": "Àwọn Àwùjọ Tí A Dé",
+        "operationalRate": "Ìwọ̀n Ṣíṣiṣẹ́"
+      },
+      "approachTitle": "Ọ̀nà Wa",
+      "approachSubtitle": "A gbà ọ̀nà tí ó kún fún àwọn ohun sí àǹfààní omi, tí ń rí dájú ìwàláàyè àti níní àwùjọ.",
+      "features": {
+        "cleanWater": { "title": "Àǹfààní Omi Mímọ́", "description": "Pípèsè omi mímu tí ó mọ́ àti tí kò léwu sí àwọn àwùjọ tí wọ́n kò ní àǹfààní tẹ́lẹ̀." },
+        "strategic": { "title": "Àwọn Ipò Ọgbọ́n", "description": "Fífi àwọn ihò omi sílẹ̀ ní àwọn agbègbè tí wọ́n nílò jùlọ àti tí ipa àwùjọ ga jùlọ." },
+        "training": { "title": "Ìkọ́ni Àwùjọ", "description": "Kíkọ́ àwọn àwùjọ àdúgbò bí wọ́n ṣe lè ṣe ìtọ́jú àti ṣàkóso àwọn ètò omi wọn." },
+        "maintenance": { "title": "Ìtọ́jú Tí Ń Tẹ̀síwájú", "description": "Pípèsè àtìlẹyìn àti ìtọ́jú tí ń tẹ̀síwájú láti rí dájú ṣíṣiṣẹ́ ìgbà pípẹ́." }
+      },
+      "locationsTitle": "Àwọn Ipò Iṣẹ́",
+      "locationsSubtitle": "A ń yan àwọn àwùjọ lọ́gbọ́n dá lórí àìní, iye ènìyàn, àti ipa tí ó ṣeé ṣe. Àwọn wọ̀nyí ni díẹ̀ nínú àwọn iṣẹ́ wa lọ́wọ́lọ́wọ́ àti tí a gbéròò:",
+      "completed": "Ti Parí",
+      "inProgress": "Ń Lọ Lọ́wọ́",
+      "planned": "A Gbéròò",
+      "howToHelpTitle": "Báwo Ni O Ṣe Lè Ran Lọ́wọ́",
+      "howToHelpSubtitle": "Ẹbùn rẹ ń nípa tààrà sí àwọn àwùjọ tí wọ́n nílò. Èyí ni ohun tí ẹbùn rẹ lè ṣe:",
+      "donationImpacts": {
+        "family": "Pèsè àǹfààní omi fún ìdílé kan fún ọdún mẹ́wàá",
+        "drilling": "Bo gbígbọ́ àti fífi sílẹ̀ ìpìlẹ̀",
+        "complete": "Pèsè owó fún fífi ihò omi sílẹ̀ ní kíkún"
+      },
+      "ctaTitle": "Ran Wa Lọ́wọ́ Láti Mú Omi Wá Sí Àwọn Tí Wọ́n Nílò",
+      "ctaText": "Gbogbo ẹbùn mú wa sún mọ́ pípèsè àǹfààní omi mímọ́ sí àwùjọ mìíràn. Darapọ̀ mọ́ wa nínú ṣíṣe ìyàtọ̀ pípẹ́."
+    }
   }
 }

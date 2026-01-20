@@ -3,9 +3,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Camera, Calendar, Users, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import tourismImg from "@/assets/tourism.jpg";
 
 const ProjectTourism = () => {
+  const { t } = useTranslation();
   const highlights = [
     {
       icon: MapPin,

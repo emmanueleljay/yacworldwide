@@ -115,6 +115,295 @@
     "contactUs": "Contact Us",
     "joinUs": "Join Us",
     "donate": "Donate",
-    "backToHome": "Return to Home"
+    "backToHome": "Back to Home",
+    "viewAllProjects": "View All Projects",
+    "becomeMember": "Become a Member",
+    "returnHome": "Return Home",
+    "donateNow": "Donate Now",
+    "sendMessage": "Send Message",
+    "sending": "Sending..."
+  },
+  "membership": {
+    "badge": "Join YAC",
+    "title": "YAC Membership",
+    "subtitle": "Join the Yoruba Advocacy Council and become part of a global movement dedicated to advancing the progress of Yoruba descendants worldwide.",
+    "introLabel": "Membership of the Yoruba Action Council",
+    "introTitle": "Join Our Global Community",
+    "introText1": "The Yoruba Action Council is a 501(c)3 organization set up and registered in New Jersey, United States of America, dedicated to advancing the progress of Yoruba descendants globally.",
+    "introText2": "As a member, you become part of a vibrant community committed to cultural preservation, economic empowerment, and the advancement of Yoruba interests worldwide.",
+    "objectivesLabel": "Our Purpose",
+    "objectivesTitle": "Membership Objectives",
+    "objectivesSubtitle": "As a YAC member, you commit to supporting these 15 core objectives",
+    "categoriesLabel": "Membership Categories",
+    "categoriesTitle": "Choose Your Membership",
+    "categoriesSubtitle": "YAC offers various membership categories to welcome all Yoruba descendants",
+    "youthTier": "Youth Tier",
+    "importantInfo": "Important Information",
+    "infoItems": [
+      "Membership for ANYAM and AYM categories may be obtained only through referral by a minimum of two foundation members affirming the individual as an honorable Yoruba descendant by birth or marriage.",
+      "The YAC registration fee is a one-time payment required of all members except the honorary members.",
+      "Annual fees and other financial obligations may be levied to all categories of the YAC membership as may be determined from time to time by the YAC executive and ratified by the YAC membership."
+    ],
+    "formLabel": "Get Started",
+    "formTitle": "Register Your Interest",
+    "formSubtitle": "Fill out the form below and our membership team will contact you",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "emailAddress": "Email Address",
+    "phone": "Phone Number",
+    "category": "Membership Category",
+    "selectCategory": "Select a category",
+    "message": "Additional Message",
+    "messagePlaceholder": "Tell us about yourself and why you want to join YAC...",
+    "submit": "Submit Application",
+    "contactLabel": "Have Questions?",
+    "contactTitle": "Contact Our Membership Team",
+    "contactText": "If you have any questions about membership or need assistance with your application, please don't hesitate to reach out."
+  },
+  "leadership": {
+    "badge": "Our Team",
+    "title": "Leadership & Board",
+    "subtitle": "Meet the dedicated individuals who guide YAC's mission to advance the progress of the Yoruba nation and preserve our rich cultural heritage.",
+    "executiveLabel": "Executive Team",
+    "executiveTitle": "Executive Leadership",
+    "ctaTitle": "Join Our Mission",
+    "ctaText": "We're always looking for dedicated individuals to join our cause. Together, we can make a lasting impact on the Yoruba community worldwide."
+  },
+  "donate": {
+    "badge": "Support Our Mission",
+    "title": "Make a Donation",
+    "subtitle": "Your generous contribution helps us advance the progress of Yoruba descendants globally and preserve our rich cultural heritage for future generations.",
+    "impactLabel": "Your Impact",
+    "impactTitle": "Every Contribution Matters",
+    "impactText1": "The Yoruba Action Council is a 501(c)3 nonprofit organization. Your donations are tax-deductible and directly support our mission to empower Yoruba descendants worldwide.",
+    "impactText2": "From educational scholarships to community development projects, your generosity enables us to create meaningful change in the lives of Yoruba people across the globe.",
+    "areasLabel": "Where Your Donation Goes",
+    "areasTitle": "Areas of Impact",
+    "areas": {
+      "education": {
+        "title": "Education",
+        "description": "Supporting scholarships and educational programs for Yoruba youth globally."
+      },
+      "water": {
+        "title": "Water Projects",
+        "description": "Providing clean water through borehole construction in Yoruba communities."
+      },
+      "culture": {
+        "title": "Cultural Preservation",
+        "description": "Preserving and promoting Yoruba language, arts, and traditions."
+      },
+      "community": {
+        "title": "Community Development",
+        "description": "Empowering Yoruba communities through economic and social initiatives."
+      }
+    },
+    "tiersLabel": "Choose Your Contribution",
+    "tiersTitle": "Donation Options",
+    "tiersSubtitle": "Select a giving level that works for you, or enter a custom amount",
+    "mostPopular": "Most Popular",
+    "tiers": {
+      "supporter": {
+        "name": "Supporter",
+        "description": "Help us continue our mission to advance Yoruba heritage and culture worldwide.",
+        "impact": ["Supports educational materials", "Helps fund community events", "Contributes to cultural preservation"]
+      },
+      "advocate": {
+        "name": "Advocate",
+        "description": "Your generosity enables us to expand our reach and impact more communities.",
+        "impact": ["Funds youth mentorship programs", "Supports advocacy initiatives", "Enables community outreach"]
+      },
+      "champion": {
+        "name": "Champion",
+        "description": "Make a significant impact on our educational and empowerment programs.",
+        "impact": ["Sponsors student scholarships", "Funds leadership development", "Supports educational projects"]
+      },
+      "visionary": {
+        "name": "Visionary",
+        "description": "Help us create lasting change through major initiatives and projects.",
+        "impact": ["Funds major project initiatives", "Supports international partnerships", "Enables large-scale impact"]
+      }
+    },
+    "customTitle": "Custom Amount",
+    "customSubtitle": "Enter any amount you'd like to donate",
+    "enterAmount": "Enter amount",
+    "comingSoon": "Payment processing coming soon",
+    "otherWaysLabel": "Other Ways to Support",
+    "otherWaysTitle": "More Ways to Give",
+    "otherWaysText": "Beyond monetary donations, there are many ways you can support the Yoruba Action Council's mission.",
+    "volunteer": {
+      "title": "Volunteer",
+      "description": "Share your time and talents to help with events, programs, and initiatives."
+    },
+    "corporate": {
+      "title": "Corporate Partnerships",
+      "description": "Partner with YAC through sponsorships, matching gifts, or cause marketing."
+    },
+    "planned": {
+      "title": "Planned Giving",
+      "description": "Include YAC in your estate planning to leave a lasting legacy."
+    },
+    "questionsText": "For questions about donations or giving opportunities, please contact us:",
+    "contactTeam": "Contact Our Team",
+    "taxInfo": "The Yoruba Action Council is a registered 501(c)3 nonprofit organization. All donations are tax-deductible to the fullest extent allowed by law. You will receive a tax receipt for your records."
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": "Contact Us",
+    "subtitle": "Have questions or want to get involved? We'd love to hear from you. Reach out to us and let's make a difference together.",
+    "formLabel": "Send a Message",
+    "formTitle": "We'd Love to Hear From You",
+    "formSubtitle": "Fill out the form below and our team will get back to you as soon as possible.",
+    "yourName": "Your Name",
+    "emailAddress": "Email Address",
+    "subject": "Subject",
+    "subjectPlaceholder": "How can we help?",
+    "message": "Message",
+    "messagePlaceholder": "Tell us more about your inquiry...",
+    "infoLabel": "Contact Information",
+    "infoTitle": "Get in Touch",
+    "infoSubtitle": "Whether you have questions about membership, want to learn more about our projects, or are interested in volunteering, we're here to help.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "officeHours": "Office Hours",
+    "officeHoursValue": "Monday - Friday: 9:00 AM - 5:00 PM EST",
+    "location": "Our Location",
+    "messageSent": "Message Sent!",
+    "messageSentDesc": "Thank you for contacting us. We'll get back to you soon."
+  },
+  "projects": {
+    "tourism": {
+      "badge": "Tourism Initiative",
+      "title": "Discover the Beauty of",
+      "titleHighlight": "Yorubaland",
+      "subtitle": "Experience the rich history, vibrant culture, and breathtaking landscapes of Yoruba heritage destinations. Our tourism initiative connects visitors with authentic cultural experiences while supporting local communities.",
+      "supportProject": "Support This Project",
+      "whatWeOffer": "What We Offer",
+      "whatWeOfferSubtitle": "Our tourism program provides comprehensive experiences that celebrate and preserve Yoruba culture.",
+      "highlights": {
+        "heritageSites": {
+          "title": "Heritage Sites",
+          "description": "Explore ancient palaces, sacred groves, and historical landmarks that tell the story of the Yoruba people."
+        },
+        "culturalExperiences": {
+          "title": "Cultural Experiences",
+          "description": "Immerse yourself in festivals, traditional ceremonies, and authentic Yoruba cultural events."
+        },
+        "guidedTours": {
+          "title": "Guided Tours",
+          "description": "Join our organized tours led by knowledgeable guides who bring history to life."
+        },
+        "communityImpact": {
+          "title": "Community Impact",
+          "description": "Your visit supports local communities and helps preserve cultural heritage for future generations."
+        }
+      },
+      "destinationsTitle": "Featured Destinations",
+      "destinationsSubtitle": "Explore these remarkable locations that showcase the depth and beauty of Yoruba heritage.",
+      "destinations": {
+        "ileIfe": { "name": "Ile-Ife", "description": "The spiritual home of the Yoruba people and cradle of civilization" },
+        "oyoEmpire": { "name": "Oyo Empire Ruins", "description": "Historical remnants of one of West Africa's most powerful empires" },
+        "osunOsogbo": { "name": "Osun-Osogbo Sacred Grove", "description": "UNESCO World Heritage Site celebrating the river goddess" },
+        "idanreHills": { "name": "Idanre Hills", "description": "Spectacular natural wonder with rich cultural significance" }
+      },
+      "heritageSites": "Heritage Sites",
+      "ctaTitle": "Ready to Explore Yorubaland?",
+      "ctaText": "Join us in promoting and preserving the rich cultural heritage of the Yoruba people through sustainable tourism."
+    },
+    "education": {
+      "badge": "Educational Sponsorship",
+      "title": "Empowering Through",
+      "titleHighlight": "Education",
+      "subtitle": "Education is the foundation of progress. Our sponsorship program provides financial support, resources, and mentorship to help Yoruba students achieve their academic dreams and become future leaders.",
+      "sponsorStudent": "Sponsor a Student",
+      "stats": {
+        "studentsSponsored": "Students Sponsored",
+        "schoolsSupported": "Schools Supported",
+        "fundsDistributed": "Funds Distributed",
+        "countriesReached": "Countries Reached"
+      },
+      "programsTitle": "Our Programs",
+      "programsSubtitle": "We offer comprehensive educational support through multiple programs designed to address different needs and stages of academic development.",
+      "programs": {
+        "scholarships": { "title": "Scholarships", "description": "Full and partial scholarships for deserving students from primary school through university level." },
+        "materials": { "title": "Educational Materials", "description": "Providing textbooks, school supplies, and learning resources to students in need." },
+        "meritAwards": { "title": "Merit Awards", "description": "Recognizing and rewarding academic excellence to motivate continued success." },
+        "mentorship": { "title": "Mentorship Programs", "description": "Connecting students with professionals for guidance and career development." }
+      },
+      "howToHelpTitle": "How You Can Help",
+      "howToHelpSubtitle": "Your contribution directly impacts a student's life and future. Here's how the sponsorship process works:",
+      "steps": {
+        "choose": { "title": "Choose Your Level", "desc": "Select a sponsorship tier that fits your capacity" },
+        "match": { "title": "Match with a Student", "desc": "We connect you with a student who needs support" },
+        "track": { "title": "Track Progress", "desc": "Receive updates on your sponsored student's achievements" },
+        "impact": { "title": "See the Impact", "desc": "Witness the transformation your support creates" }
+      },
+      "ctaTitle": "Change a Life Today",
+      "ctaText": "Every donation, no matter the size, helps a student move closer to their dreams. Join us in building the future leaders of the Yoruba nation."
+    },
+    "culture": {
+      "badge": "Cultural Promotion",
+      "title": "Celebrating Our",
+      "titleHighlight": "Heritage",
+      "subtitle": "Our cultural promotion initiative works to preserve, celebrate, and share the rich traditions of the Yoruba people. From language and music to art and ceremonies, we ensure our heritage thrives for generations to come.",
+      "supportCulture": "Support Culture",
+      "initiativesTitle": "Our Cultural Initiatives",
+      "initiativesSubtitle": "We work across multiple fronts to ensure the Yoruba cultural heritage remains vibrant and accessible.",
+      "initiatives": {
+        "music": { "title": "Traditional Music & Dance", "description": "Preserving and teaching traditional Yoruba music, drumming, and dance forms to new generations." },
+        "language": { "title": "Language Preservation", "description": "Developing resources and programs to teach and maintain the Yoruba language globally." },
+        "arts": { "title": "Arts & Crafts", "description": "Supporting traditional artisans and promoting Yoruba art forms including adire, sculptures, and beadwork." },
+        "events": { "title": "Cultural Events", "description": "Organizing festivals, conferences, and celebrations that bring the community together." }
+      },
+      "whyMattersTitle": "Why Cultural Preservation Matters",
+      "whyMattersText": "Culture is the foundation of identity. As Yoruba people spread across the globe, maintaining our cultural connections becomes increasingly vital. Our initiatives ensure that:",
+      "whyMattersList": [
+        "Future generations understand their roots and heritage",
+        "Traditional knowledge and practices are documented and preserved",
+        "The Yoruba language remains alive and evolving",
+        "Artists and craftspeople can continue their traditional work",
+        "Our community stays connected across geographical boundaries"
+      ],
+      "culturalEvents": "Cultural Events",
+      "upcomingEventsTitle": "Upcoming Events",
+      "upcomingEventsSubtitle": "Join us at our upcoming cultural events and celebrations.",
+      "ctaTitle": "Be Part of Our Cultural Legacy",
+      "ctaText": "Help us preserve and promote the rich cultural heritage of the Yoruba people. Your support makes a lasting difference."
+    },
+    "water": {
+      "badge": "Water Borehole Project",
+      "title": "Bringing Clean Water to",
+      "titleHighlight": "Communities",
+      "subtitle": "Access to clean water is a fundamental human right. Our borehole project provides sustainable water solutions to underserved communities across Yorubaland, transforming lives and enabling development.",
+      "fundBorehole": "Fund a Borehole",
+      "stats": {
+        "boreholesInstalled": "Boreholes Installed",
+        "peopleServed": "People Served",
+        "communitiesReached": "Communities Reached",
+        "operationalRate": "Operational Rate"
+      },
+      "approachTitle": "Our Approach",
+      "approachSubtitle": "We take a comprehensive approach to water access, ensuring sustainability and community ownership.",
+      "features": {
+        "cleanWater": { "title": "Clean Water Access", "description": "Providing safe, clean drinking water to communities that previously lacked access." },
+        "strategic": { "title": "Strategic Locations", "description": "Installing boreholes in areas with the greatest need and maximum community impact." },
+        "training": { "title": "Community Training", "description": "Teaching local communities how to maintain and manage their water systems." },
+        "maintenance": { "title": "Ongoing Maintenance", "description": "Providing continued support and maintenance to ensure long-term functionality." }
+      },
+      "locationsTitle": "Project Locations",
+      "locationsSubtitle": "We strategically select communities based on need, population, and potential impact. Here are some of our current and planned projects:",
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "planned": "Planned",
+      "howToHelpTitle": "How You Can Help",
+      "howToHelpSubtitle": "Your contribution directly impacts communities in need. Here's what your donation can accomplish:",
+      "donationImpacts": {
+        "family": "Provides water access for a family for 10 years",
+        "drilling": "Covers drilling and basic installation",
+        "complete": "Funds a complete borehole installation"
+      },
+      "ctaTitle": "Help Us Bring Water to Those in Need",
+      "ctaText": "Every donation brings us closer to providing clean water access to another community. Join us in making a lasting difference."
+    }
   }
 }
