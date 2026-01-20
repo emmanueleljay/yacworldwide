@@ -356,17 +356,23 @@
         "events": { "title": "Cultural Events", "description": "Organizing festivals, conferences, and celebrations that bring the community together." }
       },
       "whyMattersTitle": "Why Cultural Preservation Matters",
-      "whyMattersText": "Culture is the foundation of identity. As Yoruba people spread across the globe, maintaining our cultural connections becomes increasingly vital. Our initiatives ensure that:",
-      "whyMattersList": [
+      "whyMattersSubtitle": "Culture is the foundation of identity. As Yoruba people spread across the globe, maintaining our cultural connections becomes increasingly vital. Our initiatives ensure that:",
+      "preservationReasons": [
         "Future generations understand their roots and heritage",
         "Traditional knowledge and practices are documented and preserved",
         "The Yoruba language remains alive and evolving",
         "Artists and craftspeople can continue their traditional work",
         "Our community stays connected across geographical boundaries"
       ],
-      "culturalEvents": "Cultural Events",
+      "culturalEvents": "Cultural Events Hosted",
       "upcomingEventsTitle": "Upcoming Events",
       "upcomingEventsSubtitle": "Join us at our upcoming cultural events and celebrations.",
+      "upcomingEvents": {
+        "festival": { "name": "Yoruba Cultural Festival", "date": "March 15, 2024", "location": "New Jersey, USA" },
+        "workshop": { "name": "Traditional Drumming Workshop", "date": "April 22, 2024", "location": "Virtual Event" },
+        "exhibition": { "name": "Adire Art Exhibition", "date": "May 8, 2024", "location": "Lagos, Nigeria" },
+        "camp": { "name": "Youth Cultural Camp", "date": "June 1-7, 2024", "location": "Ile-Ife, Nigeria" }
+      },
       "ctaTitle": "Be Part of Our Cultural Legacy",
       "ctaText": "Help us preserve and promote the rich cultural heritage of the Yoruba people. Your support makes a lasting difference."
     },
@@ -386,22 +392,28 @@
       "approachSubtitle": "We take a comprehensive approach to water access, ensuring sustainability and community ownership.",
       "features": {
         "cleanWater": { "title": "Clean Water Access", "description": "Providing safe, clean drinking water to communities that previously lacked access." },
-        "strategic": { "title": "Strategic Locations", "description": "Installing boreholes in areas with the greatest need and maximum community impact." },
-        "training": { "title": "Community Training", "description": "Teaching local communities how to maintain and manage their water systems." },
+        "strategicLocations": { "title": "Strategic Locations", "description": "Installing boreholes in areas with the greatest need and maximum community impact." },
+        "communityTraining": { "title": "Community Training", "description": "Teaching local communities how to maintain and manage their water systems." },
         "maintenance": { "title": "Ongoing Maintenance", "description": "Providing continued support and maintenance to ensure long-term functionality." }
       },
       "locationsTitle": "Project Locations",
       "locationsSubtitle": "We strategically select communities based on need, population, and potential impact. Here are some of our current and planned projects:",
-      "completed": "Completed",
-      "inProgress": "In Progress",
-      "planned": "Planned",
+      "statusCompleted": "Completed",
+      "statusInProgress": "In Progress",
+      "statusPlanned": "Planned",
+      "communities": {
+        "okeOgun": { "name": "Oke-Ogun Community", "status": "Completed" },
+        "ekiti": { "name": "Ekiti Rural Area", "status": "Completed" },
+        "oyo": { "name": "Oyo Township", "status": "In Progress" },
+        "osun": { "name": "Osun Village", "status": "In Progress" }
+      },
       "howToHelpTitle": "How You Can Help",
       "howToHelpSubtitle": "Your contribution directly impacts communities in need. Here's what your donation can accomplish:",
-      "donationImpacts": {
-        "family": "Provides water access for a family for 10 years",
-        "drilling": "Covers drilling and basic installation",
-        "complete": "Funds a complete borehole installation"
-      },
+      "donationTiers": [
+        { "amount": "$500", "impact": "Provides water access for a family for 10 years" },
+        { "amount": "$2,500", "impact": "Covers drilling and basic installation" },
+        { "amount": "$5,000", "impact": "Funds a complete borehole installation" }
+      ],
       "ctaTitle": "Help Us Bring Water to Those in Need",
       "ctaText": "Every donation brings us closer to providing clean water access to another community. Join us in making a lasting difference."
     }

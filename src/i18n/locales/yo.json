@@ -356,17 +356,23 @@
         "events": { "title": "Àwọn Àjọ Àṣà", "description": "Ṣíṣètò àwọn ayẹyẹ, àwọn àpéjọ, àti àwọn ọdún tí ó mú àwùjọ jọpọ̀." }
       },
       "whyMattersTitle": "Ìdí Tí Títọ́jú Àṣà Ṣe Pàtàkì",
-      "whyMattersText": "Àṣà jẹ́ ìpìlẹ̀ ìdánimọ̀. Bí àwọn ọmọ Yorùbá ṣe tànkálẹ̀ káríayé, títọ́jú àwọn àsopọ̀ àṣà wa di ohun pàtàkì jùlọ. Àwọn ètò wa rí dájú pé:",
-      "whyMattersList": [
+      "whyMattersSubtitle": "Àṣà jẹ́ ìpìlẹ̀ ìdánimọ̀. Bí àwọn ọmọ Yorùbá ṣe tànkálẹ̀ káríayé, títọ́jú àwọn àsopọ̀ àṣà wa di ohun pàtàkì jùlọ. Àwọn ètò wa rí dájú pé:",
+      "preservationReasons": [
         "Àwọn ìran tí ó ń bọ̀ gbọ́ àwọn gbòǹgbò àti àjogúnbá wọn",
         "Ìmọ̀ àti àṣà àtijọ́ ti wà ní àkọsílẹ̀ àti títọ́jú",
         "Èdè Yorùbá wà láàyè àti pé ó ń dàgbàsókè",
         "Àwọn oníṣẹ́ ọnà àti oníṣẹ́ ọwọ́ lè tesíwájú iṣẹ́ àtijọ́ wọn",
         "Àwùjọ wa wà ní àsopọ̀ káríkààgùn"
       ],
-      "culturalEvents": "Àwọn Àjọ Àṣà",
+      "culturalEvents": "Àwọn Àjọ Àṣà Tí A Ṣètò",
       "upcomingEventsTitle": "Àwọn Àjọ Tí Ó Ń Bọ̀",
       "upcomingEventsSubtitle": "Darapọ̀ mọ́ wa ní àwọn àjọ àṣà àti àwọn ayẹyẹ tí ó ń bọ̀.",
+      "upcomingEvents": {
+        "festival": { "name": "Àjọ Àṣà Yorùbá", "date": "March 15, 2024", "location": "New Jersey, USA" },
+        "workshop": { "name": "Ìdánilẹ́kọ̀ọ́ Ìlù Àtijọ́", "date": "April 22, 2024", "location": "Àjọ Orí Ayélujára" },
+        "exhibition": { "name": "Ìfihàn Iṣẹ́ Ọnà Adire", "date": "May 8, 2024", "location": "Èkó, Nàìjíríà" },
+        "camp": { "name": "Àgọ́ Àṣà Ọ̀dọ́", "date": "June 1-7, 2024", "location": "Ilé-Ifẹ̀, Nàìjíríà" }
+      },
       "ctaTitle": "Jẹ́ Apá Kan Àjogúnbá Àṣà Wa",
       "ctaText": "Ran wa lọ́wọ́ láti tọ́jú àti gbé àjogúnbá àṣà ọlọ́rọ̀ ti àwọn ọmọ Yorùbá lárugẹ. Àtìlẹyìn rẹ ń ṣe ìyàtọ̀ pípẹ́."
     },
@@ -386,22 +392,28 @@
       "approachSubtitle": "A gbà ọ̀nà tí ó kún fún àwọn ohun sí àǹfààní omi, tí ń rí dájú ìwàláàyè àti níní àwùjọ.",
       "features": {
         "cleanWater": { "title": "Àǹfààní Omi Mímọ́", "description": "Pípèsè omi mímu tí ó mọ́ àti tí kò léwu sí àwọn àwùjọ tí wọ́n kò ní àǹfààní tẹ́lẹ̀." },
-        "strategic": { "title": "Àwọn Ipò Ọgbọ́n", "description": "Fífi àwọn ihò omi sílẹ̀ ní àwọn agbègbè tí wọ́n nílò jùlọ àti tí ipa àwùjọ ga jùlọ." },
-        "training": { "title": "Ìkọ́ni Àwùjọ", "description": "Kíkọ́ àwọn àwùjọ àdúgbò bí wọ́n ṣe lè ṣe ìtọ́jú àti ṣàkóso àwọn ètò omi wọn." },
+        "strategicLocations": { "title": "Àwọn Ipò Ọgbọ́n", "description": "Fífi àwọn ihò omi sílẹ̀ ní àwọn agbègbè tí wọ́n nílò jùlọ àti tí ipa àwùjọ ga jùlọ." },
+        "communityTraining": { "title": "Ìkọ́ni Àwùjọ", "description": "Kíkọ́ àwọn àwùjọ àdúgbò bí wọ́n ṣe lè ṣe ìtọ́jú àti ṣàkóso àwọn ètò omi wọn." },
         "maintenance": { "title": "Ìtọ́jú Tí Ń Tẹ̀síwájú", "description": "Pípèsè àtìlẹyìn àti ìtọ́jú tí ń tẹ̀síwájú láti rí dájú ṣíṣiṣẹ́ ìgbà pípẹ́." }
       },
       "locationsTitle": "Àwọn Ipò Iṣẹ́",
       "locationsSubtitle": "A ń yan àwọn àwùjọ lọ́gbọ́n dá lórí àìní, iye ènìyàn, àti ipa tí ó ṣeé ṣe. Àwọn wọ̀nyí ni díẹ̀ nínú àwọn iṣẹ́ wa lọ́wọ́lọ́wọ́ àti tí a gbéròò:",
-      "completed": "Ti Parí",
-      "inProgress": "Ń Lọ Lọ́wọ́",
-      "planned": "A Gbéròò",
+      "statusCompleted": "Ti Parí",
+      "statusInProgress": "Ń Lọ Lọ́wọ́",
+      "statusPlanned": "A Gbéròò",
+      "communities": {
+        "okeOgun": { "name": "Àwùjọ Oke-Ogun", "status": "Ti Parí" },
+        "ekiti": { "name": "Agbègbè Ìgbèríko Èkìtì", "status": "Ti Parí" },
+        "oyo": { "name": "Ìlú Ọ̀yọ́", "status": "Ń Lọ Lọ́wọ́" },
+        "osun": { "name": "Abúlé Ọ̀ṣun", "status": "Ń Lọ Lọ́wọ́" }
+      },
       "howToHelpTitle": "Báwo Ni O Ṣe Lè Ran Lọ́wọ́",
       "howToHelpSubtitle": "Ẹbùn rẹ ń nípa tààrà sí àwọn àwùjọ tí wọ́n nílò. Èyí ni ohun tí ẹbùn rẹ lè ṣe:",
-      "donationImpacts": {
-        "family": "Pèsè àǹfààní omi fún ìdílé kan fún ọdún mẹ́wàá",
-        "drilling": "Bo gbígbọ́ àti fífi sílẹ̀ ìpìlẹ̀",
-        "complete": "Pèsè owó fún fífi ihò omi sílẹ̀ ní kíkún"
-      },
+      "donationTiers": [
+        { "amount": "$500", "impact": "Pèsè àǹfààní omi fún ìdílé kan fún ọdún mẹ́wàá" },
+        { "amount": "$2,500", "impact": "Bo gbígbọ́ àti fífi sílẹ̀ ìpìlẹ̀" },
+        { "amount": "$5,000", "impact": "Pèsè owó fún fífi ihò omi sílẹ̀ ní kíkún" }
+      ],
       "ctaTitle": "Ran Wa Lọ́wọ́ Láti Mú Omi Wá Sí Àwọn Tí Wọ́n Nílò",
       "ctaText": "Gbogbo ẹbùn mú wa sún mọ́ pípèsè àǹfààní omi mímọ́ sí àwùjọ mìíràn. Darapọ̀ mọ́ wa nínú ṣíṣe ìyàtọ̀ pípẹ́."
     }

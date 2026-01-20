@@ -356,17 +356,23 @@
         "events": { "title": "Événements Culturels", "description": "Organiser des festivals, conférences et célébrations qui rassemblent la communauté." }
       },
       "whyMattersTitle": "Pourquoi la Préservation Culturelle Est Importante",
-      "whyMattersText": "La culture est le fondement de l'identité. Alors que les Yoruba se répandent à travers le monde, maintenir nos connexions culturelles devient de plus en plus vital. Nos initiatives garantissent que:",
-      "whyMattersList": [
+      "whyMattersSubtitle": "La culture est le fondement de l'identité. Alors que les Yoruba se répandent à travers le monde, maintenir nos connexions culturelles devient de plus en plus vital. Nos initiatives garantissent que:",
+      "preservationReasons": [
         "Les générations futures comprennent leurs racines et leur patrimoine",
         "Les connaissances et pratiques traditionnelles sont documentées et préservées",
         "La langue Yoruba reste vivante et évolutive",
         "Les artistes et artisans peuvent continuer leur travail traditionnel",
         "Notre communauté reste connectée au-delà des frontières géographiques"
       ],
-      "culturalEvents": "Événements Culturels",
+      "culturalEvents": "Événements Culturels Organisés",
       "upcomingEventsTitle": "Événements à Venir",
       "upcomingEventsSubtitle": "Rejoignez-nous lors de nos prochains événements culturels et célébrations.",
+      "upcomingEvents": {
+        "festival": { "name": "Festival Culturel Yoruba", "date": "15 Mars 2024", "location": "New Jersey, USA" },
+        "workshop": { "name": "Atelier de Percussions Traditionnelles", "date": "22 Avril 2024", "location": "Événement Virtuel" },
+        "exhibition": { "name": "Exposition d'Art Adire", "date": "8 Mai 2024", "location": "Lagos, Nigeria" },
+        "camp": { "name": "Camp Culturel Jeunesse", "date": "1-7 Juin 2024", "location": "Ile-Ife, Nigeria" }
+      },
       "ctaTitle": "Faites Partie de Notre Héritage Culturel",
       "ctaText": "Aidez-nous à préserver et promouvoir le riche patrimoine culturel du peuple Yoruba. Votre soutien fait une différence durable."
     },
@@ -386,22 +392,28 @@
       "approachSubtitle": "Nous adoptons une approche globale de l'accès à l'eau, assurant la durabilité et l'appropriation communautaire.",
       "features": {
         "cleanWater": { "title": "Accès à l'Eau Potable", "description": "Fournir de l'eau potable sûre et propre aux communautés qui n'y avaient pas accès auparavant." },
-        "strategic": { "title": "Emplacements Stratégiques", "description": "Installer des forages dans les zones avec le plus grand besoin et l'impact communautaire maximum." },
-        "training": { "title": "Formation Communautaire", "description": "Enseigner aux communautés locales comment entretenir et gérer leurs systèmes d'eau." },
+        "strategicLocations": { "title": "Emplacements Stratégiques", "description": "Installer des forages dans les zones avec le plus grand besoin et l'impact communautaire maximum." },
+        "communityTraining": { "title": "Formation Communautaire", "description": "Enseigner aux communautés locales comment entretenir et gérer leurs systèmes d'eau." },
         "maintenance": { "title": "Maintenance Continue", "description": "Fournir un soutien et une maintenance continus pour assurer la fonctionnalité à long terme." }
       },
       "locationsTitle": "Emplacements des Projets",
       "locationsSubtitle": "Nous sélectionnons stratégiquement les communautés en fonction des besoins, de la population et de l'impact potentiel. Voici quelques-uns de nos projets actuels et planifiés:",
-      "completed": "Terminé",
-      "inProgress": "En Cours",
-      "planned": "Planifié",
+      "statusCompleted": "Terminé",
+      "statusInProgress": "En Cours",
+      "statusPlanned": "Planifié",
+      "communities": {
+        "okeOgun": { "name": "Communauté Oke-Ogun", "status": "Terminé" },
+        "ekiti": { "name": "Zone Rurale d'Ekiti", "status": "Terminé" },
+        "oyo": { "name": "Canton d'Oyo", "status": "En Cours" },
+        "osun": { "name": "Village d'Osun", "status": "En Cours" }
+      },
       "howToHelpTitle": "Comment Vous Pouvez Aider",
       "howToHelpSubtitle": "Votre contribution impacte directement les communautés dans le besoin. Voici ce que votre don peut accomplir:",
-      "donationImpacts": {
-        "family": "Fournit l'accès à l'eau pour une famille pendant 10 ans",
-        "drilling": "Couvre le forage et l'installation de base",
-        "complete": "Finance une installation complète de forage"
-      },
+      "donationTiers": [
+        { "amount": "500$", "impact": "Fournit l'accès à l'eau pour une famille pendant 10 ans" },
+        { "amount": "2 500$", "impact": "Couvre le forage et l'installation de base" },
+        { "amount": "5 000$", "impact": "Finance une installation complète de forage" }
+      ],
       "ctaTitle": "Aidez-Nous à Apporter de l'Eau à Ceux Qui en Ont Besoin",
       "ctaText": "Chaque don nous rapproche de fournir l'accès à l'eau potable à une autre communauté. Rejoignez-nous pour faire une différence durable."
     }
