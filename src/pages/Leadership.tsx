@@ -45,18 +45,17 @@ const Leadership = () => {
             className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Home
+            {t("common.backToHome")}
           </Link>
           <AnimatedSection className="max-w-3xl">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Our Team
+              {t("leadership.badge")}
             </span>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-4 mb-6">
-              Leadership & Board
+              {t("leadership.title")}
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              Meet the dedicated individuals who guide YAC's mission to advance the 
-              progress of the Yoruba nation and preserve our rich cultural heritage.
+              {t("leadership.subtitle")}
             </p>
           </AnimatedSection>
         </div>
@@ -67,10 +66,10 @@ const Leadership = () => {
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Executive Team
+              {t("leadership.executiveLabel")}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              Executive Leadership
+              {t("leadership.executiveTitle")}
             </h2>
           </AnimatedSection>
 
@@ -117,18 +116,17 @@ const Leadership = () => {
         <div className="container mx-auto px-4 text-center">
           <AnimatedSection>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              Join Our Mission
+              {t("leadership.ctaTitle")}
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-              We're always looking for dedicated individuals to join our cause. 
-              Together, we can make a lasting impact on the Yoruba community worldwide.
+              {t("leadership.ctaText")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/membership">Become a Member</Link>
+                <Link to="/membership">{t("common.becomeMember")}</Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/">Return Home</Link>
+                <Link to="/">{t("common.returnHome")}</Link>
               </Button>
             </div>
           </AnimatedSection>

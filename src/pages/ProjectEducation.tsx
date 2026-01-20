@@ -11,31 +11,31 @@ const ProjectEducation = () => {
   const programs = [
     {
       icon: GraduationCap,
-      title: "Scholarships",
-      description: "Full and partial scholarships for deserving students from primary school through university level.",
+      title: t("projects.education.programs.scholarships.title"),
+      description: t("projects.education.programs.scholarships.description"),
     },
     {
       icon: BookOpen,
-      title: "Educational Materials",
-      description: "Providing textbooks, school supplies, and learning resources to students in need.",
+      title: t("projects.education.programs.materials.title"),
+      description: t("projects.education.programs.materials.description"),
     },
     {
       icon: Award,
-      title: "Merit Awards",
-      description: "Recognizing and rewarding academic excellence to motivate continued success.",
+      title: t("projects.education.programs.meritAwards.title"),
+      description: t("projects.education.programs.meritAwards.description"),
     },
     {
       icon: Users,
-      title: "Mentorship Programs",
-      description: "Connecting students with professionals for guidance and career development.",
+      title: t("projects.education.programs.mentorship.title"),
+      description: t("projects.education.programs.mentorship.description"),
     },
   ];
 
   const stats = [
-    { number: "500+", label: "Students Sponsored" },
-    { number: "25", label: "Schools Supported" },
-    { number: "$200K+", label: "Funds Distributed" },
-    { number: "15", label: "Countries Reached" },
+    { number: "500+", label: t("projects.education.stats.studentsSponsored") },
+    { number: "25", label: t("projects.education.stats.schoolsSupported") },
+    { number: "$200K+", label: t("projects.education.stats.fundsDistributed") },
+    { number: "15", label: t("projects.education.stats.countriesReached") },
   ];
 
   return (
@@ -53,23 +53,21 @@ const ProjectEducation = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-6">
-              Educational Sponsorship
+              {t("projects.education.badge")}
             </span>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mb-6">
-              Empowering Through <span className="text-gradient-gold">Education</span>
+              {t("projects.education.title")} <span className="text-gradient-gold">{t("projects.education.titleHighlight")}</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              Education is the foundation of progress. Our sponsorship program provides financial support, 
-              resources, and mentorship to help Yoruba students achieve their academic dreams and become 
-              future leaders.
+              {t("projects.education.subtitle")}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="xl">
                 <Heart className="w-5 h-5" />
-                Sponsor a Student
+                {t("projects.education.sponsorStudent")}
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/#projects">View All Projects</Link>
+                <Link to="/#projects">{t("common.viewAllProjects")}</Link>
               </Button>
             </div>
           </div>
@@ -97,11 +95,10 @@ const ProjectEducation = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Our Programs
+              {t("projects.education.programsTitle")}
             </h2>
             <p className="text-muted-foreground text-lg">
-              We offer comprehensive educational support through multiple programs designed to address 
-              different needs and stages of academic development.
+              {t("projects.education.programsSubtitle")}
             </p>
           </div>
 
@@ -138,18 +135,18 @@ const ProjectEducation = () => {
 
             <div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                How You Can Help
+                {t("projects.education.howToHelpTitle")}
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Your contribution directly impacts a student's life and future. Here's how the sponsorship process works:
+                {t("projects.education.howToHelpSubtitle")}
               </p>
               
               <div className="space-y-6">
                 {[
-                  { step: "1", title: "Choose Your Level", desc: "Select a sponsorship tier that fits your capacity" },
-                  { step: "2", title: "Match with a Student", desc: "We connect you with a student who needs support" },
-                  { step: "3", title: "Track Progress", desc: "Receive updates on your sponsored student's achievements" },
-                  { step: "4", title: "See the Impact", desc: "Witness the transformation your support creates" },
+                  { step: "1", title: t("projects.education.steps.choose.title"), desc: t("projects.education.steps.choose.desc") },
+                  { step: "2", title: t("projects.education.steps.match.title"), desc: t("projects.education.steps.match.desc") },
+                  { step: "3", title: t("projects.education.steps.track.title"), desc: t("projects.education.steps.track.desc") },
+                  { step: "4", title: t("projects.education.steps.impact.title"), desc: t("projects.education.steps.impact.desc") },
                 ].map((item) => (
                   <div key={item.step} className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
@@ -171,20 +168,19 @@ const ProjectEducation = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Change a Life Today
+            {t("projects.education.ctaTitle")}
           </h2>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-            Every donation, no matter the size, helps a student move closer to their dreams. 
-            Join us in building the future leaders of the Yoruba nation.
+            {t("projects.education.ctaText")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="hero" size="xl">
               <Heart className="w-5 h-5" />
-              Donate Now
+              {t("common.donateNow")}
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/membership">Become a Member</Link>
+              <Link to="/membership">{t("common.becomeMember")}</Link>
             </Button>
           </div>
         </div>

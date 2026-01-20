@@ -11,31 +11,31 @@ const ProjectTourism = () => {
   const highlights = [
     {
       icon: MapPin,
-      title: "Heritage Sites",
-      description: "Explore ancient palaces, sacred groves, and historical landmarks that tell the story of the Yoruba people.",
+      title: t("projects.tourism.highlights.heritageSites.title"),
+      description: t("projects.tourism.highlights.heritageSites.description"),
     },
     {
       icon: Camera,
-      title: "Cultural Experiences",
-      description: "Immerse yourself in festivals, traditional ceremonies, and authentic Yoruba cultural events.",
+      title: t("projects.tourism.highlights.culturalExperiences.title"),
+      description: t("projects.tourism.highlights.culturalExperiences.description"),
     },
     {
       icon: Calendar,
-      title: "Guided Tours",
-      description: "Join our organized tours led by knowledgeable guides who bring history to life.",
+      title: t("projects.tourism.highlights.guidedTours.title"),
+      description: t("projects.tourism.highlights.guidedTours.description"),
     },
     {
       icon: Users,
-      title: "Community Impact",
-      description: "Your visit supports local communities and helps preserve cultural heritage for future generations.",
+      title: t("projects.tourism.highlights.communityImpact.title"),
+      description: t("projects.tourism.highlights.communityImpact.description"),
     },
   ];
 
   const destinations = [
-    { name: "Ile-Ife", description: "The spiritual home of the Yoruba people and cradle of civilization" },
-    { name: "Oyo Empire Ruins", description: "Historical remnants of one of West Africa's most powerful empires" },
-    { name: "Osun-Osogbo Sacred Grove", description: "UNESCO World Heritage Site celebrating the river goddess" },
-    { name: "Idanre Hills", description: "Spectacular natural wonder with rich cultural significance" },
+    { name: t("projects.tourism.destinations.ileIfe.name"), description: t("projects.tourism.destinations.ileIfe.description") },
+    { name: t("projects.tourism.destinations.oyoEmpire.name"), description: t("projects.tourism.destinations.oyoEmpire.description") },
+    { name: t("projects.tourism.destinations.osunOsogbo.name"), description: t("projects.tourism.destinations.osunOsogbo.description") },
+    { name: t("projects.tourism.destinations.idanreHills.name"), description: t("projects.tourism.destinations.idanreHills.description") },
   ];
 
   return (
@@ -53,23 +53,21 @@ const ProjectTourism = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium mb-6">
-              Tourism Initiative
+              {t("projects.tourism.badge")}
             </span>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mb-6">
-              Discover the Beauty of <span className="text-gradient-gold">Yorubaland</span>
+              {t("projects.tourism.title")} <span className="text-gradient-gold">{t("projects.tourism.titleHighlight")}</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              Experience the rich history, vibrant culture, and breathtaking landscapes of Yoruba heritage 
-              destinations. Our tourism initiative connects visitors with authentic cultural experiences 
-              while supporting local communities.
+              {t("projects.tourism.subtitle")}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="xl">
                 <Heart className="w-5 h-5" />
-                Support This Project
+                {t("projects.tourism.supportProject")}
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/#projects">View All Projects</Link>
+                <Link to="/#projects">{t("common.viewAllProjects")}</Link>
               </Button>
             </div>
           </div>
@@ -81,10 +79,10 @@ const ProjectTourism = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
-              What We Offer
+              {t("projects.tourism.whatWeOffer")}
             </h2>
             <p className="text-muted-foreground text-lg">
-              Our tourism program provides comprehensive experiences that celebrate and preserve Yoruba culture.
+              {t("projects.tourism.whatWeOfferSubtitle")}
             </p>
           </div>
 
@@ -111,10 +109,10 @@ const ProjectTourism = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Featured Destinations
+                {t("projects.tourism.destinationsTitle")}
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Explore these remarkable locations that showcase the depth and beauty of Yoruba heritage.
+                {t("projects.tourism.destinationsSubtitle")}
               </p>
               
               <div className="space-y-6">
@@ -143,7 +141,7 @@ const ProjectTourism = () => {
               />
               <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-warm">
                 <div className="text-3xl font-serif font-bold text-primary mb-1">50+</div>
-                <div className="text-muted-foreground text-sm">Heritage Sites</div>
+                <div className="text-muted-foreground text-sm">{t("projects.tourism.heritageSites")}</div>
               </div>
             </div>
           </div>
@@ -154,19 +152,19 @@ const ProjectTourism = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Ready to Explore Yorubaland?
+            {t("projects.tourism.ctaTitle")}
           </h2>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-            Join us in promoting and preserving the rich cultural heritage of the Yoruba people through sustainable tourism.
+            {t("projects.tourism.ctaText")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="hero" size="xl">
               <Heart className="w-5 h-5" />
-              Donate Now
+              {t("common.donateNow")}
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/membership">Become a Member</Link>
+              <Link to="/membership">{t("common.becomeMember")}</Link>
             </Button>
           </div>
         </div>
