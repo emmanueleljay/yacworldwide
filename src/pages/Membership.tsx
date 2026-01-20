@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Target, Users, GraduationCap, Crown, Award, Star } from "lucide-react";
+import membershipImage from "@/assets/membership.jpg";
 
 const Membership = () => {
   const objectives = [
@@ -168,9 +169,38 @@ const Membership = () => {
         </div>
       </header>
 
-      {/* Objectives Section */}
+      {/* Image & Intro Section */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gold-gradient rounded-2xl opacity-20 blur-xl"></div>
+              <img 
+                src={membershipImage} 
+                alt="YAC members celebrating in traditional Yoruba attire" 
+                className="relative rounded-2xl shadow-elevated w-full h-auto object-cover"
+              />
+            </div>
+            <div>
+              <span className="text-primary font-medium uppercase tracking-wider text-sm">
+                Membership of the Yoruba Action Council
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
+                Join Our Global Community
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                The Yoruba Action Council is a 501(c)3 organization set up and registered 
+                in New Jersey, United States of America, dedicated to advancing the progress 
+                of Yoruba descendants globally.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                As a member, you become part of a vibrant community committed to cultural 
+                preservation, economic empowerment, and the advancement of Yoruba interests 
+                worldwide.
+              </p>
+            </div>
+          </div>
+
           <div className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
               Our Purpose
