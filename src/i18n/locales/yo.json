@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "whoWeAre": "Ta Ni Awa",
+    "overview": "Akopọ",
+    "mission": "Iṣẹ́ Àwá",
+    "vision": "Ìran",
+    "history": "Ìtàn",
+    "projects": "Àwọn Iṣẹ́",
+    "tourismPromotion": "Ìgbélarugẹ Irin-àjò",
+    "educationalSponsorship": "Àtìlẹyìn Ẹ̀kọ́",
+    "culturalPromotion": "Ìgbélarugẹ Àṣà",
+    "waterBorehole": "Ihò Omi",
+    "leadership": "Aṣáájú",
+    "membership": "Ọmọ Ẹgbẹ́",
+    "gallery": "Àwòrán",
+    "contact": "Kàn Sí Wa",
+    "donateNow": "Ṣe Ẹbùn Báyìí",
+    "language": "Èdè"
+  },
+  "hero": {
+    "badge": "Ẹgbẹ́ Àìléròwó Olùrànlọ́wọ́ 501(c)(3)",
+    "slides": {
+      "welcome": {
+        "title": "Ẹ Káàbọ̀ Sí",
+        "subtitle": "Igbimọ Iṣẹ́ Yorùbá",
+        "description": "Títẹ̀síwájú ìlọsíwájú orílẹ̀-èdè Yorùbá, títọ́jú àwọn àṣà àtijọ́, àti lílo ìmọ̀ àwọn ọmọ ẹgbẹ́ wa fún ìdàgbàsókè Yorùbá láyé."
+      },
+      "heritage": {
+        "title": "Títọ́jú",
+        "subtitle": "Àṣà Wa Olówó Iyebíye",
+        "description": "Ayẹyẹ àti àbójútó àṣà Yorùbá, èdè, iṣẹ́ ọnà, àti ọgbọ́n àwọn baba ńlá fún àwọn ìran tí ó ń bọ̀."
+      },
+      "tourism": {
+        "title": "Ìgbélarugẹ",
+        "subtitle": "Irin-àjò Ilẹ̀ Yorùbá",
+        "description": "Fífi ẹwà, ìtàn, àti àṣà ọlọ́lá Ilẹ̀ Yorùbá hàn sí àgbáyé nípasẹ̀ àwọn ètò irin-àjò tí ó lè pẹ́."
+      },
+      "education": {
+        "title": "Gbígbéni Lérù",
+        "subtitle": "Nípasẹ̀ Ẹ̀kọ́",
+        "description": "Títọ́jú àwọn akẹ́kọ̀ọ́ àti kíkọ́ àwọn ilé-ìwé láti ṣẹ̀dá àǹfààní fún àwọn ọ̀dọ́ Yorùbá ní àgbáyé."
+      }
+    },
+    "supportMission": "Ṣe Àtìlẹyìn Iṣẹ́ Wa",
+    "learnMore": "Kọ́ Síi Nípa Wa",
+    "stats": {
+      "founded": "Tí A Dá Sílẹ̀",
+      "members": "Àwọn Ọmọ Ẹgbẹ́",
+      "projects": "Àwọn Iṣẹ́"
+    }
+  },
+  "about": {
+    "sectionTitle": "Nípa Wa",
+    "heading": "Títẹ̀síwájú Orílẹ̀-èdè Yorùbá",
+    "description": "Igbimọ Iṣẹ́ Yorùbá (YAC) ti dá sílẹ̀ ní New Jersey, USA ní May 29, 2018 látọwọ́ àwọn ọjọ́gbọ́n Yorùbá tí wọ́n ní ìrònú kan náà láti gbé ìfẹ́ Yorùbá lárugẹ, láti mú àṣà wa dára sí i nípasẹ̀ ìṣèlú àti àtúnṣe orí-ajé-àwùjọ."
+  },
+  "about": {
+    "sectionTitle": "Nípa Wa",
+    "heading": "Títẹ̀síwájú Orílẹ̀-èdè Yorùbá",
+    "description": "Igbimọ Iṣẹ́ Yorùbá (YAC) ti dá sílẹ̀ ní New Jersey, USA ní May 29, 2018 látọwọ́ àwọn ọjọ́gbọ́n Yorùbá tí wọ́n ní ìrònú kan náà láti gbé ìfẹ́ Yorùbá lárugẹ.",
+    "values": {
+      "mission": {
+        "title": "Iṣẹ́ Àwá",
+        "description": "Láti ràn ìlọsíwájú àgbáyé Yorùbá lọ́wọ́ àti láti lo ìmọ̀ wa láti ṣe àtìlẹyìn fún gbígbéni Yorùbá lérù ní àgbáyé."
+      },
+      "unity": {
+        "title": "Ìṣọ̀kan & Àwùjọ",
+        "description": "Ṣiṣẹ́ papọ̀ láti gbé àwọn ènìyàn wa lérù ní gbogbo ìpele àwùjọ, tí ń gbé àlàáfíà, ìṣọ̀kan, ìfẹ́, àti ọrọ̀ lárugẹ."
+      },
+      "global": {
+        "title": "Àkópọ̀ Àgbáyé",
+        "description": "Ṣiṣẹ́ gẹ́gẹ́ bí àsopọ̀ láàrín Orílẹ̀-èdè Yorùbá, àwọn tí wọ́n wà ní òkèrè, àti àjọṣe àgbáyé fún ìdàgbàsókè kárí ayé."
+      },
+      "cultural": {
+        "title": "Títọ́jú Àṣà",
+        "description": "Gbígbé àti ṣíṣe àtìlẹyìn àṣà Yorùbá, dídènà àṣà olówó iyebíye wa láti parun nípasẹ̀ ìwádìí."
+      }
+    },
+    "pledge": {
+      "title": "Ìlérí Wa Patàkì",
+      "intro": "Àwa, àwọn ọmọ ìran Yorùbá, tí a fẹ́ láti gbé ìfẹ́ àti àánú Yorùbá lárugẹ ní àgbáyé...",
+      "items": [
+        "A gbé ibi tí a lè rí, pẹ̀lú ìwà ọ̀tọ́ àti òdodo",
+        "A ṣe àfọkànbalẹ̀ síle àti àgbéjà àṣà wa",
+        "Àwọn ọ̀dọ́ yóò gbé ipò pàtàkì nínú gbogbo àwọn ètò wa"
+      ]
+    }
+  },
+  "cta": {
+    "events": {
+      "label": "Àwọn Àjọ",
+      "title": "Kópa Nínú Àwọn Àjọ",
+      "description": "Wá kí o sì kópa nínú àwọn àjọ wa fún ìdàgbàsókè Yorùbá àti ìtẹ̀síwájú àwọn ilé-iṣẹ́ rẹ̀. Papọ̀, a lè ṣe ìyàtọ̀ tí ó pẹ́.",
+      "button": "Wo Àwọn Àjọ Tí Ó Ń Bọ̀"
+    },
+    "donate": {
+      "label": "Ṣe Àtìlẹyìn Wa",
+      "title": "Jẹ́ Ká Ṣe Ìyípadà Papọ̀",
+      "description": "Ẹbùn rẹ ọlá-ńlá ń ran wa lọ́wọ́ láti tesíwájú iṣẹ́ wa láti mú orílẹ̀-èdè Yorùbá lọsíwájú, láti ṣe àtìlẹyìn ẹ̀kọ́, àti láti tọ́jú àṣà wa.",
+      "button": "Ṣe Ẹbùn"
+    }
+  },
+  "footer": {
+    "description": "Ẹgbẹ́ àìléròwó 501(c)(3) tí ó ń gbé àṣà, àánú, àti ìlọsíwájú àwọn ọmọ Yorùbá lárugẹ ní àgbáyé láti ọdún 2018.",
+    "quickLinks": "Àwọn Àsopọ̀ Kíá",
+    "links": {
+      "ourProjects": "Àwọn Iṣẹ́ Wa",
+      "events": "Àwọn Àjọ",
+      "donate": "Ṣe Ẹbùn",
+      "contactUs": "Kàn Sí Wa",
+      "privacyPolicy": "Ìlànà Àṣírí"
+    },
+    "contactTitle": "Kàn Sí Wa",
+    "copyright": "© {{year}} Igbimọ Iṣẹ́ Yorùbá. Gbogbo ẹ̀tọ́ ni a tọ́jú.",
+    "taxExempt": "Ẹgbẹ́ Tí Kò Sanwó Òwò 501(c)(3)"
+  },
+  "common": {
+    "readMore": "Ka Síi",
+    "learnMore": "Kọ́ Síi",
+    "contactUs": "Kàn Sí Wa",
+    "joinUs": "Darapọ̀ Mọ́ Wa",
+    "donate": "Ṣe Ẹbùn",
+    "backToHome": "Padà Sí Ilé"
+  }
+}

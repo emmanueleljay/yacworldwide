@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
@@ -7,50 +8,51 @@ import cultureBg from "@/assets/culture.jpg";
 import tourismBg from "@/assets/tourism.jpg";
 import educationBg from "@/assets/education.jpg";
 
-const slides = [
-  {
-    image: heroBg,
-    title: "Welcome to",
-    subtitle: "Yoruba Action Council",
-    description: "Advancing the progress of the Yoruba nation, preserving cultural traditions, and deploying the professionalism of our members for global Yoruba development.",
-  },
-  {
-    image: cultureBg,
-    title: "Preserving",
-    subtitle: "Our Rich Heritage",
-    description: "Celebrating and protecting Yoruba cultural traditions, language, arts, and ancestral wisdom for future generations.",
-  },
-  {
-    image: tourismBg,
-    title: "Promoting",
-    subtitle: "Yorubaland Tourism",
-    description: "Showcasing the beauty, history, and vibrant culture of Yorubaland to the world through sustainable tourism initiatives.",
-  },
-  {
-    image: educationBg,
-    title: "Empowering",
-    subtitle: "Through Education",
-    description: "Sponsoring students and building educational infrastructure to create opportunities for Yoruba youth worldwide.",
-  },
-];
-
 const Hero = () => {
+  const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const slides = [
+    {
+      image: heroBg,
+      titleKey: "hero.slides.welcome.title",
+      subtitleKey: "hero.slides.welcome.subtitle",
+      descriptionKey: "hero.slides.welcome.description",
+    },
+    {
+      image: cultureBg,
+      titleKey: "hero.slides.heritage.title",
+      subtitleKey: "hero.slides.heritage.subtitle",
+      descriptionKey: "hero.slides.heritage.description",
+    },
+    {
+      image: tourismBg,
+      titleKey: "hero.slides.tourism.title",
+      subtitleKey: "hero.slides.tourism.subtitle",
+      descriptionKey: "hero.slides.tourism.description",
+    },
+    {
+      image: educationBg,
+      titleKey: "hero.slides.education.title",
+      subtitleKey: "hero.slides.education.subtitle",
+      descriptionKey: "hero.slides.education.description",
+    },
+  ];
 
   const nextSlide = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     setTimeout(() => setIsTransitioning(false), 700);
-  }, [isTransitioning]);
+  }, [isTransitioning, slides.length]);
 
   const prevSlide = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     setTimeout(() => setIsTransitioning(false), 700);
-  }, [isTransitioning]);
+  }, [isTransitioning, slides.length]);
 
   const goToSlide = (index: number) => {
     if (isTransitioning || index === currentSlide) return;
@@ -123,7 +125,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full mb-8 animate-fade-up opacity-0 stagger-1">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-primary-foreground/90 text-sm font-medium">
-              501(c)(3) Non-Profit Organization
+              {t("hero.badge")}
             </span>
           </div>
 
@@ -138,9 +140,9 @@ const Hero = () => {
                     : "opacity-0 translate-y-8 absolute inset-0 pointer-events-none"
                 }`}
               >
-                {slide.title}
+                {t(slide.titleKey)}
                 <span className="block text-gradient-gold mt-2">
-                  {slide.subtitle}
+                  {t(slide.subtitleKey)}
                 </span>
               </h1>
             ))}
@@ -157,7 +159,7 @@ const Hero = () => {
                     : "opacity-0 translate-y-4 absolute inset-0 pointer-events-none"
                 }`}
               >
-                {slide.description}
+                {t(slide.descriptionKey)}
               </p>
             ))}
           </div>
@@ -167,28 +169,28 @@ const Hero = () => {
             <Link to="/donate">
               <Button variant="hero" size="xl" className="group">
                 <Heart className="w-5 h-5" />
-                Support Our Mission
+                {t("hero.supportMission")}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Button variant="heroOutline" size="xl">
-              Learn More About Us
+              {t("hero.learnMore")}
             </Button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 animate-fade-up opacity-0 stagger-5">
             {[
-              { number: "2018", label: "Founded" },
-              { number: "1000+", label: "Members" },
-              { number: "50+", label: "Projects" },
+              { number: "2018", labelKey: "hero.stats.founded" },
+              { number: "1000+", labelKey: "hero.stats.members" },
+              { number: "50+", labelKey: "hero.stats.projects" },
             ].map((stat) => (
-              <div key={stat.label} className="text-center">
+              <div key={stat.labelKey} className="text-center">
                 <div className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground">
                   {stat.number}
                 </div>
                 <div className="text-primary-foreground/70 text-sm mt-1">
-                  {stat.label}
+                  {t(stat.labelKey)}
                 </div>
               </div>
             ))}
