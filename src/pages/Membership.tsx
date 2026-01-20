@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,8 @@ import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 import membershipImage from "@/assets/membership.jpg";
 
 const Membership = () => {
+  const { t } = useTranslation();
+
   const objectives = [
     "Advance the progress of Yoruba descendants globally.",
     "Use resources to support the empowerment of Yorubas globally.",
@@ -157,18 +160,17 @@ const Membership = () => {
             className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Home
+            {t('common.backToHome')}
           </Link>
           <AnimatedSection className="max-w-3xl">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Join YAC
+              {t('membership.badge')}
             </span>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-4 mb-6">
-              YAC Membership
+              {t('membership.title')}
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              Join the Yoruba Advocacy Council and become part of a global movement 
-              dedicated to advancing the progress of Yoruba descendants worldwide.
+              {t('membership.subtitle')}
             </p>
           </AnimatedSection>
         </div>
@@ -188,33 +190,29 @@ const Membership = () => {
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
-                Membership of the Yoruba Action Council
+                {t('membership.introLabel')}
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                Join Our Global Community
+                {t('membership.introTitle')}
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                The Yoruba Action Council is a 501(c)3 organization set up and registered 
-                in New Jersey, United States of America, dedicated to advancing the progress 
-                of Yoruba descendants globally.
+                {t('membership.introText1')}
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                As a member, you become part of a vibrant community committed to cultural 
-                preservation, economic empowerment, and the advancement of Yoruba interests 
-                worldwide.
+                {t('membership.introText2')}
               </p>
             </AnimatedSection>
           </div>
 
           <AnimatedSection className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Our Purpose
+              {t('membership.objectivesLabel')}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              Membership Objectives
+              {t('membership.objectivesTitle')}
             </h2>
             <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-              As a YAC member, you commit to supporting these 15 core objectives
+              {t('membership.objectivesSubtitle')}
             </p>
           </AnimatedSection>
 
@@ -245,13 +243,13 @@ const Membership = () => {
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Membership Categories
+              {t('membership.categoriesLabel')}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              Choose Your Membership
+              {t('membership.categoriesTitle')}
             </h2>
             <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-              YAC offers various membership categories to welcome all Yoruba descendants
+              {t('membership.categoriesSubtitle')}
             </p>
           </AnimatedSection>
 
@@ -269,7 +267,7 @@ const Membership = () => {
                 {category.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <span className="bg-gold-gradient text-primary-foreground px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap">
-                      Youth Tier
+                      {t('membership.youthTier')}
                     </span>
                   </div>
                 )}
@@ -320,32 +318,15 @@ const Membership = () => {
             <div className="bg-card rounded-2xl p-8 shadow-warm">
               <h3 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                 <Target className="w-5 h-5 text-primary" />
-                Important Information
+                {t('membership.importantInfo')}
               </h3>
               <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                  <span>
-                    Membership for ANYAM and AYM categories may be obtained only through referral 
-                    by a minimum of two foundation members affirming the individual as an honorable 
-                    Yoruba descendant by birth or marriage.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                  <span>
-                    The YAC registration fee is a one-time payment required of all members 
-                    except the honorary members.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                  <span>
-                    Annual fees and other financial obligations may be levied to all categories 
-                    of the YAC membership as may be determined from time to time by the YAC 
-                    executive and ratified by the YAC membership.
-                  </span>
-                </li>
+                {(t('membership.infoItems', { returnObjects: true }) as string[]).map((item, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </AnimatedSection>
@@ -358,13 +339,13 @@ const Membership = () => {
           <div className="max-w-2xl mx-auto">
             <AnimatedSection className="text-center mb-12">
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
-                Get Started
+                {t('membership.registerLabel')}
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-                Register Your Interest
+                {t('membership.registerTitle')}
               </h2>
               <p className="text-muted-foreground text-lg mt-4">
-                Fill out the form below and our membership team will contact you
+                {t('membership.registerSubtitle')}
               </p>
             </AnimatedSection>
 
@@ -373,80 +354,73 @@ const Membership = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      First Name
+                      {t('membership.form.firstName')}
                     </label>
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder="Enter your first name"
+                      placeholder={t('membership.form.firstName')}
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Last Name
+                      {t('membership.form.lastName')}
                     </label>
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder="Enter your last name"
+                      placeholder={t('membership.form.lastName')}
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    Email Address
+                    {t('membership.form.email')}
                   </label>
                   <input
                     type="email"
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="Enter your email"
+                    placeholder={t('membership.form.email')}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    Phone Number
+                    {t('membership.form.phone')}
                   </label>
                   <input
                     type="tel"
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="Enter your phone number"
+                    placeholder={t('membership.form.phone')}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    Membership Category Interest
+                    {t('membership.form.category')}
                   </label>
                   <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
-                    <option value="">Select a membership category</option>
-                    <option value="foundation">Foundation Member - $500</option>
-                    <option value="anyam">ANYAM (Adult 35+) - $500</option>
-                    <option value="aym-high">AYM High Income - $250</option>
-                    <option value="aym-min">AYM Minimum Wage - $100</option>
-                    <option value="student-grad">Student Graduate - $50</option>
-                    <option value="student-undergrad">Student Undergraduate - $25</option>
-                    <option value="honorary">Honorary Member</option>
+                    <option value="">{t('membership.form.selectCategory')}</option>
+                    {membershipCategories.map((cat) => (
+                      <option key={cat.name} value={cat.name}>
+                        {cat.name} - {cat.price}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    Do you have referrals from Foundation Members?
+                    {t('membership.form.message')}
                   </label>
                   <textarea
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[100px]"
-                    placeholder="If you have referrals from Foundation Members, please provide their names here..."
+                    rows={4}
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+                    placeholder={t('membership.form.messagePlaceholder')}
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Why do you want to join YAC?
-                  </label>
-                  <textarea
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[120px]"
-                    placeholder="Tell us about your interest in joining..."
-                  />
-                </div>
-                <Button variant="hero" size="xl" className="w-full">
-                  Submit Application
+                <Button
+                  type="submit"
+                  className="w-full bg-gold-gradient hover:opacity-90 text-primary-foreground py-3"
+                >
+                  {t('membership.form.submit')}
                 </Button>
               </form>
             </AnimatedSection>
@@ -454,25 +428,19 @@ const Membership = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-hero-gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedSection>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              Questions About Membership?
+              {t('membership.ctaTitle')}
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-              Our team is here to help you choose the right membership category and 
-              answer any questions you may have about joining YAC.
+              {t('membership.ctaText')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl" asChild>
-                <Link to="/contact">Contact Us</Link>
-              </Button>
-              <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/">Return Home</Link>
-              </Button>
-            </div>
+            <Button variant="hero" size="xl" asChild>
+              <Link to="/contact">{t('membership.ctaButton')}</Link>
+            </Button>
           </AnimatedSection>
         </div>
       </section>
