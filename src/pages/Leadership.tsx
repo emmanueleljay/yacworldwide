@@ -117,8 +117,8 @@ const Leadership = () => {
             Together, we can make a lasting impact on the Yoruba community worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl">
-              Become a Member
+            <Button variant="hero" size="xl" asChild>
+              <Link to="/membership">Become a Member</Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <Link to="/">Return Home</Link>
