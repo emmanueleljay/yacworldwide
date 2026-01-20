@@ -24,11 +24,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={mainLogo} alt="YAC Worldwide Logo" className="h-12 w-auto" />
-            <span className="font-serif text-xl font-semibold text-foreground">
-              YAC Worldwide
-            </span>
+          <Link to="/" className="flex items-center">
+            <img src={mainLogo} alt="YAC Worldwide Logo" className="h-16 lg:h-20 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

@@ -26,12 +26,8 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-3 mb-6">
-                <img src={mainLogo} alt="YAC Worldwide Logo" className="h-16 w-auto" />
-                <div>
-                  <span className="font-serif text-2xl font-bold">YAC Worldwide</span>
-                  <p className="text-primary-foreground/60 text-sm">Yoruba Action Council</p>
-                </div>
+              <div className="mb-6">
+                <img src={mainLogo} alt="YAC Worldwide Logo" className="h-24 w-auto" />
               </div>
               <p className="text-primary-foreground/70 leading-relaxed max-w-md mb-6">
                 A 501(c)(3) non-profit organization promoting the heritage, welfare, 
