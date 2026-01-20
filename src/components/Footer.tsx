@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const quickLinks = [
@@ -6,6 +7,7 @@ const Footer = () => {
     { name: "Our Projects", href: "#projects" },
     { name: "Events", href: "#events" },
     { name: "Donate", href: "#contact" },
+    { name: "Privacy Policy", href: "/privacy-policy", isRoute: true },
   ];
 
   const socialLinks = [
@@ -53,12 +55,21 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
+                  {link.isRoute ? (
+                    <Link
+                      to={link.href}
+                      className="text-primary-foreground/70 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-primary-foreground/70 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

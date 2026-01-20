@@ -11,6 +11,7 @@ import ProjectTourism from "./pages/ProjectTourism";
 import ProjectEducation from "./pages/ProjectEducation";
 import ProjectCulture from "./pages/ProjectCulture";
 import ProjectWater from "./pages/ProjectWater";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/projects/education" element={<ProjectEducation />} />
           <Route path="/projects/culture" element={<ProjectCulture />} />
           <Route path="/projects/water" element={<ProjectWater />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
