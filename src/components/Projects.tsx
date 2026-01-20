@@ -81,11 +81,11 @@ const Projects = () => {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-0 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none`}
+                className={`absolute inset-0 z-0 bg-gradient-to-t ${project.color} opacity-0 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none`}
               />
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+              <div className="absolute inset-0 z-10 flex flex-col justify-end p-6 md:p-8">
                 <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                   <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
                     {project.title}
@@ -93,20 +93,22 @@ const Projects = () => {
                   <p className="text-primary-foreground/90 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                     {project.description}
                   </p>
-                  <Link to={project.link} className="relative z-20 inline-block pointer-events-auto">
-                    <Button
-                      variant="heroOutline"
-                      className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"
-                    >
+
+                  <Button
+                    asChild
+                    variant="heroOutline"
+                    className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"
+                  >
+                    <Link to={project.link} className="inline-flex items-center gap-2">
                       Learn More
                       <ArrowRight className="w-4 h-4" />
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </div>
               </div>
 
               {/* Default Title Bar */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/90 to-transparent p-6 group-hover:opacity-0 transition-opacity duration-300">
+              <div className="absolute bottom-0 left-0 right-0 z-0 bg-gradient-to-t from-foreground/90 to-transparent p-6 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
                 <h3 className="font-serif text-xl font-bold text-primary-foreground">
                   {project.title}
                 </h3>
