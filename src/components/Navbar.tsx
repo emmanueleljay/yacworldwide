@@ -10,7 +10,6 @@ const Navbar = () => {
   const isHome = location.pathname === "/";
 
   const navLinks = [
-    { name: "Home", href: isHome ? "#home" : "/", isAnchor: isHome },
     { name: "Who We Are", href: "/who-we-are", isAnchor: false },
     { name: "Projects", href: isHome ? "#projects" : "/#projects", isAnchor: isHome },
     { name: "Leadership", href: "/leadership", isAnchor: false },
