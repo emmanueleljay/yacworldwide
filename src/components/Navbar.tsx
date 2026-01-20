@@ -23,6 +23,7 @@ const Navbar = () => {
     { name: "Overview", href: "/who-we-are" },
     { name: "Mission", href: "/who-we-are/mission" },
     { name: "Vision", href: "/who-we-are/vision" },
+    { name: "History", href: "/who-we-are/history" },
   ];
 
   const projectLinks = [

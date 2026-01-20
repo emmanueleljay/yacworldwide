@@ -17,6 +17,7 @@ import Donate from "./pages/Donate";
 import Gallery from "./pages/Gallery";
 import Mission from "./pages/Mission";
 import Vision from "./pages/Vision";
+import History from "./pages/History";
 import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/who-we-are" element={<WhoWeAre />} />
           <Route path="/who-we-are/mission" element={<Mission />} />
           <Route path="/who-we-are/vision" element={<Vision />} />
+          <Route path="/who-we-are/history" element={<History />} />
           <Route path="/projects/tourism" element={<ProjectTourism />} />
           <Route path="/projects/education" element={<ProjectEducation />} />
           <Route path="/projects/culture" element={<ProjectCulture />} />
