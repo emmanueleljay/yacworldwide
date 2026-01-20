@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, ArrowLeft } from "lucide-react";
+import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 
 import drGodwin from "@/assets/dr-godwin-omolola.jpg";
 import drAlbert from "@/assets/dr-albert-ayeni.jpg";
@@ -40,7 +41,7 @@ const Leadership = () => {
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
-          <div className="max-w-3xl">
+          <AnimatedSection className="max-w-3xl">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
               Our Team
             </span>
@@ -51,29 +52,28 @@ const Leadership = () => {
               Meet the dedicated individuals who guide YAC's mission to advance the 
               progress of the Yoruba nation and preserve our rich cultural heritage.
             </p>
-          </div>
+          </AnimatedSection>
         </div>
       </header>
 
       {/* Executive Leadership */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <AnimatedSection className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
               Executive Team
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
               Executive Leadership
             </h2>
-          </div>
+          </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {executives.map((person, index) => (
-              <div
-                key={person.name}
-                className="group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+          <AnimatedList
+            className="grid md:grid-cols-3 gap-8 lg:gap-12"
+            staggerDelay={200}
+          >
+            {executives.map((person) => (
+              <div key={person.name} className="group">
                 <div className="relative overflow-hidden rounded-2xl mb-6">
                   <img
                     src={person.image}
@@ -101,7 +101,7 @@ const Leadership = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </AnimatedList>
         </div>
       </section>
 
@@ -109,21 +109,23 @@ const Leadership = () => {
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-hero-gradient">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Join Our Mission
-          </h2>
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-            We're always looking for dedicated individuals to join our cause. 
-            Together, we can make a lasting impact on the Yoruba community worldwide.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" asChild>
-              <Link to="/membership">Become a Member</Link>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/">Return Home</Link>
-            </Button>
-          </div>
+          <AnimatedSection>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+              Join Our Mission
+            </h2>
+            <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
+              We're always looking for dedicated individuals to join our cause. 
+              Together, we can make a lasting impact on the Yoruba community worldwide.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/membership">Become a Member</Link>
+              </Button>
+              <Button variant="heroOutline" size="xl" asChild>
+                <Link to="/">Return Home</Link>
+              </Button>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
     </main>

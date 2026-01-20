@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 import tourismImg from "@/assets/tourism.jpg";
 import educationImg from "@/assets/education.jpg";
 import cultureImg from "@/assets/culture.jpg";
@@ -46,7 +47,7 @@ const Projects = () => {
     <section id="projects" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-medium uppercase tracking-wider text-sm">
             Our Projects
           </span>
@@ -57,15 +58,17 @@ const Projects = () => {
             Take part in our projects for the development and advancement of the Yoruba. 
             We want to reach out to those who are in need.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+        <AnimatedList
+          className="grid md:grid-cols-2 gap-8"
+          staggerDelay={200}
+        >
+          {projects.map((project) => (
             <div
               key={project.title}
               className="group relative overflow-hidden rounded-2xl shadow-warm hover:shadow-elevated transition-all duration-500"
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden">
@@ -110,7 +113,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
+        </AnimatedList>
       </div>
     </section>
   );

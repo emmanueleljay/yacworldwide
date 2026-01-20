@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Target, Users, GraduationCap, Crown, Award, Star } from "lucide-react";
+import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 import membershipImage from "@/assets/membership.jpg";
 
 const Membership = () => {
@@ -154,7 +155,7 @@ const Membership = () => {
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
-          <div className="max-w-3xl">
+          <AnimatedSection className="max-w-3xl">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
               Join YAC
             </span>
@@ -165,7 +166,7 @@ const Membership = () => {
               Join the Yoruba Advocacy Council and become part of a global movement 
               dedicated to advancing the progress of Yoruba descendants worldwide.
             </p>
-          </div>
+          </AnimatedSection>
         </div>
       </header>
 
@@ -173,15 +174,15 @@ const Membership = () => {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div className="relative">
+            <AnimatedSection animation="scale-in" className="relative">
               <div className="absolute -inset-4 bg-gold-gradient rounded-2xl opacity-20 blur-xl"></div>
               <img 
                 src={membershipImage} 
                 alt="YAC members celebrating in traditional Yoruba attire" 
                 className="relative rounded-2xl shadow-elevated w-full h-auto object-cover"
               />
-            </div>
-            <div>
+            </AnimatedSection>
+            <AnimatedSection delay={200}>
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
                 Membership of the Yoruba Action Council
               </span>
@@ -198,10 +199,10 @@ const Membership = () => {
                 preservation, economic empowerment, and the advancement of Yoruba interests 
                 worldwide.
               </p>
-            </div>
+            </AnimatedSection>
           </div>
 
-          <div className="text-center mb-16">
+          <AnimatedSection className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
               Our Purpose
             </span>
@@ -211,10 +212,10 @@ const Membership = () => {
             <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
               As a YAC member, you commit to supporting these 15 core objectives
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid gap-4">
+            <AnimatedList className="grid gap-4" staggerDelay={80}>
               {objectives.map((objective, index) => (
                 <div
                   key={index}
@@ -230,7 +231,7 @@ const Membership = () => {
                   </p>
                 </div>
               ))}
-            </div>
+            </AnimatedList>
           </div>
         </div>
       </section>
@@ -238,7 +239,7 @@ const Membership = () => {
       {/* Membership Categories */}
       <section className="py-20 lg:py-28 bg-section-gradient">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <AnimatedSection className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
               Membership Categories
             </span>
@@ -248,16 +249,18 @@ const Membership = () => {
             <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
               YAC offers various membership categories to welcome all Yoruba descendants
             </p>
-          </div>
+          </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {membershipCategories.map((category, index) => (
+          <AnimatedList
+            className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            staggerDelay={100}
+          >
+            {membershipCategories.map((category) => (
               <div
                 key={category.name}
                 className={`relative bg-card rounded-2xl p-6 shadow-warm hover:shadow-elevated transition-all duration-300 flex flex-col ${
                   category.popular ? "ring-2 ring-primary" : ""
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {category.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -307,40 +310,41 @@ const Membership = () => {
                 )}
               </div>
             ))}
-          </div>
+          </AnimatedList>
 
-          {/* Important Notes */}
-          <div className="mt-12 max-w-3xl mx-auto bg-card rounded-2xl p-8 shadow-warm">
-            <h3 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-              <Target className="w-5 h-5 text-primary" />
-              Important Information
-            </h3>
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                <span>
-                  Membership for ANYAM and AYM categories may be obtained only through referral 
-                  by a minimum of two foundation members affirming the individual as an honorable 
-                  Yoruba descendant by birth or marriage.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                <span>
-                  The YAC registration fee is a one-time payment required of all members 
-                  except the honorary members.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                <span>
-                  Annual fees and other financial obligations may be levied to all categories 
-                  of the YAC membership as may be determined from time to time by the YAC 
-                  executive and ratified by the YAC membership.
-                </span>
-              </li>
-            </ul>
-          </div>
+          <AnimatedSection className="mt-12 max-w-3xl mx-auto">
+            <div className="bg-card rounded-2xl p-8 shadow-warm">
+              <h3 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                <Target className="w-5 h-5 text-primary" />
+                Important Information
+              </h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                  <span>
+                    Membership for ANYAM and AYM categories may be obtained only through referral 
+                    by a minimum of two foundation members affirming the individual as an honorable 
+                    Yoruba descendant by birth or marriage.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                  <span>
+                    The YAC registration fee is a one-time payment required of all members 
+                    except the honorary members.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                  <span>
+                    Annual fees and other financial obligations may be levied to all categories 
+                    of the YAC membership as may be determined from time to time by the YAC 
+                    executive and ratified by the YAC membership.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -348,7 +352,7 @@ const Membership = () => {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12">
+            <AnimatedSection className="text-center mb-12">
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
                 Get Started
               </span>
@@ -358,88 +362,90 @@ const Membership = () => {
               <p className="text-muted-foreground text-lg mt-4">
                 Fill out the form below and our membership team will contact you
               </p>
-            </div>
+            </AnimatedSection>
 
-            <form className="bg-card rounded-2xl p-8 shadow-warm space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <AnimatedSection delay={100}>
+              <form className="bg-card rounded-2xl p-8 shadow-warm space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    First Name
+                    Email Address
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="Enter your first name"
+                    placeholder="Enter your email"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    Last Name
+                    Phone Number
                   </label>
                   <input
-                    type="text"
+                    type="tel"
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="Enter your last name"
+                    placeholder="Enter your phone number"
                   />
                 </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="Enter your email"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Membership Category Interest
-                </label>
-                <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
-                  <option value="">Select a membership category</option>
-                  <option value="foundation">Foundation Member - $500</option>
-                  <option value="anyam">ANYAM (Adult 35+) - $500</option>
-                  <option value="aym-high">AYM High Income - $250</option>
-                  <option value="aym-min">AYM Minimum Wage - $100</option>
-                  <option value="student-grad">Student Graduate - $50</option>
-                  <option value="student-undergrad">Student Undergraduate - $25</option>
-                  <option value="honorary">Honorary Member</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Do you have referrals from Foundation Members?
-                </label>
-                <textarea
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[100px]"
-                  placeholder="If you have referrals from Foundation Members, please provide their names here..."
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Why do you want to join YAC?
-                </label>
-                <textarea
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[120px]"
-                  placeholder="Tell us about your interest in joining..."
-                />
-              </div>
-              <Button variant="hero" size="xl" className="w-full">
-                Submit Application
-              </Button>
-            </form>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Membership Category Interest
+                  </label>
+                  <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
+                    <option value="">Select a membership category</option>
+                    <option value="foundation">Foundation Member - $500</option>
+                    <option value="anyam">ANYAM (Adult 35+) - $500</option>
+                    <option value="aym-high">AYM High Income - $250</option>
+                    <option value="aym-min">AYM Minimum Wage - $100</option>
+                    <option value="student-grad">Student Graduate - $50</option>
+                    <option value="student-undergrad">Student Undergraduate - $25</option>
+                    <option value="honorary">Honorary Member</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Do you have referrals from Foundation Members?
+                  </label>
+                  <textarea
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[100px]"
+                    placeholder="If you have referrals from Foundation Members, please provide their names here..."
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Why do you want to join YAC?
+                  </label>
+                  <textarea
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[120px]"
+                    placeholder="Tell us about your interest in joining..."
+                  />
+                </div>
+                <Button variant="hero" size="xl" className="w-full">
+                  Submit Application
+                </Button>
+              </form>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -447,21 +453,23 @@ const Membership = () => {
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-hero-gradient">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Questions About Membership?
-          </h2>
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-            Our team is here to help you choose the right membership category and 
-            answer any questions you may have about joining YAC.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl">
-              Contact Us
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/">Return Home</Link>
-            </Button>
-          </div>
+          <AnimatedSection>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+              Questions About Membership?
+            </h2>
+            <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
+              Our team is here to help you choose the right membership category and 
+              answer any questions you may have about joining YAC.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="xl">
+                Contact Us
+              </Button>
+              <Button variant="heroOutline" size="xl" asChild>
+                <Link to="/">Return Home</Link>
+              </Button>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
     </main>
