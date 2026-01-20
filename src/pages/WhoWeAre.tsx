@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Users, Globe, Crown, Heart, Scale } from "lucide-react";
+import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import yorubaDrummers from "@/assets/yoruba-drummers.jpg";
+import egungunMasquerade from "@/assets/egungun-masquerade.jpg";
 
 const WhoWeAre = () => {
   const highlights = [
@@ -87,6 +90,50 @@ const WhoWeAre = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Cultural Images Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="group relative overflow-hidden rounded-2xl shadow-xl">
+                <img
+                  src={yorubaDrummers}
+                  alt="Traditional Yoruba drummers in ceremonial attire"
+                  className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-primary-foreground font-serif text-xl font-bold mb-2">
+                      Traditional Drummers
+                    </h3>
+                    <p className="text-primary-foreground/90 text-sm">
+                      The talking drum (Dundun) is central to Yoruba culture, used for communication, ceremonies, and celebrations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-2xl shadow-xl">
+                <img
+                  src={egungunMasquerade}
+                  alt="Egungun masquerade performers in colorful traditional costumes"
+                  className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-primary-foreground font-serif text-xl font-bold mb-2">
+                      Egungun Masquerade
+                    </h3>
+                    <p className="text-primary-foreground/90 text-sm">
+                      Sacred ancestral masquerades representing the spirits of departed ancestors, showcasing our deep spiritual heritage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
