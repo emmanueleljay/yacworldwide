@@ -62,9 +62,11 @@ const ProjectTourism = () => {
               {t("projects.tourism.subtitle")}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl">
-                <Heart className="w-5 h-5" />
-                {t("projects.tourism.supportProject")}
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/donate">
+                  <Heart className="w-5 h-5" />
+                  {t("projects.tourism.supportProject")}
+                </Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
                 <Link to="/#projects">{t("common.viewAllProjects")}</Link>
