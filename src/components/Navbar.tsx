@@ -1,20 +1,27 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import mainLogo from "@/assets/main-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [projectsOpen, setProjectsOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
 
   const navLinks = [
     { name: "Who We Are", href: "/who-we-are", isAnchor: false },
-    { name: "Projects", href: isHome ? "#projects" : "/#projects", isAnchor: isHome },
     { name: "Leadership", href: "/leadership", isAnchor: false },
     { name: "Membership", href: "/membership", isAnchor: false },
     { name: "Contact", href: "/contact", isAnchor: false },
+  ];
+
+  const projectLinks = [
+    { name: "Tourism Promotion", href: "/projects/tourism" },
+    { name: "Educational Sponsorship", href: "/projects/education" },
+    { name: "Cultural Promotion", href: "/projects/culture" },
+    { name: "Water Borehole", href: "/projects/water" },
   ];
 
   return (
@@ -28,25 +35,61 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) =>
-              link.isAnchor ? (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {link.name}
-                </a>
-              ) : (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {link.name}
-                </Link>
-              )
-            )}
+            <Link
+              to="/who-we-are"
+              className="text-muted-foreground hover:text-primary transition-colors font-medium"
+            >
+              Who We Are
+            </Link>
+
+            {/* Projects Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors font-medium"
+                onMouseEnter={() => setProjectsOpen(true)}
+                onMouseLeave={() => setProjectsOpen(false)}
+              >
+                Projects
+                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+              </button>
+              <div
+                className={`absolute top-full left-0 pt-2 ${projectsOpen ? 'block' : 'hidden'} group-hover:block`}
+                onMouseEnter={() => setProjectsOpen(true)}
+                onMouseLeave={() => setProjectsOpen(false)}
+              >
+                <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] z-50">
+                  {projectLinks.map((project) => (
+                    <Link
+                      key={project.name}
+                      to={project.href}
+                      className="block px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                    >
+                      {project.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <Link
+              to="/leadership"
+              className="text-muted-foreground hover:text-primary transition-colors font-medium"
+            >
+              Leadership
+            </Link>
+            <Link
+              to="/membership"
+              className="text-muted-foreground hover:text-primary transition-colors font-medium"
+            >
+              Membership
+            </Link>
+            <Link
+              to="/contact"
+              className="text-muted-foreground hover:text-primary transition-colors font-medium"
+            >
+              Contact
+            </Link>
+
             <Link to="/donate">
               <Button variant="hero" size="lg">
                 Donate Now
@@ -66,28 +109,62 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) =>
-                link.isAnchor ? (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={link.name}
-                    to={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                )
-              )}
+            <div className="flex flex-col gap-2">
+              <Link
+                to="/who-we-are"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Who We Are
+              </Link>
+
+              {/* Mobile Projects Accordion */}
+              <div>
+                <button
+                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                  onClick={() => setProjectsOpen(!projectsOpen)}
+                >
+                  Projects
+                  <ChevronDown className={`w-4 h-4 transition-transform ${projectsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {projectsOpen && (
+                  <div className="pl-4 flex flex-col gap-2 mt-2">
+                    {projectLinks.map((project) => (
+                      <Link
+                        key={project.name}
+                        to={project.href}
+                        className="text-muted-foreground hover:text-primary transition-colors py-1"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {project.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link
+                to="/leadership"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Leadership
+              </Link>
+              <Link
+                to="/membership"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Membership
+              </Link>
+              <Link
+                to="/contact"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+
               <Link to="/donate" onClick={() => setIsOpen(false)}>
                 <Button variant="hero" size="lg" className="mt-2 w-full">
                   Donate Now
