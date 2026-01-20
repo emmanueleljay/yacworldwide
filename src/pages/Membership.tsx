@@ -462,8 +462,8 @@ const Membership = () => {
               answer any questions you may have about joining YAC.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl">
-                Contact Us
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/contact">Contact Us</Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
                 <Link to="/">Return Home</Link>
