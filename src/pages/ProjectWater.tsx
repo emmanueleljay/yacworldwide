@@ -11,39 +11,41 @@ const ProjectWater = () => {
   const features = [
     {
       icon: Droplet,
-      title: "Clean Water Access",
-      description: "Providing safe, clean drinking water to communities that previously lacked access.",
+      title: t("projects.water.features.cleanWater.title"),
+      description: t("projects.water.features.cleanWater.description"),
     },
     {
       icon: MapPin,
-      title: "Strategic Locations",
-      description: "Installing boreholes in areas with the greatest need and maximum community impact.",
+      title: t("projects.water.features.strategicLocations.title"),
+      description: t("projects.water.features.strategicLocations.description"),
     },
     {
       icon: Users,
-      title: "Community Training",
-      description: "Teaching local communities how to maintain and manage their water systems.",
+      title: t("projects.water.features.communityTraining.title"),
+      description: t("projects.water.features.communityTraining.description"),
     },
     {
       icon: Wrench,
-      title: "Ongoing Maintenance",
-      description: "Providing continued support and maintenance to ensure long-term functionality.",
+      title: t("projects.water.features.maintenance.title"),
+      description: t("projects.water.features.maintenance.description"),
     },
   ];
 
   const impact = [
-    { number: "20+", label: "Boreholes Installed" },
-    { number: "50K+", label: "People Served" },
-    { number: "30", label: "Communities Reached" },
-    { number: "100%", label: "Operational Rate" },
+    { number: "20+", label: t("projects.water.stats.boreholesInstalled") },
+    { number: "50K+", label: t("projects.water.stats.peopleServed") },
+    { number: "30", label: t("projects.water.stats.communitiesReached") },
+    { number: "100%", label: t("projects.water.stats.operationalRate") },
   ];
 
   const communities = [
-    { name: "Oke-Ogun Region", status: "Completed", year: "2023" },
-    { name: "Ekiti State Villages", status: "Completed", year: "2022" },
-    { name: "Oyo Rural Areas", status: "In Progress", year: "2024" },
-    { name: "Osun Farming Communities", status: "Planned", year: "2024" },
+    { name: t("projects.water.communities.okeOgun.name"), status: t("projects.water.communities.okeOgun.status"), year: "2023" },
+    { name: t("projects.water.communities.ekiti.name"), status: t("projects.water.communities.ekiti.status"), year: "2022" },
+    { name: t("projects.water.communities.oyo.name"), status: t("projects.water.communities.oyo.status"), year: "2024" },
+    { name: t("projects.water.communities.osun.name"), status: t("projects.water.communities.osun.status"), year: "2024" },
   ];
+
+  const donationTiers = t("projects.water.donationTiers", { returnObjects: true }) as { amount: string; impact: string }[];
 
   return (
     <div className="min-h-screen bg-background">
@@ -60,23 +62,21 @@ const ProjectWater = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium mb-6">
-              Water Borehole Project
+              {t("projects.water.badge")}
             </span>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mb-6">
-              Bringing Clean Water to <span className="text-gradient-gold">Communities</span>
+              {t("projects.water.title")} <span className="text-gradient-gold">{t("projects.water.titleHighlight")}</span>
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              Access to clean water is a fundamental human right. Our borehole project provides sustainable 
-              water solutions to underserved communities across Yorubaland, transforming lives and 
-              enabling development.
+              {t("projects.water.subtitle")}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="xl">
                 <Heart className="w-5 h-5" />
-                Fund a Borehole
+                {t("projects.water.fundBorehole")}
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/#projects">View All Projects</Link>
+                <Link to="/#projects">{t("common.viewAllProjects")}</Link>
               </Button>
             </div>
           </div>
@@ -104,10 +104,10 @@ const ProjectWater = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Our Approach
+              {t("projects.water.approachTitle")}
             </h2>
             <p className="text-muted-foreground text-lg">
-              We take a comprehensive approach to water access, ensuring sustainability and community ownership.
+              {t("projects.water.approachSubtitle")}
             </p>
           </div>
 
@@ -144,11 +144,10 @@ const ProjectWater = () => {
 
             <div className="order-1 lg:order-2">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Project Locations
+                {t("projects.water.locationsTitle")}
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                We strategically select communities based on need, population, and potential impact. 
-                Here are some of our current and planned projects:
+                {t("projects.water.locationsSubtitle")}
               </p>
               
               <div className="space-y-4">
@@ -167,9 +166,9 @@ const ProjectWater = () => {
                       </div>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      community.status === 'Completed' 
+                      community.status === t("projects.water.statusCompleted") 
                         ? 'bg-green-100 text-green-700' 
-                        : community.status === 'In Progress'
+                        : community.status === t("projects.water.statusInProgress")
                         ? 'bg-yellow-100 text-yellow-700'
                         : 'bg-muted text-muted-foreground'
                     }`}>
@@ -188,19 +187,15 @@ const ProjectWater = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
-              How You Can Help
+              {t("projects.water.howToHelpTitle")}
             </h2>
             <p className="text-muted-foreground text-lg">
-              Your contribution directly impacts communities in need. Here's what your donation can accomplish:
+              {t("projects.water.howToHelpSubtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              { amount: "$500", impact: "Provides water access for a family for 10 years" },
-              { amount: "$2,500", impact: "Covers drilling and basic installation" },
-              { amount: "$10,000", impact: "Funds a complete borehole installation" },
-            ].map((tier) => (
+            {donationTiers.map((tier) => (
               <div 
                 key={tier.amount}
                 className="bg-card p-8 rounded-2xl shadow-warm hover:shadow-elevated transition-all duration-300 text-center"
@@ -217,20 +212,19 @@ const ProjectWater = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Help Us Bring Water to Those in Need
+            {t("projects.water.ctaTitle")}
           </h2>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-            Every donation brings us closer to providing clean water access to another community. 
-            Join us in making a lasting difference.
+            {t("projects.water.ctaText")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="hero" size="xl">
               <Heart className="w-5 h-5" />
-              Donate Now
+              {t("common.donateNow")}
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/membership">Become a Member</Link>
+              <Link to="/membership">{t("common.becomeMember")}</Link>
             </Button>
           </div>
         </div>

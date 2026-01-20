@@ -36,8 +36,8 @@ const ContactUs = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
+      title: t("contact.messageSent"),
+      description: t("contact.messageSentDesc"),
     });
 
     setFormData({ name: "", email: "", subject: "", message: "" });
@@ -47,24 +47,24 @@ const ContactUs = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Address",
+      title: t("contact.address"),
       details: ["YAC P.O. Box 5130", "Kendall Park, NJ 08824"],
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: t("contact.phone"),
       details: ["732-595-7420"],
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t("contact.email"),
       details: ["Info@yacworldwide.org"],
       isLink: true,
     },
     {
       icon: Clock,
-      title: "Office Hours",
-      details: ["Monday - Friday: 9:00 AM - 5:00 PM EST"],
+      title: t("contact.officeHours"),
+      details: [t("contact.officeHoursValue")],
     },
   ];
 
@@ -84,14 +84,13 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <span className="inline-block px-4 py-2 bg-primary/20 border border-primary/30 rounded-full text-primary-foreground text-sm font-medium mb-6">
-            Get In Touch
+            {t("contact.badge")}
           </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-            Contact Us
+            {t("contact.title")}
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Have questions or want to get involved? We'd love to hear from you.
-            Reach out to us and let's make a difference together.
+            {t("contact.subtitle")}
           </p>
         </div>
       </section>
@@ -103,14 +102,13 @@ const ContactUs = () => {
             {/* Contact Form */}
             <div>
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
-                Send a Message
+                {t("contact.formLabel")}
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                We'd Love to Hear From You
+                {t("contact.formTitle")}
               </h2>
               <p className="text-muted-foreground mb-8">
-                Fill out the form below and our team will get back to you as
-                soon as possible.
+                {t("contact.formSubtitle")}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -120,7 +118,7 @@ const ContactUs = () => {
                       htmlFor="name"
                       className="block text-sm font-medium text-foreground mb-2"
                     >
-                      Your Name *
+                      {t("contact.yourName")} *
                     </label>
                     <Input
                       id="name"
@@ -138,7 +136,7 @@ const ContactUs = () => {
                       htmlFor="email"
                       className="block text-sm font-medium text-foreground mb-2"
                     >
-                      Email Address *
+                      {t("contact.emailAddress")} *
                     </label>
                     <Input
                       id="email"
@@ -158,7 +156,7 @@ const ContactUs = () => {
                     htmlFor="subject"
                     className="block text-sm font-medium text-foreground mb-2"
                   >
-                    Subject *
+                    {t("contact.subject")} *
                   </label>
                   <Input
                     id="subject"
@@ -167,7 +165,7 @@ const ContactUs = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="How can we help?"
+                    placeholder={t("contact.subjectPlaceholder")}
                     className="bg-muted/50"
                   />
                 </div>
@@ -177,7 +175,7 @@ const ContactUs = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-foreground mb-2"
                   >
-                    Message *
+                    {t("contact.message")} *
                   </label>
                   <Textarea
                     id="message"
@@ -185,7 +183,7 @@ const ContactUs = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us more about your inquiry..."
+                    placeholder={t("contact.messagePlaceholder")}
                     rows={6}
                     className="bg-muted/50"
                   />
@@ -198,10 +196,10 @@ const ContactUs = () => {
                   className="w-full sm:w-auto"
                 >
                   {isSubmitting ? (
-                    "Sending..."
+                    t("common.sending")
                   ) : (
                     <>
-                      Send Message
+                      {t("common.sendMessage")}
                       <Send className="ml-2 h-4 w-4" />
                     </>
                   )}
@@ -212,15 +210,13 @@ const ContactUs = () => {
             {/* Contact Information */}
             <div>
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
-                Contact Information
+                {t("contact.infoLabel")}
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                Get in Touch
+                {t("contact.infoTitle")}
               </h2>
               <p className="text-muted-foreground mb-8">
-                Whether you have questions about membership, want to learn more
-                about our projects, or are interested in volunteering, we're
-                here to help.
+                {t("contact.infoSubtitle")}
               </p>
 
               <div className="space-y-6">
@@ -258,7 +254,7 @@ const ContactUs = () => {
               {/* Map Placeholder */}
               <div className="mt-8 p-6 bg-muted/30 rounded-xl border border-border">
                 <h3 className="font-semibold text-foreground mb-4">
-                  Our Location
+                  {t("contact.location")}
                 </h3>
                 <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
                   <div className="text-center">
