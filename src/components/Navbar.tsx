@@ -7,6 +7,7 @@ import mainLogo from "@/assets/main-logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
+  const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
 
@@ -16,6 +17,11 @@ const Navbar = () => {
     { name: "Membership", href: "/membership", isAnchor: false },
     { name: "Gallery", href: "/gallery", isAnchor: false },
     { name: "Contact", href: "/contact", isAnchor: false },
+  ];
+
+  const whoWeAreLinks = [
+    { name: "Overview", href: "/who-we-are" },
+    { name: "Mission", href: "/who-we-are/mission" },
   ];
 
   const projectLinks = [
@@ -36,12 +42,34 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <Link
-              to="/who-we-are"
-              className="text-muted-foreground hover:text-primary transition-colors font-medium"
-            >
-              Who We Are
-            </Link>
+            {/* Who We Are Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors font-medium"
+                onMouseEnter={() => setWhoWeAreOpen(true)}
+                onMouseLeave={() => setWhoWeAreOpen(false)}
+              >
+                Who We Are
+                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+              </button>
+              <div
+                className={`absolute top-full left-0 pt-2 ${whoWeAreOpen ? 'block' : 'hidden'} group-hover:block`}
+                onMouseEnter={() => setWhoWeAreOpen(true)}
+                onMouseLeave={() => setWhoWeAreOpen(false)}
+              >
+                <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[180px] z-50">
+                  {whoWeAreLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
 
             {/* Projects Dropdown */}
             <div className="relative group">
@@ -117,13 +145,30 @@ const Navbar = () => {
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-2">
-              <Link
-                to="/who-we-are"
-                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Who We Are
-              </Link>
+              {/* Mobile Who We Are Accordion */}
+              <div>
+                <button
+                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                  onClick={() => setWhoWeAreOpen(!whoWeAreOpen)}
+                >
+                  Who We Are
+                  <ChevronDown className={`w-4 h-4 transition-transform ${whoWeAreOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {whoWeAreOpen && (
+                  <div className="pl-4 flex flex-col gap-2 mt-2">
+                    {whoWeAreLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className="text-muted-foreground hover:text-primary transition-colors py-1"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* Mobile Projects Accordion */}
               <div>
