@@ -1,4 +1,5 @@
 import { Target, Users, Globe, Shield } from "lucide-react";
+import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 
 const About = () => {
   const values = [
@@ -32,7 +33,7 @@ const About = () => {
     <section id="about" className="py-20 lg:py-32 bg-section-gradient">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-medium uppercase tracking-wider text-sm">
             About Us
           </span>
@@ -44,15 +45,17 @@ const About = () => {
             by like-minded Yoruba professionals to promote Yoruba interest, uphold and enhance 
             our heritage through political and socio-economic rebranding.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Values Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {values.map((value, index) => (
+        <AnimatedList
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+          staggerDelay={150}
+        >
+          {values.map((value) => (
             <div
               key={value.title}
               className="group p-8 bg-card rounded-2xl shadow-warm hover:shadow-elevated transition-all duration-300 hover:-translate-y-1"
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 rounded-xl bg-gold-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <value.icon className="w-7 h-7 text-primary-foreground" />
@@ -65,36 +68,38 @@ const About = () => {
               </p>
             </div>
           ))}
-        </div>
+        </AnimatedList>
 
         {/* Solemn Pledge */}
-        <div className="mt-20 bg-hero-gradient rounded-3xl p-8 md:p-12 lg:p-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="font-serif text-2xl md:text-4xl font-bold text-primary-foreground mb-8">
-              Our Solemn Pledge
-            </h3>
-            <div className="space-y-4 text-primary-foreground/90 text-lg leading-relaxed">
-              <p className="italic">
-                "We, the descendants of the Yoruba, desiring to promote the interests 
-                and welfare of the Yoruba globally..."
-              </p>
-              <ul className="text-left max-w-2xl mx-auto space-y-3 mt-6">
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                  <span>Committed to transparency with a great sense of justice and honesty</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                  <span>Exceptionally committed to excellence in upholding our heritage</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                  <span>The youth shall occupy a prime position in all our efforts</span>
-                </li>
-              </ul>
+        <AnimatedSection className="mt-20" delay={200}>
+          <div className="bg-hero-gradient rounded-3xl p-8 md:p-12 lg:p-16">
+            <div className="max-w-4xl mx-auto text-center">
+              <h3 className="font-serif text-2xl md:text-4xl font-bold text-primary-foreground mb-8">
+                Our Solemn Pledge
+              </h3>
+              <div className="space-y-4 text-primary-foreground/90 text-lg leading-relaxed">
+                <p className="italic">
+                  "We, the descendants of the Yoruba, desiring to promote the interests 
+                  and welfare of the Yoruba globally..."
+                </p>
+                <ul className="text-left max-w-2xl mx-auto space-y-3 mt-6">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                    <span>Committed to transparency with a great sense of justice and honesty</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                    <span>Exceptionally committed to excellence in upholding our heritage</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                    <span>The youth shall occupy a prime position in all our efforts</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );
