@@ -22,6 +22,7 @@ const Navbar = () => {
   const whoWeAreLinks = [
     { name: "Overview", href: "/who-we-are" },
     { name: "Mission", href: "/who-we-are/mission" },
+    { name: "Vision", href: "/who-we-are/vision" },
   ];
 
   const projectLinks = [
