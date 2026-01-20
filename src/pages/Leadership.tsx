@@ -2,53 +2,29 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, ArrowLeft } from "lucide-react";
 
-import leader1 from "@/assets/leader-1.jpg";
-import leader2 from "@/assets/leader-2.jpg";
-import leader3 from "@/assets/leader-3.jpg";
-import leader4 from "@/assets/leader-4.jpg";
-import leader5 from "@/assets/leader-5.jpg";
-import leader6 from "@/assets/leader-6.jpg";
+import drGodwin from "@/assets/dr-godwin-omolola.jpg";
+import drAlbert from "@/assets/dr-albert-ayeni.jpg";
+import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 
 const Leadership = () => {
   const executives = [
     {
-      name: "Chief Adebayo Ogundimu",
-      role: "President",
-      image: leader1,
-      bio: "A visionary leader with over 25 years of experience in community development and cultural preservation. Chief Ogundimu founded YAC with a mission to unite the Yoruba diaspora and advance our heritage globally.",
+      name: "Dr. Godwin Babs Oloyede Omolola",
+      role: "Executive Board Member",
+      image: drGodwin,
+      bio: "Dr. Godwin Babs Oloyede Omolola was born in Lagos to the Sokoti Family from Igbotako, Ondo State. He earned his D.Sc. in Computer Engineering and Digital Security from Colorado Technical University. With over 25 years of experience as a Cybersecurity Solution Architect and Risk Management Practitioner, he has worked with Fortune 500 companies including Chase Manhattan Bank, IBM, AT&T, and various government agencies. He is a member of ISACA, ISC2, FBI InfraGard, and contributes to emerging technologies under Cisco, IEEE, MITRE, and CSA.",
     },
     {
-      name: "Dr. Folake Adeleke",
-      role: "Vice President",
-      image: leader2,
-      bio: "An accomplished educator and cultural advocate, Dr. Adeleke leads our educational sponsorship programs and has helped hundreds of students access quality education.",
+      name: "Dr. Albert Ayeni",
+      role: "Executive Board Member",
+      image: drAlbert,
+      bio: "Dr. Albert Ayeni was born in Lagos and raised in Iffe-Ijumu, Kogi State. He earned his Ph.D. from Cornell University and served on the faculty at the University of Ibadan for 17 years before joining Rutgers University in 1995. Currently serving as Ethnic Crops Research Specialist and Leader of Entrepreneurship Ag Program at Rutgers' School of Environmental and Biological Sciences. He is a consultant to APLU and has led planning committees for NIDO Americas World Conference and multiple education summits.",
     },
     {
-      name: "Hon. Olumide Fashola",
-      role: "Chairman, Board of Trustees",
-      image: leader3,
-      bio: "With decades of experience in law and governance, Hon. Fashola provides strategic oversight and ensures YAC maintains the highest standards of transparency and accountability.",
-    },
-  ];
-
-  const boardMembers = [
-    {
-      name: "Mrs. Adunni Bakare",
-      role: "Secretary General",
-      image: leader4,
-      bio: "An organizational expert dedicated to ensuring smooth operations and effective communication across all YAC chapters worldwide.",
-    },
-    {
-      name: "Mr. Tunde Akinwale",
-      role: "Youth Coordinator",
-      image: leader5,
-      bio: "A passionate advocate for youth empowerment, Tunde leads initiatives to engage the next generation in cultural preservation and leadership.",
-    },
-    {
-      name: "Chief Samuel Adeyemi",
-      role: "Financial Secretary",
-      image: leader6,
-      bio: "A seasoned financial professional ensuring fiscal responsibility and transparency in all YAC financial operations and donor management.",
+      name: "Dr. Akin Awofolaju",
+      role: "Executive Board Member",
+      image: drAkin,
+      bio: "Dr. Akin Awofolaju was born in Lagos and holds an MBA and Ph.D. in Neuroeconomics and Applied Economics. He is an accomplished management consultant and corporate governance executive with experience as former Executive Board Director at Verizon Wireless. Dr. Awofolaju serves as President of NIDOA-USA Northeast Region Chapter and brings extensive expertise in strategic leadership and organizational development.",
     },
   ];
 
@@ -129,46 +105,6 @@ const Leadership = () => {
         </div>
       </section>
 
-      {/* Board Members */}
-      <section className="py-20 lg:py-28 bg-section-gradient">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Governance
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              Board Members
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {boardMembers.map((person, index) => (
-              <div
-                key={person.name}
-                className="bg-card rounded-2xl overflow-hidden shadow-warm hover:shadow-elevated transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={person.image}
-                    alt={person.name}
-                    className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-1">
-                    {person.name}
-                  </h3>
-                  <p className="text-primary font-medium mb-3">{person.role}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {person.bio}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-hero-gradient">
