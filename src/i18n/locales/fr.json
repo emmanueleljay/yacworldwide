@@ -417,5 +417,72 @@
       "ctaTitle": "Aidez-Nous à Apporter de l'Eau à Ceux Qui en Ont Besoin",
       "ctaText": "Chaque don nous rapproche de fournir l'accès à l'eau potable à une autre communauté. Rejoignez-nous pour faire une différence durable."
     }
+  },
+  "faq": {
+    "badge": "Centre d'Aide",
+    "title": "Questions Fréquemment",
+    "titleHighlight": "Posées",
+    "subtitle": "Trouvez des réponses aux questions courantes sur le Conseil d'Action Yoruba, l'adhésion, les dons et nos projets.",
+    "categories": {
+      "general": {
+        "title": "Questions Générales",
+        "q1": {
+          "question": "Qu'est-ce que le Conseil d'Action Yoruba (YAC)?",
+          "answer": "Le Conseil d'Action Yoruba (YAC) est une organisation à but non lucratif 501(c)(3) constituée au New Jersey, USA le 29 mai 2018. Nous sommes dédiés à l'avancement du progrès des descendants Yoruba dans le monde, à la préservation des traditions culturelles et au déploiement du professionnalisme de nos membres pour le développement mondial des Yoruba."
+        },
+        "q2": {
+          "question": "Où se trouve YAC?",
+          "answer": "Le siège de YAC est au New Jersey, États-Unis. Notre adresse postale est P.O. Box 3073, East Orange, NJ 07019. Cependant, nous opérons à l'échelle mondiale et avons des membres sur plusieurs continents."
+        },
+        "q3": {
+          "question": "YAC est-il une organisation exonérée d'impôts?",
+          "answer": "Oui, YAC est une organisation 501(c)(3) enregistrée exonérée d'impôts. Tous les dons faits à YAC sont déductibles d'impôts dans toute la mesure permise par la loi. Les donateurs recevront un reçu fiscal pour leurs dossiers."
+        },
+        "q4": {
+          "question": "Comment puis-je contacter YAC?",
+          "answer": "Vous pouvez nous joindre par email à info@yacworldwide.org, par téléphone au +1 (862) 250-1791, ou via notre formulaire de contact sur la page Nous Contacter. Nos heures de bureau sont du lundi au vendredi, de 9h00 à 17h00 EST."
+        }
+      },
+      "membership": {
+        "title": "Adhésion",
+        "q1": {
+          "question": "Qui peut devenir membre de YAC?",
+          "answer": "L'adhésion est ouverte à tous les descendants Yoruba par naissance ou mariage qui partagent notre vision de faire progresser la nation Yoruba. Nous accueillons des membres de toutes professions et origines qui sont engagés dans notre mission."
+        },
+        "q2": {
+          "question": "Quelles sont les catégories d'adhésion?",
+          "answer": "YAC offre plusieurs catégories d'adhésion: Membres Fondateurs, ANYAM (Membres Associés de l'Assemblée Nationale Yoruba), AYM Senior (50 ans et plus), AYM Régulier (Moins de 50 ans), Étudiant Senior (18-25 ans), Étudiant Junior (Moins de 18 ans) et Membres Honoraires."
+        },
+        "q3": {
+          "question": "Y a-t-il des frais d'adhésion?",
+          "answer": "Oui, il y a des frais d'inscription uniques requis pour tous les membres sauf les membres honoraires. Les frais annuels et autres obligations financières peuvent être déterminés par l'exécutif YAC et ratifiés par les membres."
+        },
+        "q4": {
+          "question": "Comment puis-je postuler pour l'adhésion?",
+          "answer": "Vous pouvez postuler pour l'adhésion en visitant notre page Adhésion et en remplissant le formulaire d'inscription. Pour les catégories ANYAM et AYM, vous aurez besoin d'une recommandation d'au moins deux membres fondateurs qui peuvent attester de votre héritage Yoruba."
+        }
+      },
+      "donations": {
+        "title": "Dons & Soutien",
+        "q1": {
+          "question": "Comment puis-je faire un don à YAC?",
+          "answer": "Vous pouvez faire un don via la page Faire un Don de notre site web. Nous acceptons diverses méthodes de paiement. Vous pouvez choisir parmi des montants de don prédéfinis ou entrer un montant personnalisé qui vous convient."
+        },
+        "q2": {
+          "question": "Où va mon don?",
+          "answer": "Vos dons soutiennent nos quatre principaux domaines de projet: Parrainage Éducatif (bourses et soutien scolaire), Projets de Forage d'Eau (accès à l'eau potable), Promotion Culturelle (préservation du patrimoine Yoruba) et Promotion du Tourisme (mise en valeur de la terre Yoruba)."
+        },
+        "q3": {
+          "question": "Puis-je faire un don à un projet spécifique?",
+          "answer": "Oui, vous pouvez désigner votre don à un projet spécifique. Lors de votre don, vous pouvez indiquer quelle initiative vous souhaitez soutenir, que ce soit l'éducation, l'eau, la culture ou le tourisme."
+        },
+        "q4": {
+          "question": "Y a-t-il d'autres façons de soutenir YAC en dehors des dons?",
+          "answer": "Absolument! Vous pouvez soutenir YAC en donnant de votre temps et de vos compétences, en devenant membre, en sensibilisant à notre mission, en participant à nos événements ou en explorant les opportunités de partenariat d'entreprise."
+        }
+      }
+    },
+    "ctaTitle": "Vous Avez Encore des Questions?",
+    "ctaText": "Vous ne trouvez pas la réponse que vous cherchez? Notre équipe est là pour vous aider. Contactez-nous et nous vous répondrons dans les plus brefs délais."
   }
 }
