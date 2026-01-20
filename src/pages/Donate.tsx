@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,60 +6,74 @@ import { ArrowLeft, Heart, Users, GraduationCap, Droplets, Globe, Check } from "
 import membershipImage from "@/assets/membership.jpg";
 
 const Donate = () => {
-  const { t } = useTranslation();
-
   const donationTiers = [
     {
-      name: t('donate.tiers.supporter.name'),
-      amount: t('donate.tiers.supporter.amount'),
+      name: "Supporter",
+      amount: "$25",
       icon: Heart,
-      description: t('donate.tiers.supporter.description'),
-      impact: t('donate.tiers.supporter.impact', { returnObjects: true }) as string[],
+      description: "Help us continue our mission to advance Yoruba heritage and culture worldwide.",
+      impact: [
+        "Supports educational materials",
+        "Helps fund community events",
+        "Contributes to cultural preservation",
+      ],
     },
     {
-      name: t('donate.tiers.advocate.name'),
-      amount: t('donate.tiers.advocate.amount'),
+      name: "Advocate",
+      amount: "$50",
       icon: Users,
-      description: t('donate.tiers.advocate.description'),
-      impact: t('donate.tiers.advocate.impact', { returnObjects: true }) as string[],
+      description: "Your generosity enables us to expand our reach and impact more communities.",
+      impact: [
+        "Funds youth mentorship programs",
+        "Supports advocacy initiatives",
+        "Enables community outreach",
+      ],
       popular: true,
     },
     {
-      name: t('donate.tiers.champion.name'),
-      amount: t('donate.tiers.champion.amount'),
+      name: "Champion",
+      amount: "$100",
       icon: GraduationCap,
-      description: t('donate.tiers.champion.description'),
-      impact: t('donate.tiers.champion.impact', { returnObjects: true }) as string[],
+      description: "Make a significant impact on our educational and empowerment programs.",
+      impact: [
+        "Sponsors student scholarships",
+        "Funds leadership development",
+        "Supports educational projects",
+      ],
     },
     {
-      name: t('donate.tiers.visionary.name'),
-      amount: t('donate.tiers.visionary.amount'),
+      name: "Visionary",
+      amount: "$250",
       icon: Globe,
-      description: t('donate.tiers.visionary.description'),
-      impact: t('donate.tiers.visionary.impact', { returnObjects: true }) as string[],
+      description: "Help us create lasting change through major initiatives and projects.",
+      impact: [
+        "Funds major project initiatives",
+        "Supports international partnerships",
+        "Enables large-scale impact",
+      ],
     },
   ];
 
   const impactAreas = [
     {
       icon: GraduationCap,
-      title: t('donate.areas.education.title'),
-      description: t('donate.areas.education.description'),
+      title: "Education",
+      description: "Supporting scholarships and educational programs for Yoruba youth globally.",
     },
     {
       icon: Droplets,
-      title: t('donate.areas.water.title'),
-      description: t('donate.areas.water.description'),
+      title: "Water Projects",
+      description: "Providing clean water through borehole construction in Yoruba communities.",
     },
     {
       icon: Globe,
-      title: t('donate.areas.cultural.title'),
-      description: t('donate.areas.cultural.description'),
+      title: "Cultural Preservation",
+      description: "Preserving and promoting Yoruba language, arts, and traditions.",
     },
     {
       icon: Users,
-      title: t('donate.areas.community.title'),
-      description: t('donate.areas.community.description'),
+      title: "Community Development",
+      description: "Empowering Yoruba communities through economic and social initiatives.",
     },
   ];
 
@@ -76,17 +89,18 @@ const Donate = () => {
             className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            {t('common.backToHome')}
+            Back to Home
           </Link>
           <div className="max-w-3xl">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              {t('donate.badge')}
+              Support Our Mission
             </span>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-4 mb-6">
-              {t('donate.title')}
+              Make a Donation
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              {t('donate.subtitle')}
+              Your generous contribution helps us advance the progress of Yoruba descendants 
+              globally and preserve our rich cultural heritage for future generations.
             </p>
           </div>
         </div>
@@ -106,16 +120,20 @@ const Donate = () => {
             </div>
             <div>
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
-                {t('donate.impactLabel')}
+                Your Impact
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                {t('donate.impactTitle')}
+                Every Contribution Matters
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                {t('donate.impactText1')}
+                The Yoruba Action Council is a 501(c)3 nonprofit organization. Your donations 
+                are tax-deductible and directly support our mission to empower Yoruba 
+                descendants worldwide.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                {t('donate.impactText2')}
+                From educational scholarships to community development projects, your 
+                generosity enables us to create meaningful change in the lives of Yoruba 
+                people across the globe.
               </p>
             </div>
           </div>
@@ -123,10 +141,10 @@ const Donate = () => {
           {/* Impact Areas */}
           <div className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              {t('donate.areasLabel')}
+              Where Your Donation Goes
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              {t('donate.areasTitle')}
+              Areas of Impact
             </h2>
           </div>
 
@@ -157,13 +175,13 @@ const Donate = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              {t('donate.tiersLabel')}
+              Choose Your Contribution
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              {t('donate.tiersTitle')}
+              Donation Options
             </h2>
             <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-              {t('donate.tiersSubtitle')}
+              Select a giving level that works for you, or enter a custom amount
             </p>
           </div>
 
@@ -179,7 +197,7 @@ const Donate = () => {
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <span className="bg-gold-gradient text-primary-foreground px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap">
-                      {t('donate.mostPopular')}
+                      Most Popular
                     </span>
                   </div>
                 )}
@@ -213,7 +231,7 @@ const Donate = () => {
                   className="w-full bg-gold-gradient hover:opacity-90 text-primary-foreground"
                   disabled
                 >
-                  {t('donate.donateButton')} {tier.amount}
+                  Donate {tier.amount}
                 </Button>
               </div>
             ))}
@@ -223,10 +241,10 @@ const Donate = () => {
           <div className="max-w-xl mx-auto bg-card rounded-2xl p-8 shadow-warm">
             <div className="text-center mb-6">
               <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
-                {t('donate.customAmount')}
+                Custom Amount
               </h3>
               <p className="text-muted-foreground">
-                {t('donate.customSubtitle')}
+                Enter any amount you'd like to donate
               </p>
             </div>
             <div className="flex gap-4">
@@ -236,7 +254,7 @@ const Donate = () => {
                 </span>
                 <input
                   type="number"
-                  placeholder={t('donate.customPlaceholder')}
+                  placeholder="Enter amount"
                   className="w-full pl-8 pr-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                   min="1"
                 />
@@ -245,11 +263,11 @@ const Donate = () => {
                 className="bg-gold-gradient hover:opacity-90 text-primary-foreground px-8"
                 disabled
               >
-                {t('donate.donateButton')}
+                Donate
               </Button>
             </div>
             <p className="text-center text-muted-foreground text-sm mt-4">
-              {t('donate.comingSoon')}
+              Payment processing coming soon
             </p>
           </div>
         </div>
@@ -260,49 +278,50 @@ const Donate = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              {t('donate.otherWaysLabel')}
+              Other Ways to Support
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-              {t('donate.otherWaysTitle')}
+              More Ways to Give
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {t('donate.otherWaysSubtitle')}
+              Beyond monetary donations, there are many ways you can support the 
+              Yoruba Action Council's mission.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="bg-card rounded-2xl p-6 shadow-warm">
                 <h3 className="font-serif text-lg font-bold text-foreground mb-2">
-                  {t('donate.volunteer.title')}
+                  Volunteer
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  {t('donate.volunteer.description')}
+                  Share your time and talents to help with events, programs, and initiatives.
                 </p>
               </div>
               <div className="bg-card rounded-2xl p-6 shadow-warm">
                 <h3 className="font-serif text-lg font-bold text-foreground mb-2">
-                  {t('donate.corporate.title')}
+                  Corporate Partnerships
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  {t('donate.corporate.description')}
+                  Partner with YAC through sponsorships, matching gifts, or cause marketing.
                 </p>
               </div>
               <div className="bg-card rounded-2xl p-6 shadow-warm">
                 <h3 className="font-serif text-lg font-bold text-foreground mb-2">
-                  {t('donate.planned.title')}
+                  Planned Giving
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  {t('donate.planned.description')}
+                  Include YAC in your estate planning to leave a lasting legacy.
                 </p>
               </div>
             </div>
 
             <div className="mt-12">
               <p className="text-muted-foreground mb-4">
-                {t('donate.contactPrompt')}
+                For questions about donations or giving opportunities, please contact us:
               </p>
               <Link to="/contact">
                 <Button className="bg-gold-gradient hover:opacity-90 text-primary-foreground">
-                  {t('donate.contactButton')}
+                  Contact Our Team
                 </Button>
               </Link>
             </div>
@@ -315,7 +334,9 @@ const Donate = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-muted-foreground text-sm">
-              <strong className="text-foreground">Tax-Deductible:</strong> {t('donate.taxInfo')}
+              <strong className="text-foreground">Tax-Deductible:</strong> The Yoruba Action Council 
+              is a registered 501(c)3 nonprofit organization. All donations are tax-deductible to 
+              the fullest extent allowed by law. You will receive a tax receipt for your records.
             </p>
           </div>
         </div>

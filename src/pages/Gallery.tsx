@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
@@ -18,18 +17,16 @@ import traditionalAttire from "@/assets/traditional-attire.jpg";
 import culturalCeremony from "@/assets/cultural-ceremony.jpg";
 
 const Gallery = () => {
-  const { t } = useTranslation();
-
   const galleryCategories = [
     {
-      title: t('gallery.categories.events'),
+      title: "YAC Events & Gatherings",
       images: [
         { src: yacEvent1, alt: "YAC Think Tank Group annual gathering", caption: "YAC Think Tank Group - Annual gathering featuring leaders and members in traditional attire" },
         { src: yacEvent2, alt: "YAC leadership at official event", caption: "YAC Leadership - Executive members presenting the YAC Solemn Pledge and Mission" },
       ],
     },
     {
-      title: t('gallery.categories.heritage'),
+      title: "Cultural Heritage",
       images: [
         { src: yorubaSculpture, alt: "Traditional Yoruba bronze sculpture", caption: "Ancient Yoruba Bronze Art - Twin figures holding ceremonial vessel, showcasing traditional craftsmanship" },
         { src: cultureImg, alt: "Traditional Yoruba cultural ceremony", caption: "Traditional Yoruba Ceremony - Celebrating our rich cultural heritage" },
@@ -38,7 +35,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: t('gallery.categories.royal'),
+      title: "Royal & Traditional Leadership",
       images: [
         { src: royalMeeting, alt: "Meeting with traditional royalty", caption: "Royal Audience - YAC representatives meeting with traditional Yoruba royalty" },
         { src: traditionalAttire, alt: "Leaders in traditional Yoruba attire", caption: "Traditional Attire - Leaders adorned in ceremonial Yoruba dress at formal event" },
@@ -46,19 +43,19 @@ const Gallery = () => {
       ],
     },
     {
-      title: t('gallery.categories.tourism'),
+      title: "Tourism Promotion",
       images: [
         { src: tourismImg, alt: "Yoruba heritage site monument", caption: "Heritage Monument - Traditional Yoruba landmark promoting cultural tourism" },
       ],
     },
     {
-      title: t('gallery.categories.education'),
+      title: "Educational Sponsorship",
       images: [
         { src: educationImg, alt: "Students in classroom", caption: "Education Initiative - Students benefiting from YAC educational sponsorship programs" },
       ],
     },
     {
-      title: t('gallery.categories.water'),
+      title: "Water Borehole Project",
       images: [
         { src: waterImg, alt: "Community water borehole", caption: "Clean Water Access - Communities benefiting from YAC water borehole projects" },
       ],
@@ -75,13 +72,14 @@ const Gallery = () => {
           <AnimatedSection animation="fade-up">
             <div className="text-center max-w-3xl mx-auto">
               <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-                {t('gallery.badge')}
+                Our Gallery
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                {t('gallery.title')} <span className="text-primary">{t('gallery.titleHighlight')}</span>
+                Moments of <span className="text-primary">Impact</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                {t('gallery.subtitle')}
+                Explore our collection of photos showcasing the projects, events, and 
+                community impact of the Yoruba Action Council across the globe.
               </p>
             </div>
           </AnimatedSection>
@@ -131,16 +129,17 @@ const Gallery = () => {
           <AnimatedSection animation="fade-up">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                {t('gallery.ctaTitle')}
+                Share Your Moments
               </h2>
               <p className="text-muted-foreground mb-8">
-                {t('gallery.ctaText')}
+                Have photos from YAC events or projects? We'd love to feature them in our gallery. 
+                Contact us to share your memories.
               </p>
               <a
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors"
               >
-                {t('gallery.ctaButton')}
+                Contact Us
               </a>
             </div>
           </AnimatedSection>

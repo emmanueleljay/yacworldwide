@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,6 @@ import { MapPin, Phone, Mail, Send, Clock } from "lucide-react";
 import contactBanner from "@/assets/contact-banner.jpg";
 
 const ContactUs = () => {
-  const { t } = useTranslation();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -36,8 +34,8 @@ const ContactUs = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: t('contact.toast.success'),
-      description: t('contact.toast.successDescription'),
+      title: "Message Sent!",
+      description: "Thank you for contacting us. We'll get back to you soon.",
     });
 
     setFormData({ name: "", email: "", subject: "", message: "" });
@@ -47,24 +45,24 @@ const ContactUs = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: t('contact.address'),
+      title: "Address",
       details: ["YAC P.O. Box 5130", "Kendall Park, NJ 08824"],
     },
     {
       icon: Phone,
-      title: t('contact.phone'),
+      title: "Phone",
       details: ["732-595-7420"],
     },
     {
       icon: Mail,
-      title: t('contact.email'),
+      title: "Email",
       details: ["Info@yacworldwide.org"],
       isLink: true,
     },
     {
       icon: Clock,
-      title: t('contact.officeHours'),
-      details: [t('contact.officeHoursValue')],
+      title: "Office Hours",
+      details: ["Monday - Friday: 9:00 AM - 5:00 PM EST"],
     },
   ];
 
@@ -84,13 +82,14 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <span className="inline-block px-4 py-2 bg-primary/20 border border-primary/30 rounded-full text-primary-foreground text-sm font-medium mb-6">
-            {t('contact.badge')}
+            Get In Touch
           </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-            {t('contact.title')}
+            Contact Us
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            {t('contact.subtitle')}
+            Have questions or want to get involved? We'd love to hear from you.
+            Reach out to us and let's make a difference together.
           </p>
         </div>
       </section>
@@ -102,13 +101,14 @@ const ContactUs = () => {
             {/* Contact Form */}
             <div>
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
-                {t('contact.formLabel')}
+                Send a Message
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                {t('contact.formTitle')}
+                We'd Love to Hear From You
               </h2>
               <p className="text-muted-foreground mb-8">
-                {t('contact.formSubtitle')}
+                Fill out the form below and our team will get back to you as
+                soon as possible.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -118,7 +118,7 @@ const ContactUs = () => {
                       htmlFor="name"
                       className="block text-sm font-medium text-foreground mb-2"
                     >
-                      {t('contact.form.name')} *
+                      Your Name *
                     </label>
                     <Input
                       id="name"
@@ -127,7 +127,7 @@ const ContactUs = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder={t('contact.form.namePlaceholder')}
+                      placeholder="John Doe"
                       className="bg-muted/50"
                     />
                   </div>
@@ -136,7 +136,7 @@ const ContactUs = () => {
                       htmlFor="email"
                       className="block text-sm font-medium text-foreground mb-2"
                     >
-                      {t('contact.form.email')} *
+                      Email Address *
                     </label>
                     <Input
                       id="email"
@@ -145,7 +145,7 @@ const ContactUs = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder={t('contact.form.emailPlaceholder')}
+                      placeholder="john@example.com"
                       className="bg-muted/50"
                     />
                   </div>
@@ -156,7 +156,7 @@ const ContactUs = () => {
                     htmlFor="subject"
                     className="block text-sm font-medium text-foreground mb-2"
                   >
-                    {t('contact.form.subject')} *
+                    Subject *
                   </label>
                   <Input
                     id="subject"
@@ -165,7 +165,7 @@ const ContactUs = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder={t('contact.form.subjectPlaceholder')}
+                    placeholder="How can we help?"
                     className="bg-muted/50"
                   />
                 </div>
@@ -175,7 +175,7 @@ const ContactUs = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-foreground mb-2"
                   >
-                    {t('contact.form.message')} *
+                    Message *
                   </label>
                   <Textarea
                     id="message"
@@ -183,7 +183,7 @@ const ContactUs = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder={t('contact.form.messagePlaceholder')}
+                    placeholder="Tell us more about your inquiry..."
                     rows={6}
                     className="bg-muted/50"
                   />
@@ -196,10 +196,10 @@ const ContactUs = () => {
                   className="w-full sm:w-auto"
                 >
                   {isSubmitting ? (
-                    t('contact.form.sending')
+                    "Sending..."
                   ) : (
                     <>
-                      {t('contact.form.submit')}
+                      Send Message
                       <Send className="ml-2 h-4 w-4" />
                     </>
                   )}
@@ -210,13 +210,15 @@ const ContactUs = () => {
             {/* Contact Information */}
             <div>
               <span className="text-primary font-medium uppercase tracking-wider text-sm">
-                {t('contact.infoLabel')}
+                Contact Information
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                {t('contact.infoTitle')}
+                Get in Touch
               </h2>
               <p className="text-muted-foreground mb-8">
-                {t('contact.infoSubtitle')}
+                Whether you have questions about membership, want to learn more
+                about our projects, or are interested in volunteering, we're
+                here to help.
               </p>
 
               <div className="space-y-6">
@@ -254,7 +256,7 @@ const ContactUs = () => {
               {/* Map Placeholder */}
               <div className="mt-8 p-6 bg-muted/30 rounded-xl border border-border">
                 <h3 className="font-semibold text-foreground mb-4">
-                  {t('contact.location')}
+                  Our Location
                 </h3>
                 <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
                   <div className="text-center">

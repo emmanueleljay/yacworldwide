@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,24 +10,22 @@ import drAlbert from "@/assets/dr-albert-ayeni.jpg";
 import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 
 const Leadership = () => {
-  const { t } = useTranslation();
-
   const executives = [
     {
       name: "Dr. Godwin Babs Oloyede Omolola",
-      role: t('leadership.executiveBoardMember'),
+      role: "Executive Board Member",
       image: drGodwin,
       bio: "Dr. Godwin Babs Oloyede Omolola was born in Lagos to the Sokoti Family from Igbotako, Ondo State. He earned his D.Sc. in Computer Engineering and Digital Security from Colorado Technical University. With over 25 years of experience as a Cybersecurity Solution Architect and Risk Management Practitioner, he has worked with Fortune 500 companies including Chase Manhattan Bank, IBM, AT&T, and various government agencies. He is a member of ISACA, ISC2, FBI InfraGard, and contributes to emerging technologies under Cisco, IEEE, MITRE, and CSA.",
     },
     {
       name: "Dr. Albert Ayeni",
-      role: t('leadership.executiveBoardMember'),
+      role: "Executive Board Member",
       image: drAlbert,
       bio: "Dr. Albert Ayeni was born in Lagos and raised in Iffe-Ijumu, Kogi State. He earned his Ph.D. from Cornell University and served on the faculty at the University of Ibadan for 17 years before joining Rutgers University in 1995. Currently serving as Ethnic Crops Research Specialist and Leader of Entrepreneurship Ag Program at Rutgers' School of Environmental and Biological Sciences. He is a consultant to APLU and has led planning committees for NIDO Americas World Conference and multiple education summits.",
     },
     {
       name: "Dr. Akin Awofolaju",
-      role: t('leadership.executiveBoardMember'),
+      role: "Executive Board Member",
       image: drAkin,
       bio: "Dr. Akin Awofolaju was born in Lagos and holds an MBA and Ph.D. in Neuroeconomics and Applied Economics. He is an accomplished management consultant and corporate governance executive with experience as former Executive Board Director at Verizon Wireless. Dr. Awofolaju serves as President of NIDOA-USA Northeast Region Chapter and brings extensive expertise in strategic leadership and organizational development.",
     },
@@ -46,17 +43,18 @@ const Leadership = () => {
             className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            {t('common.backToHome')}
+            Back to Home
           </Link>
           <AnimatedSection className="max-w-3xl">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              {t('leadership.badge')}
+              Our Team
             </span>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-4 mb-6">
-              {t('leadership.title')}
+              Leadership & Board
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              {t('leadership.subtitle')}
+              Meet the dedicated individuals who guide YAC's mission to advance the 
+              progress of the Yoruba nation and preserve our rich cultural heritage.
             </p>
           </AnimatedSection>
         </div>
@@ -67,10 +65,10 @@ const Leadership = () => {
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              {t('leadership.executiveLabel')}
+              Executive Team
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              {t('leadership.executiveTitle')}
+              Executive Leadership
             </h2>
           </AnimatedSection>
 
@@ -117,17 +115,18 @@ const Leadership = () => {
         <div className="container mx-auto px-4 text-center">
           <AnimatedSection>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              {t('leadership.ctaTitle')}
+              Join Our Mission
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-              {t('leadership.ctaText')}
+              We're always looking for dedicated individuals to join our cause. 
+              Together, we can make a lasting impact on the Yoruba community worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/membership">{t('common.becomeMember')}</Link>
+                <Link to="/membership">Become a Member</Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/">{t('common.returnHome')}</Link>
+                <Link to="/">Return Home</Link>
               </Button>
             </div>
           </AnimatedSection>

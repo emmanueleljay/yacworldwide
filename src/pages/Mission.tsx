@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
@@ -6,14 +5,73 @@ import missionBanner from "@/assets/mission-banner.jpg";
 import { Target, Users, Globe, Scale, Lightbulb, Heart, Handshake, Building, Award, BookOpen, Vote, Shield, Sparkles } from "lucide-react";
 
 const Mission = () => {
-  const { t } = useTranslation();
-
-  const missionIcons = [Target, Users, Lightbulb, Vote, Heart, Building, Handshake, Scale, Globe, Award, Sparkles, BookOpen, Shield];
-  const missionPoints = (t('mission.points', { returnObjects: true }) as string[]).map((text, index) => ({
-    number: String(index + 1).padStart(2, '0'),
-    text,
-    icon: missionIcons[index] || Target,
-  }));
+  const missionPoints = [
+    {
+      number: "01",
+      text: "To provide assistance in the progress of the Yoruba world",
+      icon: Target,
+    },
+    {
+      number: "02",
+      text: "To use our intellects to support the empowerment of Yorubas globally",
+      icon: Users,
+    },
+    {
+      number: "03",
+      text: "To serve as an advisory organization to other Pan-Yoruba organizations",
+      icon: Lightbulb,
+    },
+    {
+      number: "04",
+      text: "To promote and support democracy at all levels and foster Yoruba growth in the political arena",
+      icon: Vote,
+    },
+    {
+      number: "05",
+      text: "To encourage and deliberate on issues paramount to the Yoruba people",
+      icon: Heart,
+    },
+    {
+      number: "06",
+      text: "To foster the economic empowerment of Yorubas globally",
+      icon: Building,
+    },
+    {
+      number: "07",
+      text: "To work with other organizations across the globe and Nigeria to promote peace, stability, justice, and unity while working fervently for the promotion of Yoruba's interest",
+      icon: Handshake,
+    },
+    {
+      number: "08",
+      text: "To engage in activities worldwide that promote and ensure social justice, equity, business opportunities, and interests of Yoruba",
+      icon: Scale,
+    },
+    {
+      number: "09",
+      text: "To work diligently to bridge the information gap between the Yoruba and the world",
+      icon: Globe,
+    },
+    {
+      number: "10",
+      text: "To ensure the advancement of Yoruba traditional institutions",
+      icon: Award,
+    },
+    {
+      number: "11",
+      text: "Promoting the advancement of Yoruba as a giant in politics, economics, and social initiatives",
+      icon: Sparkles,
+    },
+    {
+      number: "12",
+      text: "Providing awareness about our civic rights as Yoruba indigenes",
+      icon: BookOpen,
+    },
+    {
+      number: "13",
+      text: "To honor and respect other peoples and cultures around the world as God's creation",
+      icon: Shield,
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -32,10 +90,10 @@ const Mission = () => {
         <div className="relative z-10 text-center px-4">
           <AnimatedSection animation="fade-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-foreground mb-4">
-              {t('mission.title')}
+              Our Mission
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-              {t('mission.subtitle')}
+              Empowering the Yoruba community worldwide through unity, progress, and cultural preservation
             </p>
           </AnimatedSection>
         </div>
@@ -47,10 +105,12 @@ const Mission = () => {
           <AnimatedSection animation="fade-up">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
-                {t('mission.statementTitle')}
+                YAC Mission Statement
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                {t('mission.statementText')}
+                The Yoruba Advocacy Congress is committed to advancing the interests of Yoruba people 
+                worldwide through intellectual engagement, cultural promotion, and collaborative partnerships. 
+                Our 13-point mission outlines our dedication to progress, unity, and global empowerment.
               </p>
             </div>
           </AnimatedSection>
@@ -96,16 +156,16 @@ const Mission = () => {
           <AnimatedSection animation="fade-up">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-                {t('mission.ctaTitle')}
+                Join Us in Our Mission
               </h2>
               <p className="text-muted-foreground mb-8">
-                {t('mission.ctaText')}
+                Be part of a global movement dedicated to the advancement and empowerment of Yoruba people everywhere.
               </p>
               <a
                 href="/membership"
                 className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-colors"
               >
-                {t('common.becomeMember')}
+                Become a Member
               </a>
             </div>
           </AnimatedSection>
