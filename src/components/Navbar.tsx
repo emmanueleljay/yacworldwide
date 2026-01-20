@@ -1,13 +1,21 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import mainLogo from "@/assets/main-logo.png";
+
+const languages = [
+  { code: "en", name: "English" },
+  { code: "yo", name: "Yoruba" },
+  { code: "fr", name: "French" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState("en");
   const location = useLocation();
   const isHome = location.pathname === "/";
 
@@ -132,6 +140,39 @@ const Navbar = () => {
                 Donate Now
               </Button>
             </Link>
+
+            {/* Language Selector */}
+            <div className="relative">
+              <button
+                className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors p-2 rounded-md border border-border hover:border-primary/50"
+                onClick={() => setLangOpen(!langOpen)}
+                onBlur={() => setTimeout(() => setLangOpen(false), 150)}
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium uppercase">{selectedLang}</span>
+                <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {langOpen && (
+                <div className="absolute top-full right-0 mt-2 bg-background border border-border rounded-lg shadow-lg py-1 min-w-[120px] z-50">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
+                        selectedLang === lang.code 
+                          ? 'text-primary bg-primary/10' 
+                          : 'text-muted-foreground hover:text-primary hover:bg-muted'
+                      }`}
+                      onClick={() => {
+                        setSelectedLang(lang.code);
+                        setLangOpen(false);
+                      }}
+                    >
+                      {lang.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -224,6 +265,27 @@ const Navbar = () => {
                   Donate Now
                 </Button>
               </Link>
+
+              {/* Mobile Language Selector */}
+              <div className="flex items-center gap-2 pt-4 border-t border-border mt-4">
+                <Globe className="w-4 h-4 text-muted-foreground" />
+                <span className="text-sm text-muted-foreground">Language:</span>
+                <div className="flex gap-2">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                        selectedLang === lang.code 
+                          ? 'bg-primary text-primary-foreground' 
+                          : 'bg-muted text-muted-foreground hover:text-primary'
+                      }`}
+                      onClick={() => setSelectedLang(lang.code)}
+                    >
+                      {lang.code.toUpperCase()}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         )}
