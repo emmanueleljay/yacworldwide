@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Target, Users, GraduationCap, Crown, Award, Star } from "lucide-react";
 import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
@@ -144,7 +146,9 @@ const Membership = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
       {/* Header */}
       <header className="bg-hero-gradient py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -472,7 +476,9 @@ const Membership = () => {
           </AnimatedSection>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 };
 

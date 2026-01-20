@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Shield, Lock, Eye, Phone, FileText, Users, Server } from "lucide-react";
 import privacyBanner from "@/assets/privacy-banner.jpg";
 
 const PrivacyPolicy = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
       {/* Hero Section */}
       <header className="relative py-24 lg:py-32 overflow-hidden">
         <div 
@@ -303,7 +307,9 @@ const PrivacyPolicy = () => {
           </Link>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
