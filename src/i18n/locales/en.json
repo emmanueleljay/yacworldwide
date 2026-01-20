@@ -14,6 +14,7 @@
     "membership": "Membership",
     "gallery": "Gallery",
     "contact": "Contact",
+    "faq": "FAQ",
     "donateNow": "Donate Now",
     "language": "Language"
   },
@@ -102,6 +103,7 @@
       "ourProjects": "Our Projects",
       "events": "Events",
       "donate": "Donate",
+      "faq": "FAQ",
       "contactUs": "Contact Us",
       "privacyPolicy": "Privacy Policy"
     },
