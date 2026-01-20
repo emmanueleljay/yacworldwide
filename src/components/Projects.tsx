@@ -78,7 +78,7 @@ const Projects = () => {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-0 group-hover:opacity-80 transition-opacity duration-500`}
+                className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-0 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none`}
               />
 
               {/* Content */}
@@ -90,10 +90,10 @@ const Projects = () => {
                   <p className="text-primary-foreground/90 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                     {project.description}
                   </p>
-                  <Link to={project.link}>
+                  <Link to={project.link} className="relative z-20 inline-block pointer-events-auto">
                     <Button
                       variant="heroOutline"
-                      className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 relative z-10"
+                      className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4" />
