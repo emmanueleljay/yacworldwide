@@ -1,85 +1,142 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Check, Users, Globe, BookOpen, Heart, Award, Calendar } from "lucide-react";
+import { ArrowLeft, Check, Target, Users, GraduationCap, Crown, Award, Star } from "lucide-react";
 
 const Membership = () => {
-  const benefits = [
-    {
-      icon: Users,
-      title: "Global Network",
-      description: "Connect with Yoruba professionals, entrepreneurs, and cultural advocates worldwide.",
-    },
-    {
-      icon: Globe,
-      title: "Cultural Events",
-      description: "Exclusive access to cultural festivals, heritage celebrations, and community gatherings.",
-    },
-    {
-      icon: BookOpen,
-      title: "Educational Resources",
-      description: "Access language courses, historical archives, and cultural preservation materials.",
-    },
-    {
-      icon: Heart,
-      title: "Community Support",
-      description: "Be part of initiatives supporting Yoruba communities through education and development.",
-    },
-    {
-      icon: Award,
-      title: "Leadership Opportunities",
-      description: "Participate in council activities and contribute to decision-making processes.",
-    },
-    {
-      icon: Calendar,
-      title: "Member Programs",
-      description: "Join mentorship programs, professional development workshops, and networking events.",
-    },
+  const objectives = [
+    "Advance the progress of Yoruba descendants globally.",
+    "Use resources to support the empowerment of Yorubas globally.",
+    "Promote the active engagement and participation of the youth (Age 18-35-year bracket) in YAC activities.",
+    "Serve as an advisory organization to other Pan-Yoruba organizations.",
+    "Promote and support democracy at all levels.",
+    "Encourage and deliberate on issues paramount to the Yoruba people.",
+    "Foster the economic empowerment of Yorubas globally.",
+    "Work with other organizations across the globe in general and Nigeria, in particular, to promote peace, stability, justice, and unity while working fervently for the promotion of the Yoruba interest.",
+    "Engage in activities worldwide, that promote and ensure social justice, equity, business opportunities, and interests of the Yoruba.",
+    "Work diligently to bridge the information gap between the Yoruba and the world.",
+    "Ensure the advancement of Yoruba traditional institutions.",
+    "Promote the advancement of Yoruba as a giant in politics, economics, and social initiatives.",
+    "Provide awareness about our civic rights as Yoruba citizens.",
+    "Honor and respect other peoples and cultures around the world as God's creation.",
+    "Facilitate and foster Yoruba unity, strategic growth, and political visibility.",
   ];
 
-  const tiers = [
+  const membershipCategories = [
     {
-      name: "Individual",
-      price: "$50",
-      period: "per year",
-      description: "For individuals passionate about Yoruba heritage",
+      name: "Foundation Member",
+      icon: Crown,
+      price: "$500",
+      period: "one-time",
+      description: "Membership obtained at the inception of YAC. Foundation Members are the pillars of our organization.",
       features: [
-        "Membership card & certificate",
-        "Monthly newsletter",
-        "Access to member events",
-        "Voting rights in elections",
-        "Online resource library",
+        "Charter membership status",
+        "Full voting rights",
+        "Advisory council eligibility",
+        "Wall of Honor recognition",
+        "All member benefits included",
       ],
+      note: "Registration fee due before the inauguration of the substantive Executive of YAC.",
       popular: false,
     },
     {
-      name: "Family",
-      price: "$100",
-      period: "per year",
-      description: "For households sharing our cultural values",
+      name: "ANYAM",
+      subtitle: "Accredited Non-Youth Adult Member",
+      icon: Users,
+      price: "$500",
+      period: "one-time",
+      description: "For adults above the age of 35, gainfully employed, and earning an income more than the NJ minimum wage.",
       features: [
-        "All Individual benefits",
-        "Up to 4 family members",
-        "Family event discounts",
-        "Youth program access",
-        "Priority event registration",
-        "Annual family recognition",
+        "Full membership status",
+        "Voting rights in elections",
+        "Mentorship opportunities",
+        "Leadership participation",
+        "All member benefits included",
       ],
+      note: "Requires referral by two foundation members.",
+      popular: false,
+    },
+    {
+      name: "AYM - High Income",
+      subtitle: "Accredited Youth Member",
+      icon: Star,
+      price: "$250",
+      period: "one-time",
+      description: "For youth (18-35 years) gainfully employed and earning an income higher than the NJ minimum wage ($8.50/hr).",
+      features: [
+        "Full youth membership",
+        "Youth program participation",
+        "Leadership development",
+        "Networking opportunities",
+        "Mentoring by senior members",
+      ],
+      note: "Requires referral by two foundation members.",
       popular: true,
     },
     {
-      name: "Lifetime",
-      price: "$500",
+      name: "AYM - Minimum Wage",
+      subtitle: "Accredited Youth Member",
+      icon: Star,
+      price: "$100",
       period: "one-time",
-      description: "Permanent commitment to our mission",
+      description: "For youth (18-35 years) employed and earning the NJ minimum wage or less.",
       features: [
-        "All Family benefits",
-        "Lifetime membership status",
-        "VIP event access",
-        "Wall of Honor recognition",
-        "Advisory council eligibility",
-        "Legacy member benefits",
-        "Special commemorative gifts",
+        "Full youth membership",
+        "Youth program participation",
+        "Leadership development",
+        "Networking opportunities",
+        "Mentoring by senior members",
       ],
+      note: "Requires referral by two foundation members.",
+      popular: false,
+    },
+    {
+      name: "Student - Graduate",
+      subtitle: "Student Membership",
+      icon: GraduationCap,
+      price: "$50",
+      period: "one-time",
+      description: "For graduate students committed to serving YAC's mission and developing as future leaders.",
+      features: [
+        "Student membership status",
+        "Mentoring services",
+        "Youth program access",
+        "Leadership training",
+        "Service opportunities",
+      ],
+      note: "Students are called to serve in capacities that promote YAC's mission.",
+      popular: false,
+    },
+    {
+      name: "Student - Undergraduate",
+      subtitle: "Student Membership",
+      icon: GraduationCap,
+      price: "$25",
+      period: "one-time",
+      description: "For undergraduate students eager to connect with their heritage and develop leadership skills.",
+      features: [
+        "Student membership status",
+        "Mentoring services",
+        "Youth program access",
+        "Leadership training",
+        "Service opportunities",
+      ],
+      note: "Students are called to serve in capacities that promote YAC's mission.",
+      popular: false,
+    },
+    {
+      name: "Honorary Member",
+      icon: Award,
+      price: "Free",
+      period: "by nomination",
+      description: "Highly distinguished Yoruba leaders nominated and ratified by the YAC membership.",
+      features: [
+        "Honorary membership status",
+        "Advisory role opportunities",
+        "Recognition and honor",
+        "Moral support capacity",
+        "Non-financial contributions welcome",
+      ],
+      note: "Admitted free through nomination and ratification process.",
       popular: false,
     },
   ];
@@ -98,120 +155,161 @@ const Membership = () => {
           </Link>
           <div className="max-w-3xl">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Join Us
+              Join YAC
             </span>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-4 mb-6">
-              Become a Member
+              YAC Membership
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              Join thousands of Yoruba advocates worldwide in preserving our heritage, 
-              advancing our community, and building bridges across generations.
+              Join the Yoruba Advocacy Council and become part of a global movement 
+              dedicated to advancing the progress of Yoruba descendants worldwide.
             </p>
           </div>
         </div>
       </header>
 
-      {/* Benefits Section */}
+      {/* Objectives Section */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Why Join
+              Our Purpose
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              Membership Benefits
+              Membership Objectives
             </h2>
             <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-              Experience the full range of opportunities available to YAC members
+              As a YAC member, you commit to supporting these 15 core objectives
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={benefit.title}
-                className="bg-card rounded-2xl p-8 shadow-warm hover:shadow-elevated transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-14 h-14 rounded-xl bg-gold-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-7 h-7 text-primary-foreground" />
+          <div className="max-w-4xl mx-auto">
+            <div className="grid gap-4">
+              {objectives.map((objective, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-4 bg-card rounded-xl p-5 shadow-warm hover:shadow-elevated transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-foreground font-bold text-sm">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  <p className="text-foreground leading-relaxed pt-2">
+                    {objective}
+                  </p>
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Membership Tiers */}
+      {/* Membership Categories */}
       <section className="py-20 lg:py-28 bg-section-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              Membership Options
+              Membership Categories
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              Choose Your Path
+              Choose Your Membership
             </h2>
             <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-              Select the membership tier that best fits your commitment to the Yoruba community
+              YAC offers various membership categories to welcome all Yoruba descendants
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {tiers.map((tier, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {membershipCategories.map((category, index) => (
               <div
-                key={tier.name}
-                className={`relative bg-card rounded-2xl p-8 shadow-warm hover:shadow-elevated transition-all duration-300 ${
-                  tier.popular ? "ring-2 ring-primary scale-105" : ""
+                key={category.name}
+                className={`relative bg-card rounded-2xl p-6 shadow-warm hover:shadow-elevated transition-all duration-300 flex flex-col ${
+                  category.popular ? "ring-2 ring-primary" : ""
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-gold-gradient text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
+                {category.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="bg-gold-gradient text-primary-foreground px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap">
+                      Youth Tier
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-8">
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
-                    {tier.name}
-                  </h3>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="font-serif text-4xl font-bold text-primary">
-                      {tier.price}
-                    </span>
-                    <span className="text-muted-foreground">/{tier.period}</span>
+                <div className="text-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gold-gradient flex items-center justify-center mx-auto mb-4">
+                    <category.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <p className="text-muted-foreground text-sm mt-3">
-                    {tier.description}
-                  </p>
+                  <h3 className="font-serif text-xl font-bold text-foreground">
+                    {category.name}
+                  </h3>
+                  {category.subtitle && (
+                    <p className="text-muted-foreground text-xs mt-1">
+                      {category.subtitle}
+                    </p>
+                  )}
+                  <div className="flex items-baseline justify-center gap-1 mt-3">
+                    <span className="font-serif text-3xl font-bold text-primary">
+                      {category.price}
+                    </span>
+                    <span className="text-muted-foreground text-sm">
+                      {category.period}
+                    </span>
+                  </div>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-accent" />
+                <p className="text-muted-foreground text-sm text-center mb-4 leading-relaxed">
+                  {category.description}
+                </p>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  {category.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <div className="w-4 h-4 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-2.5 h-2.5 text-accent" />
                       </div>
-                      <span className="text-foreground text-sm">{feature}</span>
+                      <span className="text-foreground text-xs">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <Button
-                  variant={tier.popular ? "hero" : "outline"}
-                  size="lg"
-                  className="w-full"
-                >
-                  Select {tier.name}
-                </Button>
+                {category.note && (
+                  <p className="text-muted-foreground text-xs italic border-t border-border pt-4 mt-auto">
+                    {category.note}
+                  </p>
+                )}
               </div>
             ))}
+          </div>
+
+          {/* Important Notes */}
+          <div className="mt-12 max-w-3xl mx-auto bg-card rounded-2xl p-8 shadow-warm">
+            <h3 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+              <Target className="w-5 h-5 text-primary" />
+              Important Information
+            </h3>
+            <ul className="space-y-3 text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                <span>
+                  Membership for ANYAM and AYM categories may be obtained only through referral 
+                  by a minimum of two foundation members affirming the individual as an honorable 
+                  Yoruba descendant by birth or marriage.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                <span>
+                  The YAC registration fee is a one-time payment required of all members 
+                  except the honorary members.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                <span>
+                  Annual fees and other financial obligations may be levied to all categories 
+                  of the YAC membership as may be determined from time to time by the YAC 
+                  executive and ratified by the YAC membership.
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -277,14 +375,27 @@ const Membership = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Membership Tier Interest
+                  Membership Category Interest
                 </label>
                 <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
-                  <option value="">Select a membership tier</option>
-                  <option value="individual">Individual - $50/year</option>
-                  <option value="family">Family - $100/year</option>
-                  <option value="lifetime">Lifetime - $500 one-time</option>
+                  <option value="">Select a membership category</option>
+                  <option value="foundation">Foundation Member - $500</option>
+                  <option value="anyam">ANYAM (Adult 35+) - $500</option>
+                  <option value="aym-high">AYM High Income - $250</option>
+                  <option value="aym-min">AYM Minimum Wage - $100</option>
+                  <option value="student-grad">Student Graduate - $50</option>
+                  <option value="student-undergrad">Student Undergraduate - $25</option>
+                  <option value="honorary">Honorary Member</option>
                 </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">
+                  Do you have referrals from Foundation Members?
+                </label>
+                <textarea
+                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[100px]"
+                  placeholder="If you have referrals from Foundation Members, please provide their names here..."
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
@@ -310,7 +421,7 @@ const Membership = () => {
             Questions About Membership?
           </h2>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-            Our team is here to help you choose the right membership option and 
+            Our team is here to help you choose the right membership category and 
             answer any questions you may have about joining YAC.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
