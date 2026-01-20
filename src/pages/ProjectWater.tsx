@@ -3,9 +3,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Droplet, MapPin, Users, Wrench, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import waterImg from "@/assets/water.jpg";
 
 const ProjectWater = () => {
+  const { t } = useTranslation();
   const features = [
     {
       icon: Droplet,

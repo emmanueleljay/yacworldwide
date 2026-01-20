@@ -3,9 +3,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Music, BookOpen, Palette, Mic, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import cultureImg from "@/assets/culture.jpg";
 
 const ProjectCulture = () => {
+  const { t } = useTranslation();
   const initiatives = [
     {
       icon: Music,

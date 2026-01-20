@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,7 @@ import { ArrowLeft, Heart, Users, GraduationCap, Droplets, Globe, Check } from "
 import membershipImage from "@/assets/membership.jpg";
 
 const Donate = () => {
+  const { t } = useTranslation();
   const donationTiers = [
     {
       name: "Supporter",

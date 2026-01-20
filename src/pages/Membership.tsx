@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,7 @@ import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 import membershipImage from "@/assets/membership.jpg";
 
 const Membership = () => {
+  const { t } = useTranslation();
   const objectives = [
     "Advance the progress of Yoruba descendants globally.",
     "Use resources to support the empowerment of Yorubas globally.",
