@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import mainLogo from "@/assets/main-logo.png";
@@ -11,35 +12,32 @@ const languages = [
 ];
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("en");
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  const navLinks = [
-    { name: "Who We Are", href: "/who-we-are", isAnchor: false },
-    { name: "Leadership", href: "/leadership", isAnchor: false },
-    { name: "Membership", href: "/membership", isAnchor: false },
-    { name: "Gallery", href: "/gallery", isAnchor: false },
-    { name: "Contact", href: "/contact", isAnchor: false },
-  ];
-
   const whoWeAreLinks = [
-    { name: "Overview", href: "/who-we-are" },
-    { name: "Mission", href: "/who-we-are/mission" },
-    { name: "Vision", href: "/who-we-are/vision" },
-    { name: "History", href: "/who-we-are/history" },
+    { name: t("nav.overview"), href: "/who-we-are" },
+    { name: t("nav.mission"), href: "/who-we-are/mission" },
+    { name: t("nav.vision"), href: "/who-we-are/vision" },
+    { name: t("nav.history"), href: "/who-we-are/history" },
   ];
 
   const projectLinks = [
-    { name: "Tourism Promotion", href: "/projects/tourism" },
-    { name: "Educational Sponsorship", href: "/projects/education" },
-    { name: "Cultural Promotion", href: "/projects/culture" },
-    { name: "Water Borehole", href: "/projects/water" },
+    { name: t("nav.tourismPromotion"), href: "/projects/tourism" },
+    { name: t("nav.educationalSponsorship"), href: "/projects/education" },
+    { name: t("nav.culturalPromotion"), href: "/projects/culture" },
+    { name: t("nav.waterBorehole"), href: "/projects/water" },
   ];
+
+  const changeLanguage = (langCode: string) => {
+    i18n.changeLanguage(langCode);
+    setLangOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -59,7 +57,7 @@ const Navbar = () => {
                 onMouseEnter={() => setWhoWeAreOpen(true)}
                 onMouseLeave={() => setWhoWeAreOpen(false)}
               >
-                Who We Are
+                {t("nav.whoWeAre")}
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
               <div
@@ -70,7 +68,7 @@ const Navbar = () => {
                 <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[180px] z-50">
                   {whoWeAreLinks.map((link) => (
                     <Link
-                      key={link.name}
+                      key={link.href}
                       to={link.href}
                       className="block px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
                     >
@@ -88,7 +86,7 @@ const Navbar = () => {
                 onMouseEnter={() => setProjectsOpen(true)}
                 onMouseLeave={() => setProjectsOpen(false)}
               >
-                Projects
+                {t("nav.projects")}
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
               <div
@@ -99,7 +97,7 @@ const Navbar = () => {
                 <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] z-50">
                   {projectLinks.map((project) => (
                     <Link
-                      key={project.name}
+                      key={project.href}
                       to={project.href}
                       className="block px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
                     >
@@ -114,30 +112,30 @@ const Navbar = () => {
               to="/leadership"
               className="text-muted-foreground hover:text-primary transition-colors font-medium"
             >
-              Leadership
+              {t("nav.leadership")}
             </Link>
             <Link
               to="/membership"
               className="text-muted-foreground hover:text-primary transition-colors font-medium"
             >
-              Membership
+              {t("nav.membership")}
             </Link>
             <Link
               to="/gallery"
               className="text-muted-foreground hover:text-primary transition-colors font-medium"
             >
-              Gallery
+              {t("nav.gallery")}
             </Link>
             <Link
               to="/contact"
               className="text-muted-foreground hover:text-primary transition-colors font-medium"
             >
-              Contact
+              {t("nav.contact")}
             </Link>
 
             <Link to="/donate">
               <Button variant="hero" size="lg">
-                Donate Now
+                {t("nav.donateNow")}
               </Button>
             </Link>
 
@@ -149,7 +147,7 @@ const Navbar = () => {
                 onBlur={() => setTimeout(() => setLangOpen(false), 150)}
               >
                 <Globe className="w-4 h-4" />
-                <span className="text-sm font-medium uppercase">{selectedLang}</span>
+                <span className="text-sm font-medium uppercase">{i18n.language}</span>
                 <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
               </button>
               {langOpen && (
@@ -158,14 +156,11 @@ const Navbar = () => {
                     <button
                       key={lang.code}
                       className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
-                        selectedLang === lang.code 
+                        i18n.language === lang.code 
                           ? 'text-primary bg-primary/10' 
                           : 'text-muted-foreground hover:text-primary hover:bg-muted'
                       }`}
-                      onClick={() => {
-                        setSelectedLang(lang.code);
-                        setLangOpen(false);
-                      }}
+                      onClick={() => changeLanguage(lang.code)}
                     >
                       {lang.name}
                     </button>
@@ -194,14 +189,14 @@ const Navbar = () => {
                   className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setWhoWeAreOpen(!whoWeAreOpen)}
                 >
-                  Who We Are
+                  {t("nav.whoWeAre")}
                   <ChevronDown className={`w-4 h-4 transition-transform ${whoWeAreOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {whoWeAreOpen && (
                   <div className="pl-4 flex flex-col gap-2 mt-2">
                     {whoWeAreLinks.map((link) => (
                       <Link
-                        key={link.name}
+                        key={link.href}
                         to={link.href}
                         className="text-muted-foreground hover:text-primary transition-colors py-1"
                         onClick={() => setIsOpen(false)}
@@ -219,14 +214,14 @@ const Navbar = () => {
                   className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setProjectsOpen(!projectsOpen)}
                 >
-                  Projects
+                  {t("nav.projects")}
                   <ChevronDown className={`w-4 h-4 transition-transform ${projectsOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {projectsOpen && (
                   <div className="pl-4 flex flex-col gap-2 mt-2">
                     {projectLinks.map((project) => (
                       <Link
-                        key={project.name}
+                        key={project.href}
                         to={project.href}
                         className="text-muted-foreground hover:text-primary transition-colors py-1"
                         onClick={() => setIsOpen(false)}
@@ -243,43 +238,43 @@ const Navbar = () => {
                 className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Leadership
+                {t("nav.leadership")}
               </Link>
               <Link
                 to="/membership"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Membership
+                {t("nav.membership")}
               </Link>
               <Link
                 to="/contact"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
+                {t("nav.contact")}
               </Link>
 
               <Link to="/donate" onClick={() => setIsOpen(false)}>
                 <Button variant="hero" size="lg" className="mt-2 w-full">
-                  Donate Now
+                  {t("nav.donateNow")}
                 </Button>
               </Link>
 
               {/* Mobile Language Selector */}
               <div className="flex items-center gap-2 pt-4 border-t border-border mt-4">
                 <Globe className="w-4 h-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Language:</span>
+                <span className="text-sm text-muted-foreground">{t("nav.language")}:</span>
                 <div className="flex gap-2">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
                       className={`px-3 py-1 text-sm rounded-md transition-colors ${
-                        selectedLang === lang.code 
+                        i18n.language === lang.code 
                           ? 'bg-primary text-primary-foreground' 
                           : 'bg-muted text-muted-foreground hover:text-primary'
                       }`}
-                      onClick={() => setSelectedLang(lang.code)}
+                      onClick={() => changeLanguage(lang.code)}
                     >
                       {lang.code.toUpperCase()}
                     </button>

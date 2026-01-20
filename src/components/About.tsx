@@ -1,33 +1,34 @@
+import { useTranslation } from "react-i18next";
 import { Target, Users, Globe, Shield } from "lucide-react";
 import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { t } = useTranslation();
+
   const values = [
     {
       icon: Target,
-      title: "Our Mission",
-      description:
-        "To assist in the progress of Yoruba's world and to use our intellects to support the global empowerment of the Yoruba.",
+      titleKey: "about.values.mission.title",
+      descriptionKey: "about.values.mission.description",
     },
     {
       icon: Users,
-      title: "Unity & Community",
-      description:
-        "Working in one accord to empower our people at all levels of society, promoting peace, unity, love, and prosperity.",
+      titleKey: "about.values.unity.title",
+      descriptionKey: "about.values.unity.description",
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description:
-        "Operating as a link between the Yoruba Nation, the diaspora, and global interaction for worldwide development.",
+      titleKey: "about.values.global.title",
+      descriptionKey: "about.values.global.description",
     },
     {
       icon: Shield,
-      title: "Cultural Preservation",
-      description:
-        "Promoting and supporting Yoruba cultural traditions, preventing our rich heritage from extinction through research.",
+      titleKey: "about.values.cultural.title",
+      descriptionKey: "about.values.cultural.description",
     },
   ];
+
+  const pledgeItems = t("about.pledge.items", { returnObjects: true }) as string[];
 
   return (
     <section id="about" className="py-20 lg:py-32 bg-section-gradient">
@@ -35,15 +36,13 @@ const About = () => {
         {/* Section Header */}
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-medium uppercase tracking-wider text-sm">
-            About Us
+            {t("about.sectionTitle")}
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mt-4 mb-6">
-            Advancing the Yoruba Nation
+            {t("about.heading")}
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Yoruba Action Council (YAC) was incorporated in New Jersey, USA on May 29th, 2018 
-            by like-minded Yoruba professionals to promote Yoruba interest, uphold and enhance 
-            our heritage through political and socio-economic rebranding.
+            {t("about.description")}
           </p>
         </AnimatedSection>
 
@@ -54,17 +53,17 @@ const About = () => {
         >
           {values.map((value) => (
             <div
-              key={value.title}
+              key={value.titleKey}
               className="group p-8 bg-card rounded-2xl shadow-warm hover:shadow-elevated transition-all duration-300 hover:-translate-y-1"
             >
               <div className="w-14 h-14 rounded-xl bg-gold-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <value.icon className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                {value.title}
+                {t(value.titleKey)}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {value.description}
+                {t(value.descriptionKey)}
               </p>
             </div>
           ))}
@@ -75,26 +74,19 @@ const About = () => {
           <div className="bg-hero-gradient rounded-3xl p-8 md:p-12 lg:p-16">
             <div className="max-w-4xl mx-auto text-center">
               <h3 className="font-serif text-2xl md:text-4xl font-bold text-primary-foreground mb-8">
-                Our Solemn Pledge
+                {t("about.pledge.title")}
               </h3>
               <div className="space-y-4 text-primary-foreground/90 text-lg leading-relaxed">
                 <p className="italic">
-                  "We, the descendants of the Yoruba, desiring to promote the interests 
-                  and welfare of the Yoruba globally..."
+                  "{t("about.pledge.intro")}"
                 </p>
                 <ul className="text-left max-w-2xl mx-auto space-y-3 mt-6">
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                    <span>Committed to transparency with a great sense of justice and honesty</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                    <span>Exceptionally committed to excellence in upholding our heritage</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                    <span>The youth shall occupy a prime position in all our efforts</span>
-                  </li>
+                  {pledgeItems.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "whoWeAre": "Who We Are",
+    "overview": "Overview",
+    "mission": "Mission",
+    "vision": "Vision",
+    "history": "History",
+    "projects": "Projects",
+    "tourismPromotion": "Tourism Promotion",
+    "educationalSponsorship": "Educational Sponsorship",
+    "culturalPromotion": "Cultural Promotion",
+    "waterBorehole": "Water Borehole",
+    "leadership": "Leadership",
+    "membership": "Membership",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "donateNow": "Donate Now",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "501(c)(3) Non-Profit Organization",
+    "slides": {
+      "welcome": {
+        "title": "Welcome to",
+        "subtitle": "Yoruba Action Council",
+        "description": "Advancing the progress of the Yoruba nation, preserving cultural traditions, and deploying the professionalism of our members for global Yoruba development."
+      },
+      "heritage": {
+        "title": "Preserving",
+        "subtitle": "Our Rich Heritage",
+        "description": "Celebrating and protecting Yoruba cultural traditions, language, arts, and ancestral wisdom for future generations."
+      },
+      "tourism": {
+        "title": "Promoting",
+        "subtitle": "Yorubaland Tourism",
+        "description": "Showcasing the beauty, history, and vibrant culture of Yorubaland to the world through sustainable tourism initiatives."
+      },
+      "education": {
+        "title": "Empowering",
+        "subtitle": "Through Education",
+        "description": "Sponsoring students and building educational infrastructure to create opportunities for Yoruba youth worldwide."
+      }
+    },
+    "supportMission": "Support Our Mission",
+    "learnMore": "Learn More About Us",
+    "stats": {
+      "founded": "Founded",
+      "members": "Members",
+      "projects": "Projects"
+    }
+  },
+  "about": {
+    "sectionTitle": "About Us",
+    "heading": "Advancing the Yoruba Nation",
+    "description": "Yoruba Action Council (YAC) was incorporated in New Jersey, USA on May 29th, 2018 by like-minded Yoruba professionals to promote Yoruba interest, uphold and enhance our heritage through political and socio-economic rebranding.",
+    "values": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "To assist in the progress of Yoruba's world and to use our intellects to support the global empowerment of the Yoruba."
+      },
+      "unity": {
+        "title": "Unity & Community",
+        "description": "Working in one accord to empower our people at all levels of society, promoting peace, unity, love, and prosperity."
+      },
+      "global": {
+        "title": "Global Reach",
+        "description": "Operating as a link between the Yoruba Nation, the diaspora, and global interaction for worldwide development."
+      },
+      "cultural": {
+        "title": "Cultural Preservation",
+        "description": "Promoting and supporting Yoruba cultural traditions, preventing our rich heritage from extinction through research."
+      }
+    },
+    "pledge": {
+      "title": "Our Solemn Pledge",
+      "intro": "We, the descendants of the Yoruba, desiring to promote the interests and welfare of the Yoruba globally...",
+      "items": [
+        "Committed to transparency with a great sense of justice and honesty",
+        "Exceptionally committed to excellence in upholding our heritage",
+        "The youth shall occupy a prime position in all our efforts"
+      ]
+    }
+  },
+  "cta": {
+    "events": {
+      "label": "Events",
+      "title": "Get Involved in Events",
+      "description": "Come and take part in our events for the Yoruba's growth and the advancement of its institutions. Together, we can make a lasting impact.",
+      "button": "View Upcoming Events"
+    },
+    "donate": {
+      "label": "Support Us",
+      "title": "Together, Let's Make Change Happen",
+      "description": "Your generous contribution helps us continue our mission of advancing the Yoruba nation, supporting education, and preserving our cultural heritage.",
+      "button": "Make a Donation"
+    }
+  },
+  "footer": {
+    "description": "A 501(c)(3) non-profit organization promoting the heritage, welfare, and progress of the Yoruba people globally since 2018.",
+    "quickLinks": "Quick Links",
+    "links": {
+      "ourProjects": "Our Projects",
+      "events": "Events",
+      "donate": "Donate",
+      "contactUs": "Contact Us",
+      "privacyPolicy": "Privacy Policy"
+    },
+    "contactTitle": "Contact Us",
+    "copyright": "© {{year}} Yoruba Action Council. All rights reserved.",
+    "taxExempt": "A 501(c)(3) Tax-Exempt Organization"
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "joinUs": "Join Us",
+    "donate": "Donate",
+    "backToHome": "Return to Home"
+  }
+}

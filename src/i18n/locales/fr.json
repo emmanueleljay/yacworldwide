@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "whoWeAre": "Qui Sommes-Nous",
+    "overview": "Aperçu",
+    "mission": "Mission",
+    "vision": "Vision",
+    "history": "Histoire",
+    "projects": "Projets",
+    "tourismPromotion": "Promotion du Tourisme",
+    "educationalSponsorship": "Parrainage Éducatif",
+    "culturalPromotion": "Promotion Culturelle",
+    "waterBorehole": "Forage d'Eau",
+    "leadership": "Direction",
+    "membership": "Adhésion",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "donateNow": "Faire un Don",
+    "language": "Langue"
+  },
+  "hero": {
+    "badge": "Organisation à But Non Lucratif 501(c)(3)",
+    "slides": {
+      "welcome": {
+        "title": "Bienvenue à",
+        "subtitle": "Conseil d'Action Yoruba",
+        "description": "Faire progresser la nation Yoruba, préserver les traditions culturelles et déployer le professionnalisme de nos membres pour le développement mondial des Yoruba."
+      },
+      "heritage": {
+        "title": "Préservation de",
+        "subtitle": "Notre Riche Patrimoine",
+        "description": "Célébrer et protéger les traditions culturelles Yoruba, la langue, les arts et la sagesse ancestrale pour les générations futures."
+      },
+      "tourism": {
+        "title": "Promotion du",
+        "subtitle": "Tourisme en Terre Yoruba",
+        "description": "Mettre en valeur la beauté, l'histoire et la culture vibrante de la terre Yoruba à travers des initiatives de tourisme durable."
+      },
+      "education": {
+        "title": "Autonomisation par",
+        "subtitle": "L'Éducation",
+        "description": "Parrainer des étudiants et construire des infrastructures éducatives pour créer des opportunités pour la jeunesse Yoruba dans le monde entier."
+      }
+    },
+    "supportMission": "Soutenir Notre Mission",
+    "learnMore": "En Savoir Plus Sur Nous",
+    "stats": {
+      "founded": "Fondé",
+      "members": "Membres",
+      "projects": "Projets"
+    }
+  },
+  "about": {
+    "sectionTitle": "À Propos de Nous",
+    "heading": "Faire Progresser la Nation Yoruba",
+    "description": "Le Conseil d'Action Yoruba (YAC) a été constitué au New Jersey, États-Unis, le 29 mai 2018 par des professionnels Yoruba partageant les mêmes idées pour promouvoir les intérêts Yoruba, maintenir et améliorer notre patrimoine à travers la refonte politique et socio-économique.",
+    "values": {
+      "mission": {
+        "title": "Notre Mission",
+        "description": "Aider au progrès du monde Yoruba et utiliser nos intelligences pour soutenir l'autonomisation mondiale des Yoruba."
+      },
+      "unity": {
+        "title": "Unité & Communauté",
+        "description": "Travailler en harmonie pour autonomiser notre peuple à tous les niveaux de la société, en promouvant la paix, l'unité, l'amour et la prospérité."
+      },
+      "global": {
+        "title": "Portée Mondiale",
+        "description": "Opérer comme un lien entre la Nation Yoruba, la diaspora et l'interaction mondiale pour le développement mondial."
+      },
+      "cultural": {
+        "title": "Préservation Culturelle",
+        "description": "Promouvoir et soutenir les traditions culturelles Yoruba, empêcher notre riche patrimoine de disparaître grâce à la recherche."
+      }
+    },
+    "pledge": {
+      "title": "Notre Engagement Solennel",
+      "intro": "Nous, les descendants des Yoruba, souhaitant promouvoir les intérêts et le bien-être des Yoruba dans le monde entier...",
+      "items": [
+        "Engagés pour la transparence avec un grand sens de la justice et de l'honnêteté",
+        "Exceptionnellement engagés pour l'excellence dans la préservation de notre patrimoine",
+        "La jeunesse occupera une position primordiale dans tous nos efforts"
+      ]
+    }
+  },
+  "cta": {
+    "events": {
+      "label": "Événements",
+      "title": "Participez aux Événements",
+      "description": "Venez participer à nos événements pour la croissance des Yoruba et l'avancement de ses institutions. Ensemble, nous pouvons avoir un impact durable.",
+      "button": "Voir les Événements à Venir"
+    },
+    "donate": {
+      "label": "Soutenez-Nous",
+      "title": "Ensemble, Faisons le Changement",
+      "description": "Votre généreuse contribution nous aide à poursuivre notre mission de faire progresser la nation Yoruba, soutenir l'éducation et préserver notre patrimoine culturel.",
+      "button": "Faire un Don"
+    }
+  },
+  "footer": {
+    "description": "Une organisation à but non lucratif 501(c)(3) promouvant le patrimoine, le bien-être et le progrès du peuple Yoruba dans le monde depuis 2018.",
+    "quickLinks": "Liens Rapides",
+    "links": {
+      "ourProjects": "Nos Projets",
+      "events": "Événements",
+      "donate": "Faire un Don",
+      "contactUs": "Nous Contacter",
+      "privacyPolicy": "Politique de Confidentialité"
+    },
+    "contactTitle": "Nous Contacter",
+    "copyright": "© {{year}} Conseil d'Action Yoruba. Tous droits réservés.",
+    "taxExempt": "Organisation Exonérée d'Impôts 501(c)(3)"
+  },
+  "common": {
+    "readMore": "Lire Plus",
+    "learnMore": "En Savoir Plus",
+    "contactUs": "Nous Contacter",
+    "joinUs": "Rejoignez-Nous",
+    "donate": "Faire un Don",
+    "backToHome": "Retour à l'Accueil"
+  }
+}

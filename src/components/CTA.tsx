@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Heart, Calendar, ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const CTA = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="events" className="py-20 lg:py-32 bg-section-gradient">
       <div className="container mx-auto px-4">
@@ -15,18 +18,17 @@ const CTA = () => {
                   <Calendar className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <span className="text-primary font-medium uppercase tracking-wider text-sm">
-                  Events
+                  {t("cta.events.label")}
                 </span>
               </div>
               <h3 className="font-serif text-2xl md:text-4xl font-bold text-foreground mb-4">
-                Get Involved in Events
+                {t("cta.events.title")}
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Come and take part in our events for the Yoruba's growth and the 
-                advancement of its institutions. Together, we can make a lasting impact.
+                {t("cta.events.description")}
               </p>
               <Button variant="outline" size="lg" className="group">
-                View Upcoming Events
+                {t("cta.events.button")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
@@ -40,19 +42,18 @@ const CTA = () => {
                   <Heart className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <span className="text-primary-foreground/80 font-medium uppercase tracking-wider text-sm">
-                  Support Us
+                  {t("cta.donate.label")}
                 </span>
               </div>
               <h3 className="font-serif text-2xl md:text-4xl font-bold text-primary-foreground mb-4">
-                Together, Let's Make Change Happen
+                {t("cta.donate.title")}
               </h3>
               <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
-                Your generous contribution helps us continue our mission of advancing 
-                the Yoruba nation, supporting education, and preserving our cultural heritage.
+                {t("cta.donate.description")}
               </p>
               <Button variant="hero" size="lg" className="group">
                 <Heart className="w-5 h-5" />
-                Make a Donation
+                {t("cta.donate.button")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
