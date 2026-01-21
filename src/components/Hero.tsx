@@ -6,7 +6,7 @@ import { useState, useEffect, useCallback } from "react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-2.jpg";
 import heroSlide3 from "@/assets/hero-slide-3.jpg";
-import educationBg from "@/assets/education.jpg";
+import heroSlide4 from "@/assets/hero-slide-4.jpg";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -33,7 +33,7 @@ const Hero = () => {
       descriptionKey: "hero.slides.tourism.description",
     },
     {
-      image: educationBg,
+      image: heroSlide4,
       titleKey: "hero.slides.education.title",
       subtitleKey: "hero.slides.education.subtitle",
       descriptionKey: "hero.slides.education.description",
