@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import cultureBg from "@/assets/culture.jpg";
 import tourismBg from "@/assets/tourism.jpg";
 import educationBg from "@/assets/education.jpg";
@@ -15,7 +15,7 @@ const Hero = () => {
 
   const slides = [
     {
-      image: heroBg,
+      image: heroSlide1,
       titleKey: "hero.slides.welcome.title",
       subtitleKey: "hero.slides.welcome.subtitle",
       descriptionKey: "hero.slides.welcome.description",
@@ -84,7 +84,7 @@ const Hero = () => {
       ))}
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-hero-gradient opacity-85" />
+      <div className="absolute inset-0 bg-hero-gradient opacity-70" />
       
       {/* Slide Navigation Arrows */}
       <button
