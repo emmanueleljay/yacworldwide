@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
-import cultureBg from "@/assets/culture.jpg";
+import heroSlide2 from "@/assets/hero-slide-2.jpg";
 import tourismBg from "@/assets/tourism.jpg";
 import educationBg from "@/assets/education.jpg";
 
@@ -21,7 +21,7 @@ const Hero = () => {
       descriptionKey: "hero.slides.welcome.description",
     },
     {
-      image: cultureBg,
+      image: heroSlide2,
       titleKey: "hero.slides.heritage.title",
       subtitleKey: "hero.slides.heritage.subtitle",
       descriptionKey: "hero.slides.heritage.description",
