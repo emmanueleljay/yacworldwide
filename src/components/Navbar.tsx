@@ -22,6 +22,7 @@ const Navbar = () => {
 
   const whoWeAreLinks = [
     { name: t("nav.overview"), href: "/who-we-are" },
+    { name: t("nav.aboutIleIfe"), href: "/who-we-are/ile-ife" },
     { name: t("nav.mission"), href: "/who-we-are/mission" },
     { name: t("nav.vision"), href: "/who-we-are/vision" },
     { name: t("nav.history"), href: "/who-we-are/history" },
