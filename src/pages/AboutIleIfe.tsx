@@ -4,6 +4,12 @@ import { useTranslation } from "react-i18next";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { MapPin, Crown, Landmark, Palette, Sparkles } from "lucide-react";
 
+// Import artifact images
+import ifeBronzeHead from "@/assets/ife-bronze-head.jpg";
+import opaOranmiyan from "@/assets/opa-oranmiyan.jpg";
+import ifeTerracotta from "@/assets/ife-terracotta.jpg";
+import oduduwaShrine from "@/assets/oduduwa-shrine.jpg";
+
 const AboutIleIfe = () => {
   const { t } = useTranslation();
 
@@ -13,24 +19,28 @@ const AboutIleIfe = () => {
       title: "The Bronze Head of an Ooni (The Ife Head)",
       description:
         "The bronze and copper-alloy heads discovered in Ile-Ife are perhaps the most famous evidence of the city's ancient sophistication. These sculptures, dating back to the 4th–15th centuries, exhibit a level of naturalism that shocked Western archaeologists when they were first \"discovered\" by Leo Frobenius. They represent the divine authority of the Ooni (the King) and serve as a physical link to the ancestral founders of the race.",
+      image: ifeBronzeHead,
     },
     {
       icon: Landmark,
       title: "The Opa Oranmiyan (Staff of Oranmiyan)",
       description:
         "This massive granite monolith stands over 5 meters tall in the heart of Ile-Ife. According to tradition, it was the walking stick or staff of Oranmiyan, the youngest son of Oduduwa (the progenitor of the Yoruba). It is a symbol of the military prowess and the foundational lineage of the Yoruba kingdoms, as Oranmiyan went on to found the Oyo Empire and the Benin Dynasty.",
+      image: opaOranmiyan,
     },
     {
       icon: Palette,
       title: "Terracotta Sculptures",
       description:
         "Before the mastery of bronze casting, Ife artists were renowned for their terracotta works. These pieces often depict ritual scenes, deities, and everyday citizens with intricate facial scarification (Pele). These artifacts suggest a deeply organized social and religious structure that centers on Ife as a sacred hub.",
+      image: ifeTerracotta,
     },
     {
       icon: Sparkles,
       title: "The Oranfe and Oduduwa Shrines",
       description:
         "Ile-Ife is home to 401 deities (Orishas), and their shrines are considered the physical anchors of Yoruba spirituality. The belief is that at the dawn of time, Olodumare (the Supreme Being) sent Oduduwa down a chain to create the earth out of the primordial waters at Ife. The existence of these ancient groves and shrines reinforces the city's status as the spiritual \"Source.\"",
+      image: oduduwaShrine,
     },
   ];
 
@@ -101,21 +111,32 @@ const AboutIleIfe = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid gap-8 max-w-5xl mx-auto">
+          <div className="grid gap-12 max-w-6xl mx-auto">
             {artifacts.map((artifact, index) => (
               <AnimatedSection key={artifact.title} animation="fade-up" delay={index * 100}>
-                <div className="bg-background rounded-2xl p-8 md:p-10 shadow-lg border border-border hover:border-primary/30 transition-colors">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <artifact.icon className="w-7 h-7 text-primary" />
-                      </div>
+                <div className="bg-background rounded-2xl overflow-hidden shadow-lg border border-border hover:border-primary/30 transition-colors">
+                  <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
+                    {/* Image */}
+                    <div className={`relative h-64 md:h-auto md:min-h-[320px] ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                      <img
+                        src={artifact.image}
+                        alt={artifact.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:hidden" />
                     </div>
-                    <div>
+                    {/* Content */}
+                    <div className={`p-8 md:p-10 flex flex-col justify-center ${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                          <artifact.icon className="w-6 h-6 text-primary" />
+                        </div>
+                        <span className="text-primary font-bold text-lg">{index + 1}</span>
+                      </div>
                       <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                        {index + 1}. {artifact.title}
+                        {artifact.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed text-lg">
+                      <p className="text-muted-foreground leading-relaxed">
                         {artifact.description}
                       </p>
                     </div>
