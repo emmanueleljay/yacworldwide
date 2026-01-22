@@ -22,7 +22,6 @@ const Navbar = () => {
 
   const whoWeAreLinks = [
     { name: t("nav.overview"), href: "/who-we-are" },
-    { name: t("nav.aboutIleIfe"), href: "/who-we-are/ile-ife" },
     { name: t("nav.mission"), href: "/who-we-are/mission" },
     { name: t("nav.vision"), href: "/who-we-are/vision" },
     { name: t("nav.history"), href: "/who-we-are/history" },
@@ -109,6 +108,12 @@ const Navbar = () => {
               </div>
             </div>
 
+            <Link
+              to="/who-we-are/ile-ife"
+              className="text-muted-foreground hover:text-primary transition-colors font-medium"
+            >
+              {t("nav.aboutIleIfe")}
+            </Link>
             <Link
               to="/leadership"
               className="text-muted-foreground hover:text-primary transition-colors font-medium"
@@ -234,6 +239,13 @@ const Navbar = () => {
                 )}
               </div>
 
+              <Link
+                to="/who-we-are/ile-ife"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                {t("nav.aboutIleIfe")}
+              </Link>
               <Link
                 to="/leadership"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
