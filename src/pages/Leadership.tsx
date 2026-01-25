@@ -9,6 +9,7 @@ import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 import drGodwin from "@/assets/dr-godwin-omolola.jpg";
 import drAlbert from "@/assets/dr-albert-ayeni.jpg";
 import drAkin from "@/assets/dr-akin-awofolaju.jpg";
+import msAbby from "@/assets/ms-abby.jpg";
 
 const Leadership = () => {
   const { t } = useTranslation();
@@ -30,6 +31,12 @@ const Leadership = () => {
       role: "Executive Board Member",
       image: drAkin,
       bio: "Dr. Akin Awofolaju was born in Lagos and holds an MBA and Ph.D. in Neuroeconomics and Applied Economics. He is an accomplished management consultant and corporate governance executive with experience as former Executive Board Director at Verizon Wireless. Dr. Awofolaju serves as President of NIDOA-USA Northeast Region Chapter and brings extensive expertise in strategic leadership and organizational development.",
+    },
+    {
+      name: "Ms. Abby",
+      role: "Executive Board Member",
+      image: msAbby,
+      bio: "Ms Abby is an RN & a Midwife for over 45 years. Her nursing education started at Lagos University Teaching Hospital, Lagos. Her BSN & MSN was completed at Wagner College on Staten Island, and she is currently pursuing a Ph.D in International Business at California Intercontinental University, expected to finish in February 2027. She is the CEO of Fadmo Health and Homecare Agency, Fadmo Logistics USA and Nigeria. She is married with three children and three grandchildren.",
     },
   ];
 
