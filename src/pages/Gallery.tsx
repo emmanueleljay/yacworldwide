@@ -18,6 +18,12 @@ import culturalCeremony from "@/assets/cultural-ceremony.jpg";
 import galleryNew1 from "@/assets/gallery-new-1.jpg";
 import galleryNew2 from "@/assets/gallery-new-2.jpg";
 import galleryNew3 from "@/assets/gallery-new-3.jpg";
+import galleryNew4 from "@/assets/gallery-new-4.jpg";
+import galleryNew5 from "@/assets/gallery-new-5.jpg";
+import galleryNew6 from "@/assets/gallery-new-6.jpg";
+import galleryNew7 from "@/assets/gallery-new-7.jpg";
+import galleryNew8 from "@/assets/gallery-new-8.jpg";
+import galleryNew9 from "@/assets/gallery-new-9.jpg";
 
 const Gallery = () => {
   const galleryCategories = [
@@ -29,6 +35,12 @@ const Gallery = () => {
         { src: galleryNew1, alt: "YAC community event", caption: "YAC Community Event - Members gathered for cultural celebration" },
         { src: galleryNew2, alt: "YAC gathering", caption: "YAC Gathering - Community members coming together in unity" },
         { src: galleryNew3, alt: "YAC event", caption: "YAC Event - Celebrating Yoruba heritage and culture" },
+        { src: galleryNew4, alt: "YAC community gathering", caption: "YAC Community Gathering - Members united in cultural celebration" },
+        { src: galleryNew5, alt: "YAC cultural event", caption: "YAC Cultural Event - Embracing Yoruba traditions together" },
+        { src: galleryNew6, alt: "YAC meeting", caption: "YAC Meeting - Leadership and members in fellowship" },
+        { src: galleryNew7, alt: "YAC celebration", caption: "YAC Celebration - Honoring our heritage and community bonds" },
+        { src: galleryNew8, alt: "YAC event photo", caption: "YAC Event - Coming together to celebrate our culture" },
+        { src: galleryNew9, alt: "YAC gathering photo", caption: "YAC Gathering - Unity in cultural pride and tradition" },
       ],
     },
     {
