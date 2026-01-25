@@ -15,6 +15,9 @@ import yacEvent2 from "@/assets/yac-event-2.jpg";
 import royalMeeting from "@/assets/royal-meeting.jpg";
 import traditionalAttire from "@/assets/traditional-attire.jpg";
 import culturalCeremony from "@/assets/cultural-ceremony.jpg";
+import galleryNew1 from "@/assets/gallery-new-1.jpg";
+import galleryNew2 from "@/assets/gallery-new-2.jpg";
+import galleryNew3 from "@/assets/gallery-new-3.jpg";
 
 const Gallery = () => {
   const galleryCategories = [
@@ -23,6 +26,9 @@ const Gallery = () => {
       images: [
         { src: yacEvent1, alt: "YAC Think Tank Group annual gathering", caption: "YAC Think Tank Group - Annual gathering featuring leaders and members in traditional attire" },
         { src: yacEvent2, alt: "YAC leadership at official event", caption: "YAC Leadership - Executive members presenting the YAC Solemn Pledge and Mission" },
+        { src: galleryNew1, alt: "YAC community event", caption: "YAC Community Event - Members gathered for cultural celebration" },
+        { src: galleryNew2, alt: "YAC gathering", caption: "YAC Gathering - Community members coming together in unity" },
+        { src: galleryNew3, alt: "YAC event", caption: "YAC Event - Celebrating Yoruba heritage and culture" },
       ],
     },
     {
