@@ -15,6 +15,12 @@ const Leadership = () => {
   const { t } = useTranslation();
   const executives = [
     {
+      name: "Dr. Akin Awofolaju",
+      role: "President/CEO: Yoruba Action Council North America",
+      image: drAkin,
+      bio: "Dr. Akin Awofolaju was born in Lagos and holds an MBA and Ph.D. in Neuroeconomics and Applied Economics. He is an accomplished management consultant and corporate governance executive with experience as former Executive Board Director at Verizon Wireless. Dr. Awofolaju serves as President of NIDOA-USA Northeast Region Chapter and brings extensive expertise in strategic leadership and organizational development.",
+    },
+    {
       name: "Dr. Godwin Babs Oloyede Omolola",
       role: "Executive Board Member",
       image: drGodwin,
@@ -25,12 +31,6 @@ const Leadership = () => {
       role: "Executive Board Member",
       image: drAlbert,
       bio: "Dr. Albert Ayeni was born in Lagos and raised in Iffe-Ijumu, Kogi State. He earned his Ph.D. from Cornell University and served on the faculty at the University of Ibadan for 17 years before joining Rutgers University in 1995. Currently serving as Ethnic Crops Research Specialist and Leader of Entrepreneurship Ag Program at Rutgers' School of Environmental and Biological Sciences. He is a consultant to APLU and has led planning committees for NIDO Americas World Conference and multiple education summits.",
-    },
-    {
-      name: "Dr. Akin Awofolaju",
-      role: "Executive Board Member",
-      image: drAkin,
-      bio: "Dr. Akin Awofolaju was born in Lagos and holds an MBA and Ph.D. in Neuroeconomics and Applied Economics. He is an accomplished management consultant and corporate governance executive with experience as former Executive Board Director at Verizon Wireless. Dr. Awofolaju serves as President of NIDOA-USA Northeast Region Chapter and brings extensive expertise in strategic leadership and organizational development.",
     },
     {
       name: "Ms. Abby",
