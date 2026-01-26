@@ -1,6 +1,9 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Import project images
 import tourismImg from "@/assets/tourism.jpg";
@@ -24,12 +27,42 @@ import galleryNew6 from "@/assets/gallery-new-6.jpg";
 import galleryNew7 from "@/assets/gallery-new-7.jpg";
 import galleryNew8 from "@/assets/gallery-new-8.jpg";
 import galleryNew9 from "@/assets/gallery-new-9.jpg";
+import galleryEvent1 from "@/assets/gallery-event-1.jpg";
+import galleryEvent2 from "@/assets/gallery-event-2.jpg";
+import galleryEvent3 from "@/assets/gallery-event-3.jpg";
+import galleryEvent4 from "@/assets/gallery-event-4.jpg";
+import galleryEvent5 from "@/assets/gallery-event-5.jpg";
+import galleryEvent6 from "@/assets/gallery-event-6.jpg";
+import galleryEvent7 from "@/assets/gallery-event-7.jpg";
+import galleryEvent8 from "@/assets/gallery-event-8.jpg";
+import galleryEvent9 from "@/assets/gallery-event-9.jpg";
+import galleryEvent10 from "@/assets/gallery-event-10.jpg";
+
+interface GalleryImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
 
 const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [allImages, setAllImages] = useState<GalleryImage[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const galleryCategories = [
     {
       title: "YAC Events & Gatherings",
       images: [
+        { src: galleryEvent1, alt: "YAC community event", caption: "YAC Community Event - Members gathered for cultural celebration" },
+        { src: galleryEvent2, alt: "YAC gathering", caption: "YAC Gathering - Community members coming together in unity" },
+        { src: galleryEvent3, alt: "YAC event", caption: "YAC Event - Celebrating Yoruba heritage and culture" },
+        { src: galleryEvent4, alt: "YAC community gathering", caption: "YAC Community Gathering - Members united in cultural celebration" },
+        { src: galleryEvent5, alt: "YAC cultural event", caption: "YAC Cultural Event - Embracing Yoruba traditions together" },
+        { src: galleryEvent6, alt: "YAC meeting", caption: "YAC Meeting - Leadership and members in fellowship" },
+        { src: galleryEvent7, alt: "YAC celebration", caption: "YAC Celebration - Honoring our heritage and community bonds" },
+        { src: galleryEvent8, alt: "YAC event photo", caption: "YAC Event - Coming together to celebrate our culture" },
+        { src: galleryEvent9, alt: "YAC gathering photo", caption: "YAC Gathering - Unity in cultural pride and tradition" },
+        { src: galleryEvent10, alt: "YAC community photo", caption: "YAC Community - Strengthening bonds through shared heritage" },
         { src: yacEvent1, alt: "YAC Think Tank Group annual gathering", caption: "YAC Think Tank Group - Annual gathering featuring leaders and members in traditional attire" },
         { src: yacEvent2, alt: "YAC leadership at official event", caption: "YAC Leadership - Executive members presenting the YAC Solemn Pledge and Mission" },
         { src: galleryNew1, alt: "YAC community event", caption: "YAC Community Event - Members gathered for cultural celebration" },
@@ -80,6 +113,35 @@ const Gallery = () => {
     },
   ];
 
+  // Flatten all images for navigation
+  const getAllImages = () => {
+    return galleryCategories.flatMap(category => category.images);
+  };
+
+  const openLightbox = (image: GalleryImage) => {
+    const images = getAllImages();
+    const index = images.findIndex(img => img.src === image.src);
+    setAllImages(images);
+    setCurrentIndex(index);
+    setSelectedImage(image);
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
+  const goToPrevious = () => {
+    const newIndex = currentIndex > 0 ? currentIndex - 1 : allImages.length - 1;
+    setCurrentIndex(newIndex);
+    setSelectedImage(allImages[newIndex]);
+  };
+
+  const goToNext = () => {
+    const newIndex = currentIndex < allImages.length - 1 ? currentIndex + 1 : 0;
+    setCurrentIndex(newIndex);
+    setSelectedImage(allImages[newIndex]);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -115,8 +177,11 @@ const Gallery = () => {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {category.images.map((image, imageIndex) => (
-                    <AnimatedSection key={imageIndex} animation="fade-up" delay={imageIndex * 100}>
-                      <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <AnimatedSection key={imageIndex} animation="fade-up" delay={imageIndex * 50}>
+                      <div 
+                        className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                        onClick={() => openLightbox(image)}
+                      >
                         <div className="aspect-square overflow-hidden">
                           <img
                             src={image.src}
@@ -131,6 +196,12 @@ const Gallery = () => {
                             </p>
                           </div>
                         </div>
+                        {/* Click indicator */}
+                        <div className="absolute top-3 right-3 bg-background/80 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground">
+                            <path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                          </svg>
+                        </div>
                       </div>
                     </AnimatedSection>
                   ))}
@@ -140,6 +211,56 @@ const Gallery = () => {
           ))}
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      <Dialog open={!!selectedImage} onOpenChange={closeLightbox}>
+        <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 bg-background/95 backdrop-blur-md border-none">
+          <div className="relative w-full h-full flex flex-col">
+            {/* Close button */}
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 z-50 bg-background/80 hover:bg-background rounded-full p-2 transition-colors"
+            >
+              <X className="w-6 h-6 text-foreground" />
+            </button>
+
+            {/* Navigation buttons */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-background/80 hover:bg-background rounded-full p-3 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6 text-foreground" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-background/80 hover:bg-background rounded-full p-3 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6 text-foreground" />
+            </button>
+
+            {/* Image */}
+            <div className="flex-1 flex items-center justify-center p-8">
+              {selectedImage && (
+                <img
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl"
+                />
+              )}
+            </div>
+
+            {/* Caption */}
+            {selectedImage && (
+              <div className="p-6 text-center bg-muted/50">
+                <p className="text-foreground font-medium">{selectedImage.caption}</p>
+                <p className="text-muted-foreground text-sm mt-2">
+                  {currentIndex + 1} of {allImages.length}
+                </p>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Call to Action */}
       <section className="py-20 bg-muted">
