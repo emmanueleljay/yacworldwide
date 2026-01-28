@@ -1,14 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Target, Users, GraduationCap, Crown, Award, Star } from "lucide-react";
 import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Checkbox } from "@/components/ui/checkbox";
+import { cn } from "@/lib/utils";
 import membershipImage from "@/assets/membership.jpg";
 
 const Membership = () => {
   const { t } = useTranslation();
+  const [dateOfBirth, setDateOfBirth] = useState<Date>();
+  const [honorDeclaration, setHonorDeclaration] = useState(false);
   const objectives = [
     t("membership.objectives.0", "Advance the progress of Yoruba descendants globally."),
     t("membership.objectives.1", "Use resources to support the empowerment of Yorubas globally."),
@@ -231,73 +240,241 @@ const Membership = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={100}>
-              <form className="bg-card rounded-2xl p-8 shadow-warm space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("membership.firstName")}
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder={t("membership.firstName")}
-                    />
+              <form className="bg-card rounded-2xl p-8 shadow-warm space-y-8">
+                {/* Applicant's Information */}
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-6 pb-2 border-b border-border">
+                    Applicant's Information
+                  </h3>
+                  <div className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          First Name
+                        </label>
+                        <input
+                          type="text"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="First Name"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Last Name
+                        </label>
+                        <input
+                          type="text"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Last Name"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Date of Birth
+                      </label>
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <Button
+                            variant="outline"
+                            className={cn(
+                              "w-full justify-start text-left font-normal px-4 py-3 h-auto",
+                              !dateOfBirth && "text-muted-foreground"
+                            )}
+                          >
+                            <CalendarIcon className="mr-2 h-4 w-4" />
+                            {dateOfBirth ? format(dateOfBirth, "PPP") : <span>Select date of birth</span>}
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-auto p-0 bg-background border border-border z-50" align="start">
+                          <Calendar
+                            mode="single"
+                            selected={dateOfBirth}
+                            onSelect={setDateOfBirth}
+                            disabled={(date) =>
+                              date > new Date() || date < new Date("1900-01-01")
+                            }
+                            initialFocus
+                            className={cn("p-3 pointer-events-auto")}
+                          />
+                        </PopoverContent>
+                      </Popover>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Occupation
+                        </label>
+                        <input
+                          type="text"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Occupation"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Affiliation
+                        </label>
+                        <input
+                          type="text"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Affiliation"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Contact Address
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        placeholder="Contact Address"
+                      />
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Phone
+                        </label>
+                        <input
+                          type="tel"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Phone Number"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Email Address"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Membership Category
+                      </label>
+                      <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
+                        <option value="">Select a category</option>
+                        <option value="foundation">Category 1 – Foundation Member - $500</option>
+                        <option value="anyam">Category 2 – ANYAM (Adult 35+) - $100</option>
+                        <option value="aym-above-min">Category 3 – AYM (Above NJ Min Wage) - $75</option>
+                        <option value="aym-min">Category 3 – AYM (NJ Min Wage or Less) - $50</option>
+                        <option value="student-grad">Category 3 – AYM Student (Graduate) - $30</option>
+                        <option value="student-undergrad">Category 3 – AYM Student (Undergraduate) - $20</option>
+                        <option value="honorary">Category 4 – Honorary Member (By Nomination)</option>
+                      </select>
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("membership.lastName")}
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder={t("membership.lastName")}
-                    />
+                </div>
+
+                {/* Introducer's Information */}
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-6 pb-2 border-b border-border">
+                    Introducer's Information
+                  </h3>
+                  <div className="space-y-6">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Introducer's Name
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        placeholder="Full Name"
+                      />
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Phone
+                        </label>
+                        <input
+                          type="tel"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Phone Number"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Email Address"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
+
+                {/* Supporter's Information */}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    {t("membership.emailAddress")}
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder={t("membership.emailAddress")}
-                  />
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-6 pb-2 border-b border-border">
+                    Applicant's Supporter from YAC Membership
+                  </h3>
+                  <div className="space-y-6">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Supporter's Name (from YAC)
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        placeholder="Full Name"
+                      />
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Phone
+                        </label>
+                        <input
+                          type="tel"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Phone Number"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                          placeholder="Email Address"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Honor Declaration */}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    {t("membership.phone")}
-                  </label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder={t("membership.phone")}
-                  />
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-6 pb-2 border-b border-border">
+                    Applicant's Honor Declaration
+                  </h3>
+                  <div className="flex items-start space-x-3">
+                    <Checkbox
+                      id="honor-declaration"
+                      checked={honorDeclaration}
+                      onCheckedChange={(checked) => setHonorDeclaration(checked as boolean)}
+                      className="mt-1"
+                    />
+                    <label
+                      htmlFor="honor-declaration"
+                      className="text-sm text-muted-foreground leading-relaxed cursor-pointer"
+                    >
+                      I hereby declare that I am an honorable Yoruba descendant (by birth or marriage) of good character with no criminal records in the Diaspora and/or the Homeland.
+                    </label>
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    {t("membership.category")}
-                  </label>
-                  <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
-                    <option value="">{t("membership.selectCategory")}</option>
-                    <option value="foundation">Category 1 – Foundation Member - $500</option>
-                    <option value="anyam">Category 2 – ANYAM (Adult 35+) - $100</option>
-                    <option value="aym-above-min">Category 3 – AYM (Above NJ Min Wage) - $75</option>
-                    <option value="aym-min">Category 3 – AYM (NJ Min Wage or Less) - $50</option>
-                    <option value="student-grad">Category 3 – AYM Student (Graduate) - $30</option>
-                    <option value="student-undergrad">Category 3 – AYM Student (Undergraduate) - $20</option>
-                    <option value="honorary">Category 4 – Honorary Member (By Nomination)</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    {t("membership.message")}
-                  </label>
-                  <textarea
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[120px]"
-                    placeholder={t("membership.messagePlaceholder")}
-                  />
-                </div>
+
                 <Button variant="hero" size="xl" className="w-full">
                   {t("membership.submit")}
                 </Button>
