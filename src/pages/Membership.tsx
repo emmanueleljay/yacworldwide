@@ -296,6 +296,9 @@ const Membership = () => {
                             }
                             initialFocus
                             className={cn("p-3 pointer-events-auto")}
+                            captionLayout="dropdown-buttons"
+                            fromYear={1920}
+                            toYear={new Date().getFullYear()}
                           />
                         </PopoverContent>
                       </Popover>
