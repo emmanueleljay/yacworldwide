@@ -27,125 +27,7 @@ const Membership = () => {
     t("membership.objectives.14", "Facilitate and foster Yoruba unity, strategic growth, and political visibility."),
   ];
 
-  const membershipCategories = [
-    {
-      name: "Foundation Member",
-      icon: Crown,
-      price: "$500",
-      period: "one-time",
-      description: "Membership obtained at the inception of YAC. Foundation Members are the pillars of our organization.",
-      features: [
-        "Charter membership status",
-        "Full voting rights",
-        "Advisory council eligibility",
-        "Wall of Honor recognition",
-        "All member benefits included",
-      ],
-      note: "Registration fee due before the inauguration of the substantive Executive of YAC.",
-      popular: false,
-    },
-    {
-      name: "ANYAM",
-      subtitle: "Accredited Non-Youth Adult Member",
-      icon: Users,
-      price: "$500",
-      period: "one-time",
-      description: "For adults above the age of 35, gainfully employed, and earning an income more than the NJ minimum wage.",
-      features: [
-        "Full membership status",
-        "Voting rights in elections",
-        "Mentorship opportunities",
-        "Leadership participation",
-        "All member benefits included",
-      ],
-      note: "Requires referral by two foundation members.",
-      popular: false,
-    },
-    {
-      name: "AYM - High Income",
-      subtitle: "Accredited Youth Member",
-      icon: Star,
-      price: "$250",
-      period: "one-time",
-      description: "For youth (18-35 years) gainfully employed and earning an income higher than the NJ minimum wage ($8.50/hr).",
-      features: [
-        "Full youth membership",
-        "Youth program participation",
-        "Leadership development",
-        "Networking opportunities",
-        "Mentoring by senior members",
-      ],
-      note: "Requires referral by two foundation members.",
-      popular: true,
-    },
-    {
-      name: "AYM - Minimum Wage",
-      subtitle: "Accredited Youth Member",
-      icon: Star,
-      price: "$100",
-      period: "one-time",
-      description: "For youth (18-35 years) employed and earning the NJ minimum wage or less.",
-      features: [
-        "Full youth membership",
-        "Youth program participation",
-        "Leadership development",
-        "Networking opportunities",
-        "Mentoring by senior members",
-      ],
-      note: "Requires referral by two foundation members.",
-      popular: false,
-    },
-    {
-      name: "Student - Graduate",
-      subtitle: "Student Membership",
-      icon: GraduationCap,
-      price: "$50",
-      period: "one-time",
-      description: "For graduate students committed to serving YAC's mission and developing as future leaders.",
-      features: [
-        "Student membership status",
-        "Mentoring services",
-        "Youth program access",
-        "Leadership training",
-        "Service opportunities",
-      ],
-      note: "Students are called to serve in capacities that promote YAC's mission.",
-      popular: false,
-    },
-    {
-      name: "Student - Undergraduate",
-      subtitle: "Student Membership",
-      icon: GraduationCap,
-      price: "$25",
-      period: "one-time",
-      description: "For undergraduate students eager to connect with their heritage and develop leadership skills.",
-      features: [
-        "Student membership status",
-        "Mentoring services",
-        "Youth program access",
-        "Leadership training",
-        "Service opportunities",
-      ],
-      note: "Students are called to serve in capacities that promote YAC's mission.",
-      popular: false,
-    },
-    {
-      name: "Honorary Member",
-      icon: Award,
-      price: "Free",
-      period: "by nomination",
-      description: "Highly distinguished Yoruba leaders nominated and ratified by the YAC membership.",
-      features: [
-        "Honorary membership status",
-        "Advisory role opportunities",
-        "Recognition and honor",
-        "Moral support capacity",
-        "Non-financial contributions welcome",
-      ],
-      note: "Admitted free through nomination and ratification process.",
-      popular: false,
-    },
-  ];
+  // Membership categories content is now displayed as detailed text sections
 
   return (
     <div className="min-h-screen bg-background">
@@ -240,93 +122,93 @@ const Membership = () => {
       {/* Membership Categories */}
       <section className="py-20 lg:py-28 bg-section-gradient">
         <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              {t("membership.categoriesLabel")}
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-              {t("membership.categoriesTitle")}
-            </h2>
-            <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-              {t("membership.categoriesSubtitle")}
-            </p>
-          </AnimatedSection>
-
-          <AnimatedList
-            className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-            staggerDelay={100}
-          >
-            {membershipCategories.map((category) => (
-              <div
-                key={category.name}
-                className={`relative bg-card rounded-2xl p-6 shadow-warm hover:shadow-elevated transition-all duration-300 flex flex-col ${
-                  category.popular ? "ring-2 ring-primary" : ""
-                }`}
-              >
-                {category.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-gold-gradient text-primary-foreground px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap">
-                      {t("membership.youthTier")}
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-gold-gradient flex items-center justify-center mx-auto mb-4">
-                    <category.icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="font-serif text-xl font-bold text-foreground">
-                    {category.name}
+          <AnimatedSection className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-2xl p-8 md:p-12 shadow-warm">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-8">
+                The membership of YAC falls into the following categories:
+              </h2>
+              
+              <div className="space-y-8 text-foreground">
+                {/* Category 1 */}
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="font-serif text-xl font-bold text-primary mb-3 flex items-center gap-3">
+                    <Crown className="w-6 h-6" />
+                    Category 1 – Foundation Member
                   </h3>
-                  {category.subtitle && (
-                    <p className="text-muted-foreground text-xs mt-1">
-                      {category.subtitle}
+                  <p className="text-muted-foreground leading-relaxed">
+                    Membership obtained at the inception of YAC. The registration fee for the Foundation Member is <strong className="text-foreground">US$500 (Five hundred US dollars)</strong> due before the inauguration of the substantive Executive of YAC in January 2019.
+                  </p>
+                </div>
+
+                {/* Category 2 */}
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="font-serif text-xl font-bold text-primary mb-3 flex items-center gap-3">
+                    <Users className="w-6 h-6" />
+                    Category 2 – Accredited Non-Youth Adult Member (ANYAM)
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    YAC defines ANYAM as an adult above the age of 35, gainfully employed, and earning an income more than the NJ minimum wage. The registration fee for ANYAM is <strong className="text-foreground">US$100 (One hundred US dollars)</strong>.
+                  </p>
+                </div>
+
+                {/* Category 3 */}
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="font-serif text-xl font-bold text-primary mb-3 flex items-center gap-3">
+                    <Star className="w-6 h-6" />
+                    Category 3 – Accredited Youth Member (AYM)
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    YAC's definition of a youth is an adult male or female in the 18 – 35 years age bracket. In this category three sub-categories are recognized:
+                  </p>
+                  <ul className="space-y-4 ml-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                      <p className="text-muted-foreground leading-relaxed">
+                        <strong className="text-foreground">Gainfully employed and earning an income higher than the NJ minimum wage ($14.20-18.92/hr.).</strong> The registration fee for this subcategory of AYM is <strong className="text-foreground">US$75 (Seventy-Five US dollars)</strong>.
+                      </p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                      <p className="text-muted-foreground leading-relaxed">
+                        <strong className="text-foreground">Employed and earning the NJ minimum wage or less.</strong> The registration fee for this subcategory of AYM is <strong className="text-foreground">US$50 (Fifty US dollars)</strong>.
+                      </p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <GraduationCap className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                      <div className="text-muted-foreground leading-relaxed">
+                        <strong className="text-foreground">Student membership:</strong> YAC is highly interested in student membership as leaders of tomorrow. In addition to the registration fee, student members are called to serve in capacities that promote YAC's mission in its totality. The student members will benefit from YAC through mentoring services provided by the foundation and ANYAM members. The registration fee for the Graduate student is <strong className="text-foreground">US$30 (Thirty US dollars)</strong> and Undergraduate student <strong className="text-foreground">US$20 (Twenty US dollars)</strong>.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Category 4 */}
+                <div className="border-l-4 border-primary pl-6">
+                  <h3 className="font-serif text-xl font-bold text-primary mb-3 flex items-center gap-3">
+                    <Award className="w-6 h-6" />
+                    Category 4 – Honorary Member
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Through nomination and ratification by the YAC membership, highly distinguished Yoruba leaders may be accepted to the membership of YAC. Members in this category are admitted free, but may be approached for financial and moral support, and/or advisory role and may make other non-financial contributions to the welfare of YAC.
+                  </p>
+                </div>
+
+                {/* Additional Notes */}
+                <div className="bg-muted/30 rounded-xl p-6 mt-8 border border-border">
+                  <h4 className="font-serif text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                    <Target className="w-5 h-5 text-primary" />
+                    Important Membership Information
+                  </h4>
+                  <div className="space-y-4 text-muted-foreground leading-relaxed">
+                    <p>
+                      Membership of YAC from categories 2 and 3 above may be obtained only through referral by a minimum of two foundation members affirming the individual as an honorable Yoruba descendant by birth or marriage.
                     </p>
-                  )}
-                  <div className="flex items-baseline justify-center gap-1 mt-3">
-                    <span className="font-serif text-3xl font-bold text-primary">
-                      {category.price}
-                    </span>
-                    <span className="text-muted-foreground text-sm">
-                      {category.period}
-                    </span>
+                    <p>
+                      The YAC registration fee is a one-time payment required of all members except the honorary members. Annual fees and other financial obligations may be levied to all categories of the YAC membership as may be determined from time to time by the YAC executive and ratified by the YAC membership.
+                    </p>
                   </div>
                 </div>
-                <p className="text-muted-foreground text-sm text-center mb-4 leading-relaxed">
-                  {category.description}
-                </p>
-                <ul className="space-y-3 mb-6 flex-grow">
-                  {category.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <div className="w-4 h-4 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-2.5 h-2.5 text-accent" />
-                      </div>
-                      <span className="text-foreground text-xs">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                {category.note && (
-                  <p className="text-muted-foreground text-xs italic border-t border-border pt-4 mt-auto">
-                    {category.note}
-                  </p>
-                )}
               </div>
-            ))}
-          </AnimatedList>
-
-          <AnimatedSection className="mt-12 max-w-3xl mx-auto">
-            <div className="bg-card rounded-2xl p-8 shadow-warm">
-              <h3 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-                <Target className="w-5 h-5 text-primary" />
-                {t("membership.importantInfo")}
-              </h3>
-              <ul className="space-y-3 text-muted-foreground">
-                {(t("membership.infoItems", { returnObjects: true }) as string[]).map((item: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </AnimatedSection>
         </div>
