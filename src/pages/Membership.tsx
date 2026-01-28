@@ -280,13 +280,13 @@ const Membership = () => {
                   </label>
                   <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
                     <option value="">{t("membership.selectCategory")}</option>
-                    <option value="foundation">Foundation Member - $500</option>
-                    <option value="anyam">ANYAM (Adult 35+) - $500</option>
-                    <option value="aym-high">AYM High Income - $250</option>
-                    <option value="aym-min">AYM Minimum Wage - $100</option>
-                    <option value="student-grad">Student Graduate - $50</option>
-                    <option value="student-undergrad">Student Undergraduate - $25</option>
-                    <option value="honorary">Honorary Member</option>
+                    <option value="foundation">Category 1 – Foundation Member - $500</option>
+                    <option value="anyam">Category 2 – ANYAM (Adult 35+) - $100</option>
+                    <option value="aym-above-min">Category 3 – AYM (Above NJ Min Wage) - $75</option>
+                    <option value="aym-min">Category 3 – AYM (NJ Min Wage or Less) - $50</option>
+                    <option value="student-grad">Category 3 – AYM Student (Graduate) - $30</option>
+                    <option value="student-undergrad">Category 3 – AYM Student (Undergraduate) - $20</option>
+                    <option value="honorary">Category 4 – Honorary Member (By Nomination)</option>
                   </select>
                 </div>
                 <div>
