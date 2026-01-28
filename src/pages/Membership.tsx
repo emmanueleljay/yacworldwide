@@ -12,7 +12,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
-import membershipImage from "@/assets/membership.jpg";
+import membershipImage from "@/assets/membership-banner.jpg";
 
 const Membership = () => {
   const { t } = useTranslation();
