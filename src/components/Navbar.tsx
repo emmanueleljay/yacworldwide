@@ -25,6 +25,7 @@ const Navbar = () => {
     { name: t("nav.mission"), href: "/who-we-are/mission" },
     { name: t("nav.vision"), href: "/who-we-are/vision" },
     { name: t("nav.history"), href: "/who-we-are/history" },
+    { name: t("nav.omoluabi"), href: "/who-we-are/omoluabi" },
   ];
 
   const projectLinks = [
