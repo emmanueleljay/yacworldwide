@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
@@ -16,8 +16,14 @@ import membershipImage from "@/assets/membership-banner.jpg";
 
 const Membership = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [dateOfBirth, setDateOfBirth] = useState<Date>();
   const [honorDeclaration, setHonorDeclaration] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate("/donate");
+  };
   const objectives = [
     t("membership.objectives.0", "Advance the progress of Yoruba descendants globally."),
     t("membership.objectives.1", "Use resources to support the empowerment of Yorubas globally."),
@@ -240,7 +246,7 @@ const Membership = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={100}>
-              <form className="bg-card rounded-2xl p-8 shadow-warm space-y-8">
+              <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-warm space-y-8">
                 {/* Applicant's Information */}
                 <div>
                   <h3 className="font-serif text-xl font-bold text-foreground mb-6 pb-2 border-b border-border">
@@ -478,7 +484,7 @@ const Membership = () => {
                   </div>
                 </div>
 
-                <Button variant="hero" size="xl" className="w-full">
+                <Button type="submit" variant="hero" size="xl" className="w-full">
                   {t("membership.submit")}
                 </Button>
               </form>
