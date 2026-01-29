@@ -14,6 +14,7 @@ const Footer = () => {
     { nameKey: "footer.links.faq", href: "/faq", isRoute: true },
     { nameKey: "footer.links.contactUs", href: "/contact", isRoute: true },
     { nameKey: "footer.links.privacyPolicy", href: "/privacy-policy", isRoute: true },
+    { nameKey: "footer.links.webmail", href: "https://premium135.web-hosting.com:2096/", isExternal: true },
   ];
 
   const socialLinks = [
@@ -62,6 +63,15 @@ const Footer = () => {
                       >
                         {t(link.nameKey)}
                       </Link>
+                    ) : link.isExternal ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-foreground/70 hover:text-primary transition-colors"
+                      >
+                        {t(link.nameKey)}
+                      </a>
                     ) : (
                       <a
                         href={link.href}

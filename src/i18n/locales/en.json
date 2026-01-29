@@ -107,7 +107,8 @@
       "donate": "Donate",
       "faq": "FAQ",
       "contactUs": "Contact Us",
-      "privacyPolicy": "Privacy Policy"
+      "privacyPolicy": "Privacy Policy",
+      "webmail": "Webmail"
     },
     "contactTitle": "Contact Us",
     "copyright": "© {{year}} Yoruba Action Council. All rights reserved.",
