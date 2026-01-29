@@ -13,74 +13,16 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
 import membershipImage from "@/assets/membership-banner.jpg";
-import { useToast } from "@/hooks/use-toast";
-import { submitMembershipForm } from "@/lib/web3forms";
 
 const Membership = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { toast } = useToast();
   const [dateOfBirth, setDateOfBirth] = useState<Date>();
   const [honorDeclaration, setHonorDeclaration] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    occupation: "",
-    affiliation: "",
-    address: "",
-    phone: "",
-    email: "",
-    membershipCategory: "",
-    introducerName: "",
-    introducerPhone: "",
-    introducerEmail: "",
-    supporterName: "",
-    supporterPhone: "",
-    supporterEmail: "",
-  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!honorDeclaration) {
-      toast({
-        title: "Declaration Required",
-        description: "Please confirm the honor declaration to proceed.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      await submitMembershipForm({
-        ...formData,
-        dateOfBirth: dateOfBirth ? format(dateOfBirth, "PPP") : "Not provided",
-      });
-
-      toast({
-        title: "Application Submitted!",
-        description: "Your membership application has been received. Please check your email for confirmation.",
-      });
-
-      // Navigate to donate page after successful submission
-      navigate("/donate");
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to submit application. Please try again or contact us at info@yacworldwide.org",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    navigate("/donate");
   };
   const objectives = [
     t("membership.objectives.0", "Advance the progress of Yoruba descendants globally."),
@@ -314,28 +256,20 @@ const Membership = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          First Name *
+                          First Name
                         </label>
                         <input
                           type="text"
-                          name="firstName"
-                          required
-                          value={formData.firstName}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="First Name"
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Last Name *
+                          Last Name
                         </label>
                         <input
                           type="text"
-                          name="lastName"
-                          required
-                          value={formData.lastName}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Last Name"
                         />
@@ -382,9 +316,6 @@ const Membership = () => {
                         </label>
                         <input
                           type="text"
-                          name="occupation"
-                          value={formData.occupation}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Occupation"
                         />
@@ -395,9 +326,6 @@ const Membership = () => {
                         </label>
                         <input
                           type="text"
-                          name="affiliation"
-                          value={formData.affiliation}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Affiliation"
                         />
@@ -409,9 +337,6 @@ const Membership = () => {
                       </label>
                       <input
                         type="text"
-                        name="address"
-                        value={formData.address}
-                        onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Contact Address"
                       />
@@ -419,28 +344,20 @@ const Membership = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Phone *
+                          Phone
                         </label>
                         <input
                           type="tel"
-                          name="phone"
-                          required
-                          value={formData.phone}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Phone Number"
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Email *
+                          Email
                         </label>
                         <input
                           type="email"
-                          name="email"
-                          required
-                          value={formData.email}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Email Address"
                         />
@@ -448,23 +365,17 @@ const Membership = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        Membership Category *
+                        Membership Category
                       </label>
-                      <select 
-                        name="membershipCategory"
-                        required
-                        value={formData.membershipCategory}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      >
+                      <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
                         <option value="">Select a category</option>
-                        <option value="Category 1 – Foundation Member - $500">Category 1 – Foundation Member - $500</option>
-                        <option value="Category 2 – ANYAM (Adult 35+) - $100">Category 2 – ANYAM (Adult 35+) - $100</option>
-                        <option value="Category 3 – AYM (Above NJ Min Wage) - $75">Category 3 – AYM (Above NJ Min Wage) - $75</option>
-                        <option value="Category 3 – AYM (NJ Min Wage or Less) - $50">Category 3 – AYM (NJ Min Wage or Less) - $50</option>
-                        <option value="Category 3 – AYM Student (Graduate) - $30">Category 3 – AYM Student (Graduate) - $30</option>
-                        <option value="Category 3 – AYM Student (Undergraduate) - $20">Category 3 – AYM Student (Undergraduate) - $20</option>
-                        <option value="Category 4 – Honorary Member (By Nomination)">Category 4 – Honorary Member (By Nomination)</option>
+                        <option value="foundation">Category 1 – Foundation Member - $500</option>
+                        <option value="anyam">Category 2 – ANYAM (Adult 35+) - $100</option>
+                        <option value="aym-above-min">Category 3 – AYM (Above NJ Min Wage) - $75</option>
+                        <option value="aym-min">Category 3 – AYM (NJ Min Wage or Less) - $50</option>
+                        <option value="student-grad">Category 3 – AYM Student (Graduate) - $30</option>
+                        <option value="student-undergrad">Category 3 – AYM Student (Undergraduate) - $20</option>
+                        <option value="honorary">Category 4 – Honorary Member (By Nomination)</option>
                       </select>
                     </div>
                   </div>
@@ -482,9 +393,6 @@ const Membership = () => {
                       </label>
                       <input
                         type="text"
-                        name="introducerName"
-                        value={formData.introducerName}
-                        onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Full Name"
                       />
@@ -496,9 +404,6 @@ const Membership = () => {
                         </label>
                         <input
                           type="tel"
-                          name="introducerPhone"
-                          value={formData.introducerPhone}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Phone Number"
                         />
@@ -509,9 +414,6 @@ const Membership = () => {
                         </label>
                         <input
                           type="email"
-                          name="introducerEmail"
-                          value={formData.introducerEmail}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Email Address"
                         />
@@ -532,9 +434,6 @@ const Membership = () => {
                       </label>
                       <input
                         type="text"
-                        name="supporterName"
-                        value={formData.supporterName}
-                        onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Full Name"
                       />
@@ -546,9 +445,6 @@ const Membership = () => {
                         </label>
                         <input
                           type="tel"
-                          name="supporterPhone"
-                          value={formData.supporterPhone}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Phone Number"
                         />
@@ -559,9 +455,6 @@ const Membership = () => {
                         </label>
                         <input
                           type="email"
-                          name="supporterEmail"
-                          value={formData.supporterEmail}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Email Address"
                         />
@@ -591,8 +484,8 @@ const Membership = () => {
                   </div>
                 </div>
 
-                <Button type="submit" variant="hero" size="xl" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Submitting..." : t("membership.submit")}
+                <Button type="submit" variant="hero" size="xl" className="w-full">
+                  {t("membership.submit")}
                 </Button>
               </form>
             </AnimatedSection>
