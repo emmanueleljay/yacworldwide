@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Send, Clock } from "lucide-react";
 import contactBanner from "@/assets/contact-banner.jpg";
+import { submitContactForm } from "@/lib/web3forms";
 
 const ContactUs = () => {
   const { t } = useTranslation();
@@ -32,16 +33,24 @@ const ContactUs = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      await submitContactForm(formData);
+      
+      toast({
+        title: t("contact.messageSent"),
+        description: t("contact.messageSentDesc"),
+      });
 
-    toast({
-      title: t("contact.messageSent"),
-      description: t("contact.messageSentDesc"),
-    });
-
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or email us directly at info@yacworldwide.org",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
