@@ -20,6 +20,7 @@ import Vision from "./pages/Vision";
 import History from "./pages/History";
 import AboutIleIfe from "./pages/AboutIleIfe";
 import FAQ from "./pages/FAQ";
+import Omoluabi from "./pages/Omoluabi";
 import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/who-we-are/vision" element={<Vision />} />
           <Route path="/who-we-are/history" element={<History />} />
           <Route path="/who-we-are/ile-ife" element={<AboutIleIfe />} />
+          <Route path="/who-we-are/omoluabi" element={<Omoluabi />} />
           <Route path="/projects/tourism" element={<ProjectTourism />} />
           <Route path="/projects/education" element={<ProjectEducation />} />
           <Route path="/projects/culture" element={<ProjectCulture />} />
