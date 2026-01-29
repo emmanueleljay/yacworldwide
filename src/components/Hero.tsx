@@ -180,23 +180,6 @@ const Hero = () => {
             </Link>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 animate-fade-up opacity-0 stagger-5">
-            {[
-              { number: "2018", labelKey: "hero.stats.founded" },
-              { number: "1000+", labelKey: "hero.stats.members" },
-              { number: "50+", labelKey: "hero.stats.projects" },
-            ].map((stat) => (
-              <div key={stat.labelKey} className="text-center">
-                <div className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground">
-                  {stat.number}
-                </div>
-                <div className="text-primary-foreground/70 text-sm mt-1">
-                  {t(stat.labelKey)}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
