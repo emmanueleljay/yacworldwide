@@ -36,7 +36,7 @@ const Projects = () => {
     {
       title: "Water Borehole",
       description:
-        "Infrastructure projects providing clean water access to communities in need across Yoruba land.",
+        "Infrastructure projects providing clean water access to communities in need across the Yoruba Race.",
       image: waterImg,
       color: "from-accent to-primary/60",
       link: "/projects/water",
