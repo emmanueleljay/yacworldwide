@@ -251,21 +251,22 @@ const ContactUs = () => {
                 ))}
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map */}
               <div className="mt-8 p-6 bg-muted/30 rounded-xl border border-border">
                 <h3 className="font-semibold text-foreground mb-4">
                   {t("contact.location")}
                 </h3>
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-primary mx-auto mb-3" />
-                    <p className="text-muted-foreground">
-                      Kendall Park, New Jersey
-                    </p>
-                    <p className="text-sm text-muted-foreground/70">
-                      United States of America
-                    </p>
-                  </div>
+                <div className="aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24297.91968454899!2d-74.5628851!3d40.4205671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c5e1a9a77c49%3A0x2ce0b0f8b3d1a97e!2sKendall%20Park%2C%20NJ%2008824!5e0!3m2!1sen!2sus!4v1706700000000!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="YAC Office Location - Kendall Park, NJ"
+                  />
                 </div>
               </div>
             </div>
