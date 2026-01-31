@@ -13,7 +13,8 @@ import msAbby from "@/assets/ms-abby.jpg";
 
 const Leadership = () => {
   const { t } = useTranslation();
-  const executives = [
+  // Founding leaders displayed side by side
+  const foundingLeaders = [
     {
       name: "Dr. Akin Mo' Awofolaju",
       role: "President/CEO: Yoruba Action Council North America",
@@ -26,16 +27,20 @@ Background: Post-Doctoral Studies in Business Strategy & Corporate Diplomacy at 
 Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – Present). African Business Trade Center, NY | Chairman & CEO (2010 – 2016). Verizon Wireless | Executive Board Director – Managed over $2.5 billion in investments across the Tri-State region and oversaw a workforce of 3,000+ employees for over a decade.`,
     },
     {
+      name: "Dr. Albert Ayeni",
+      role: "Founding General Secretary",
+      image: drAlbert,
+      bio: "Dr. Albert Ayeni was born in Lagos and raised in Iffe-Ijumu, Kogi State. He earned his Ph.D. from Cornell University and served on the faculty at the University of Ibadan for 17 years before joining Rutgers University in 1995. Currently serving as Ethnic Crops Research Specialist and Leader of Entrepreneurship Ag Program at Rutgers' School of Environmental and Biological Sciences. He is a consultant to APLU and has led planning committees for NIDO Americas World Conference and multiple education summits.",
+    },
+  ];
+
+  // Other executive board members
+  const executives = [
+    {
       name: "Dr. Godwin Babs Oloyede Omolola",
       role: "Executive Board Member",
       image: drGodwin,
       bio: "Dr. Godwin Babs Oloyede Omolola was born in Lagos to the Sokoti Family from Igbotako, Ondo State. He earned his D.Sc. in Computer Engineering and Digital Security from Colorado Technical University. With over 25 years of experience as a Cybersecurity Solution Architect and Risk Management Practitioner, he has worked with Fortune 500 companies including Chase Manhattan Bank, IBM, AT&T, and various government agencies. He is a member of ISACA, ISC2, FBI InfraGard, and contributes to emerging technologies under Cisco, IEEE, MITRE, and CSA.",
-    },
-    {
-      name: "Dr. Albert Ayeni",
-      role: "Executive Board Member",
-      image: drAlbert,
-      bio: "Dr. Albert Ayeni was born in Lagos and raised in Iffe-Ijumu, Kogi State. He earned his Ph.D. from Cornell University and served on the faculty at the University of Ibadan for 17 years before joining Rutgers University in 1995. Currently serving as Ethnic Crops Research Specialist and Leader of Entrepreneurship Ag Program at Rutgers' School of Environmental and Biological Sciences. He is a consultant to APLU and has led planning committees for NIDO Americas World Conference and multiple education summits.",
     },
     {
       name: "Ms. Abby",
@@ -85,11 +90,12 @@ Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – P
             </h2>
           </AnimatedSection>
 
+          {/* Founding Leaders - Side by Side */}
           <AnimatedList
-            className="grid md:grid-cols-3 gap-8 lg:gap-12"
+            className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16"
             staggerDelay={200}
           >
-            {executives.map((person) => (
+            {foundingLeaders.map((person) => (
               <div key={person.name} className="group">
                 <div className="relative overflow-hidden rounded-2xl mb-6">
                   <img
@@ -116,6 +122,42 @@ Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – P
                 {person.tagline && (
                   <p className="text-sm text-muted-foreground italic mb-3">{person.tagline}</p>
                 )}
+                <p className="text-muted-foreground leading-relaxed text-sm whitespace-pre-line">
+                  {person.bio}
+                </p>
+              </div>
+            ))}
+          </AnimatedList>
+
+          {/* Other Executive Board Members */}
+          <AnimatedList
+            className="grid md:grid-cols-2 gap-8 lg:gap-12"
+            staggerDelay={200}
+          >
+            {executives.map((person) => (
+              <div key={person.name} className="group">
+                <div className="relative overflow-hidden rounded-2xl mb-6">
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <div className="flex gap-3">
+                      <button className="w-10 h-10 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
+                        <Linkedin className="w-5 h-5 text-primary-foreground" />
+                      </button>
+                      <button className="w-10 h-10 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
+                        <Mail className="w-5 h-5 text-primary-foreground" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-1">
+                  {person.name}
+                </h3>
+                <p className="text-primary font-medium mb-2">{person.role}</p>
                 <p className="text-muted-foreground leading-relaxed text-sm whitespace-pre-line">
                   {person.bio}
                 </p>
