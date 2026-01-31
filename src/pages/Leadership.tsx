@@ -17,7 +17,7 @@ const Leadership = () => {
   const foundingLeaders = [
     {
       name: "Dr. Akin Mo' Awofolaju",
-      role: "President/CEO: Yoruba Action Council North America",
+      role: "Founding President",
       tagline: "Neuroeconomist | Fortune 100 Executive | Global Business Strategy Consultant",
       image: drAkin,
       bio: `Executive Summary: Dr. Akin Mo' Awofolaju is a distinguished Neuroeconomist and seasoned executive with over 35 years of experience in financial engineering, corporate Strategy, and global Private Equity & FinTec Compliance. A veteran of Wall Street and the Fortune 100 sector, he has managed multi-billion dollar investment portfolios and led high performance teams across the telecommunications, real estate, FinTech and energy sectors. Dr. Awofolaju is recognized for his ability to merge big picture vision with tactical execution, having served as a senior advisor to governors and a pivotal figure in Nigerian diaspora policy. Chief Analyst & Initiator of Diaspora Bonds: US$300M Nigerian Diaspora Bond 2014.
@@ -118,7 +118,7 @@ Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – P
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-1">
                   {person.name}
                 </h3>
-                <p className="text-primary font-medium mb-2">{person.role}</p>
+                <p className="text-primary font-bold mb-2">{person.role}</p>
                 {person.tagline && (
                   <p className="text-sm text-muted-foreground italic mb-3">{person.tagline}</p>
                 )}
@@ -157,7 +157,7 @@ Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – P
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-1">
                   {person.name}
                 </h3>
-                <p className="text-primary font-medium mb-2">{person.role}</p>
+                <p className="text-primary font-bold mb-2">{person.role}</p>
                 <p className="text-muted-foreground leading-relaxed text-sm whitespace-pre-line">
                   {person.bio}
                 </p>
