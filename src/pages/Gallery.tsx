@@ -27,6 +27,16 @@ import galleryNew6 from "@/assets/gallery-new-6.jpg";
 import galleryNew7 from "@/assets/gallery-new-7.jpg";
 import galleryNew8 from "@/assets/gallery-new-8.jpg";
 import galleryNew9 from "@/assets/gallery-new-9.jpg";
+import galleryNew10 from "@/assets/gallery-new-10.jpg";
+import galleryNew11 from "@/assets/gallery-new-11.jpg";
+import galleryNew12 from "@/assets/gallery-new-12.jpg";
+import galleryNew13 from "@/assets/gallery-new-13.jpg";
+import galleryNew14 from "@/assets/gallery-new-14.jpg";
+import galleryNew15 from "@/assets/gallery-new-15.jpg";
+import galleryNew16 from "@/assets/gallery-new-16.jpg";
+import galleryNew17 from "@/assets/gallery-new-17.jpg";
+import galleryNew18 from "@/assets/gallery-new-18.jpg";
+import galleryNew19 from "@/assets/gallery-new-19.jpg";
 import galleryEvent1 from "@/assets/gallery-event-1.jpg";
 import galleryEvent2 from "@/assets/gallery-event-2.jpg";
 import galleryEvent3 from "@/assets/gallery-event-3.jpg";
@@ -74,6 +84,16 @@ const Gallery = () => {
         { src: galleryNew7, alt: "YAC celebration", caption: "YAC Celebration - Honoring our heritage and community bonds" },
         { src: galleryNew8, alt: "YAC event photo", caption: "YAC Event - Coming together to celebrate our culture" },
         { src: galleryNew9, alt: "YAC gathering photo", caption: "YAC Gathering - Unity in cultural pride and tradition" },
+        { src: galleryNew10, alt: "YAC community event", caption: "YAC Community Event - Celebrating together in unity" },
+        { src: galleryNew11, alt: "YAC gathering", caption: "YAC Gathering - Members united in fellowship" },
+        { src: galleryNew12, alt: "YAC event", caption: "YAC Event - Embracing our cultural heritage" },
+        { src: galleryNew13, alt: "YAC celebration", caption: "YAC Celebration - Community bonds and traditions" },
+        { src: galleryNew14, alt: "YAC meeting", caption: "YAC Meeting - Leadership and community in harmony" },
+        { src: galleryNew15, alt: "YAC cultural event", caption: "YAC Cultural Event - Honoring Yoruba traditions" },
+        { src: galleryNew16, alt: "YAC community gathering", caption: "YAC Community Gathering - Strength through unity" },
+        { src: galleryNew17, alt: "YAC event photo", caption: "YAC Event - Celebrating our shared heritage" },
+        { src: galleryNew18, alt: "YAC gathering photo", caption: "YAC Gathering - Cultural pride and community spirit" },
+        { src: galleryNew19, alt: "YAC community photo", caption: "YAC Community - Together in cultural celebration" },
       ],
     },
     {
