@@ -55,45 +55,39 @@ Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – P
     <div className="min-h-screen bg-background">
       <Navbar />
       <main>
-      {/* Header */}
-      <header className="bg-hero-gradient py-20 lg:py-32">
-        <div className="container mx-auto px-4">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            {t("common.backToHome")}
-          </Link>
-          <AnimatedSection className="max-w-3xl">
-            <span className="text-primary font-medium uppercase tracking-wider text-sm">
-              {t("leadership.badge")}
-            </span>
-            <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-4 mb-6">
-              {t("leadership.title")}
-            </h1>
-            <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              {t("leadership.subtitle")}
-            </p>
-          </AnimatedSection>
+      {/* Header with Feature Image */}
+      <header className="relative">
+        <div className="absolute inset-0">
+          <img
+            src={leadershipFeature}
+            alt="YAC Leadership gathering"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-foreground/60" />
+        </div>
+        <div className="relative py-20 lg:py-32">
+          <div className="container mx-auto px-4">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors mb-8"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              {t("common.backToHome")}
+            </Link>
+            <AnimatedSection className="max-w-3xl">
+              <span className="text-primary font-medium uppercase tracking-wider text-sm">
+                {t("leadership.badge")}
+              </span>
+              <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-4 mb-6">
+                {t("leadership.title")}
+              </h1>
+              <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
+                {t("leadership.subtitle")}
+              </p>
+            </AnimatedSection>
+          </div>
         </div>
       </header>
-
-      {/* Feature Image */}
-      <section className="py-12 lg:py-16">
-        <div className="container mx-auto px-4">
-          <AnimatedSection>
-            <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <img
-                src={leadershipFeature}
-                alt="YAC Leadership gathering"
-                className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
 
       {/* Executive Leadership */}
       <section className="py-20 lg:py-28">
