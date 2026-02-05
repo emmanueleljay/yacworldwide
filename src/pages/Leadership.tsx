@@ -10,6 +10,7 @@ import drGodwin from "@/assets/dr-godwin-omolola.jpg";
 import drAlbert from "@/assets/dr-albert-ayeni.jpg";
 import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 import msAbby from "@/assets/ms-abby.jpg";
+import leadershipFeature from "@/assets/leadership-feature.jpg";
 
 const Leadership = () => {
   const { t } = useTranslation();
@@ -77,6 +78,22 @@ Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – P
           </AnimatedSection>
         </div>
       </header>
+
+      {/* Feature Image */}
+      <section className="py-12 lg:py-16">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src={leadershipFeature}
+                alt="YAC Leadership gathering"
+                className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* Executive Leadership */}
       <section className="py-20 lg:py-28">
