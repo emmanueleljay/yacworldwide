@@ -65,6 +65,11 @@ import galleryNew44 from "@/assets/gallery-new-44.jpg";
 import galleryNew45 from "@/assets/gallery-new-45.jpg";
 import galleryNew46 from "@/assets/gallery-new-46.jpg";
 import galleryNew47 from "@/assets/gallery-new-47.jpg";
+import galleryNew48 from "@/assets/gallery-new-48.jpg";
+import galleryNew49 from "@/assets/gallery-new-49.jpg";
+import galleryNew50 from "@/assets/gallery-new-50.jpg";
+import galleryNew51 from "@/assets/gallery-new-51.jpg";
+import galleryNew52 from "@/assets/gallery-new-52.jpg";
 import galleryEvent1 from "@/assets/gallery-event-1.jpg";
 import galleryEvent2 from "@/assets/gallery-event-2.jpg";
 import galleryEvent3 from "@/assets/gallery-event-3.jpg";
@@ -150,6 +155,11 @@ const Gallery = () => {
         { src: galleryNew45, alt: "YAC event photo", caption: "YAC Event - Celebrating together" },
         { src: galleryNew46, alt: "YAC community event", caption: "YAC Community Event - Cultural unity" },
         { src: galleryNew47, alt: "YAC celebration photo", caption: "YAC Celebration - Honoring our shared heritage" },
+        { src: galleryNew48, alt: "Royal audience with the Ooni", caption: "Royal Audience - Meeting with the Ooni of Ife" },
+        { src: galleryNew49, alt: "Conversation with the Ooni", caption: "Royal Dialogue - Engaging with the Ooni of Ife" },
+        { src: galleryNew50, alt: "The Ooni of Ife at the palace", caption: "The Ooni of Ife - At the Royal Palace" },
+        { src: galleryNew51, alt: "Discussion with the Ooni", caption: "Royal Exchange - Audience with the Ooni" },
+        { src: galleryNew52, alt: "Portrait with the Ooni of Ife", caption: "Royal Portrait - With the Ooni of Ife" },
       ],
     },
     {
