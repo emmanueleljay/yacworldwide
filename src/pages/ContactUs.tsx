@@ -32,16 +32,41 @@ const ContactUs = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "YOUR_ACCESS_KEY_PLACEHOLDER",
+          to: "Info@yacworldwide.org",
+          from_name: formData.name,
+          replyto: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          botcheck: "",
+        }),
+      });
 
-    toast({
-      title: t("contact.messageSent"),
-      description: t("contact.messageSentDesc"),
-    });
+      const result = await response.json();
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
+      if (result.success) {
+        toast({
+          title: t("contact.messageSent"),
+          description: t("contact.messageSentDesc"),
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error(result.message || "Submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
