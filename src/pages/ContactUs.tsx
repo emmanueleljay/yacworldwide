@@ -28,45 +28,18 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_PLACEHOLDER",
-          to: "Info@yacworldwide.org",
-          from_name: formData.name,
-          replyto: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          botcheck: "",
-        }),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        toast({
-          title: t("contact.messageSent"),
-          description: t("contact.messageSentDesc"),
-        });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        throw new Error(result.message || "Submission failed");
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again or email us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    const { name, email, subject, message } = formData;
+    const body = `Name: ${name}%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
+    const mailtoLink = `mailto:Info@yacworldwide.org?subject=${encodeURIComponent(subject || "Website Inquiry")}&body=${body}`;
+    window.location.href = mailtoLink;
+    
+    toast({
+      title: t("contact.messageSent"),
+      description: "Your email client has been opened. Please send the email to complete your inquiry.",
+    });
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const contactInfo = [
