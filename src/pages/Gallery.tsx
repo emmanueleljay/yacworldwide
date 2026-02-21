@@ -70,6 +70,16 @@ import galleryNew49 from "@/assets/gallery-new-49.jpg";
 import galleryNew50 from "@/assets/gallery-new-50.jpg";
 import galleryNew51 from "@/assets/gallery-new-51.jpg";
 import galleryNew52 from "@/assets/gallery-new-52.jpg";
+import galleryNew53 from "@/assets/gallery-new-53.jpg";
+import galleryNew54 from "@/assets/gallery-new-54.jpg";
+import galleryNew55 from "@/assets/gallery-new-55.jpg";
+import galleryNew56 from "@/assets/gallery-new-56.jpg";
+import galleryNew57 from "@/assets/gallery-new-57.jpg";
+import galleryNew58 from "@/assets/gallery-new-58.jpg";
+import galleryNew59 from "@/assets/gallery-new-59.jpg";
+import galleryNew60 from "@/assets/gallery-new-60.jpg";
+import galleryNew61 from "@/assets/gallery-new-61.jpg";
+import galleryNew62 from "@/assets/gallery-new-62.jpg";
 import galleryEvent1 from "@/assets/gallery-event-1.jpg";
 import galleryEvent2 from "@/assets/gallery-event-2.jpg";
 import galleryEvent3 from "@/assets/gallery-event-3.jpg";
@@ -160,6 +170,16 @@ const Gallery = () => {
         { src: galleryNew50, alt: "The Ooni of Ife at the palace", caption: "The Ooni of Ife - At the Royal Palace" },
         { src: galleryNew51, alt: "Discussion with the Ooni", caption: "Royal Exchange - Audience with the Ooni" },
         { src: galleryNew52, alt: "Portrait with the Ooni of Ife", caption: "Royal Portrait - With the Ooni of Ife" },
+        { src: galleryNew53, alt: "YAC community event", caption: "YAC Community Event - Members in fellowship" },
+        { src: galleryNew54, alt: "YAC gathering", caption: "YAC Gathering - Celebrating together" },
+        { src: galleryNew55, alt: "YAC cultural celebration", caption: "YAC Cultural Celebration - Embracing heritage" },
+        { src: galleryNew56, alt: "YAC event photo", caption: "YAC Event - Unity in cultural pride" },
+        { src: galleryNew57, alt: "YAC community gathering", caption: "YAC Community - Strengthening bonds" },
+        { src: galleryNew58, alt: "YAC meeting", caption: "YAC Meeting - Leadership and fellowship" },
+        { src: galleryNew59, alt: "YAC celebration", caption: "YAC Celebration - Honoring our heritage" },
+        { src: galleryNew60, alt: "YAC event", caption: "YAC Event - Coming together in unity" },
+        { src: galleryNew61, alt: "YAC community photo", caption: "YAC Community - Shared cultural pride" },
+        { src: galleryNew62, alt: "YAC gathering photo", caption: "YAC Gathering - Tradition and togetherness" },
       ],
     },
     {
