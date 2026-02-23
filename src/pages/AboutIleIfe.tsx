@@ -61,7 +61,7 @@ const AboutIleIfe = () => {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-center mb-6">
               {t("ileIfe.title", "Origin of")}
-              <span className="text-primary block mt-2">{t("ileIfe.highlight", "Ile-Ife")}</span>
+              <span className="text-primary block mt-2">{t("ileIfe.highlight", "Yoruba Race")}</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground text-center max-w-3xl mx-auto">
               {t(
