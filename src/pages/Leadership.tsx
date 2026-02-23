@@ -21,11 +21,19 @@ const Leadership = () => {
       role: "Founding President",
       tagline: "Neuroeconomist | Fortune 100 Executive | Global Business Strategy Consultant",
       image: drAkin,
-      bio: `Executive Summary: Dr. Akin Mo' Awofolaju is a distinguished Neuroeconomist and seasoned executive with over 35 years of experience in financial engineering, corporate Strategy, and global Private Equity & FinTec Compliance. A veteran of Wall Street and the Fortune 100 sector, he has managed multi-billion dollar investment portfolios and led high performance teams across the telecommunications, real estate, FinTech and energy sectors. Dr. Awofolaju is recognized for his ability to merge big picture vision with tactical execution, having served as a senior advisor to governors and a pivotal figure in Nigerian diaspora policy. Chief Analyst & Initiator of Diaspora Bonds: US$300M Nigerian Diaspora Bond 2014.
+      bio: `Academic pursuits include an MBA and PhD scholarships in Neuroeconomics and Applied Development Economics from Moscow University and Plekhanov Business School in Moscow. He further had his doctoral education in Business Strategy & Corporate Diplomacy at the prestigious Cornell University, S.C. Johnson Graduate School of Management in Ithaca, New York. He has also completed advanced programs in Executive Leadership Development, Business Strategy, and Strategic Thinking/Planning at the Yale and Harvard University Business Schools.
 
-Background: Post-Doctoral Studies in Business Strategy & Corporate Diplomacy at Cornell University, S.C. Johnson Graduate School of Management, Ithaca, NY. PhD & MBA (Scholarship Recipient) in Neuroeconomics & Applied Development Economics from Moscow University and Plekhanov Russian University of Economics, Moscow. Advanced Professional Education with specialized programs in Economic Strategy and Strategic Planning at Harvard Business School and Yale School of Management.
+His expertise includes:
 
-Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – Present). African Business Trade Center, NY | Chairman & CEO (2010 – 2016). Verizon Wireless | Executive Board Director – Managed over $2.5 billion in investments across the Tri-State region and oversaw a workforce of 3,000+ employees for over a decade.`,
+Emerging private equity, future capital, leveraged M&A buyouts, venture capital, recapitalization, and private equity funds.
+
+Strategic capital development in Fintech.
+
+Revolutionizing process improvement with innovative tactical evaluations.
+
+Specializing in mergers and acquisitions, managing numerous organizations in senior executive capacities.
+
+Awofolaju has served in various C-level and Director capacities with Fortune 500 companies such as Verizon Wireless, Apple Inc., Altice, and Comcast. While at Verizon Wireless, the largest U.S. wireless communication company, he was a leading Executive Board Director, managing over US$2.5 billion in investments (Tri-State regions) and overseeing more than 3,000 employees for over 10 years.`,
     },
     {
       name: "Dr. Albert Ayeni",
