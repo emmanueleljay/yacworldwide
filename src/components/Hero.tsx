@@ -145,7 +145,7 @@ const Hero = () => {
                   {t(slide.subtitleKey)}
                 </span>
                 {index === 0 && (
-                  <span className="block text-primary-foreground mt-2 text-3xl md:text-5xl lg:text-6xl">
+                  <span className="block text-primary-foreground mt-2 text-4xl md:text-6xl lg:text-7xl">
                     {t("hero.slides.welcome.tagline")}
                   </span>
                 )}
