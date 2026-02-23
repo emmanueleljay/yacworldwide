@@ -44,7 +44,7 @@ Professional Experience: AmeriStrategy Inc. – USA | Chairman & CEO (2016 – P
       bio: "Dr. Godwin Babs Oloyede Omolola was born in Lagos to the Sokoti Family from Igbotako, Ondo State. He earned his D.Sc. in Computer Engineering and Digital Security from Colorado Technical University. With over 25 years of experience as a Cybersecurity Solution Architect and Risk Management Practitioner, he has worked with Fortune 500 companies including Chase Manhattan Bank, IBM, AT&T, and various government agencies. He is a member of ISACA, ISC2, FBI InfraGard, and contributes to emerging technologies under Cisco, IEEE, MITRE, and CSA.",
     },
     {
-      name: "Ms. Abby",
+      name: "Ms. Abby Agboola Arogundade",
       role: "Executive Founding Member",
       image: msAbby,
       bio: "Ms Abby is an RN & a Midwife for over 45 years. Her nursing education started at Lagos University Teaching Hospital, Lagos. Her BSN & MSN was completed at Wagner College on Staten Island, and she is currently pursuing a Ph.D in International Business at California Intercontinental University, expected to finish in February 2027. She is the CEO of Fadmo Health and Homecare Agency, Fadmo Logistics USA and Nigeria. She is married with three children and three grandchildren.",
