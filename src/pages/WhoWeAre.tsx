@@ -278,7 +278,7 @@ const WhoWeAre = () => {
                   <Scale className="w-7 h-7 text-primary" />
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-serif font-bold text-foreground">
-                  3. The "Origin" Dispute
+                  3. The "Origin"
                 </h2>
               </div>
             </AnimatedSection>
