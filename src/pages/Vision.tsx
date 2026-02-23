@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Eye, Globe, Users, Handshake, Link2, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Vision = () => {
   const objectives = [
@@ -169,12 +170,12 @@ const Vision = () => {
               <p className="text-muted-foreground mb-8">
                 Join us in building a future where Yoruba excellence is recognized and celebrated worldwide.
               </p>
-              <a
-                href="/membership"
+              <Link
+                to="/membership"
                 className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-colors"
               >
                 Join YAC Today
-              </a>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
