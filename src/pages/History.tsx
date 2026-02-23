@@ -93,7 +93,7 @@ const History = () => {
               <div className="flex items-center justify-center gap-4 mb-8">
                 <MapPin className="w-8 h-8 text-primary" />
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                  Our Founding Story
+                  Our Organization
                 </h2>
               </div>
               
