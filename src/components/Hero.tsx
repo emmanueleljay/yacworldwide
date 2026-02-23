@@ -144,9 +144,11 @@ const Hero = () => {
                 <span className="block text-gradient-gold mt-2">
                   {t(slide.subtitleKey)}
                 </span>
-                <span className="block text-primary-foreground mt-2 text-4xl md:text-6xl lg:text-7xl font-bold">
-                  {t("hero.slides.welcome.tagline")}
-                </span>
+                {index === 0 && (
+                  <span className="block text-primary-foreground mt-2 text-3xl md:text-5xl lg:text-6xl">
+                    {t("hero.slides.welcome.tagline")}
+                  </span>
+                )}
               </h1>
             ))}
           </div>
