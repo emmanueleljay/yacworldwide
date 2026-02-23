@@ -51,7 +51,7 @@ const Omoluabi = () => {
           <AnimatedSection animation="fade-up">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6 text-center">
-                Yoruba "Omoluabi"
+                Yoruba "Omoluabi" — Culture is Our Mantra
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 The Omoluabi concept signifies courage, hard work, humility and respect. An Omoluabi is a person of honor who believes in hard work, respects the rights of others, and gives to the community in deeds and in action.
