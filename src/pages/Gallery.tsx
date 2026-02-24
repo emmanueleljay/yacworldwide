@@ -80,6 +80,14 @@ import galleryNew59 from "@/assets/gallery-new-59.jpg";
 import galleryNew60 from "@/assets/gallery-new-60.jpg";
 import galleryNew61 from "@/assets/gallery-new-61.jpg";
 import galleryNew62 from "@/assets/gallery-new-62.jpg";
+import galleryNew63 from "@/assets/gallery-new-63.jpg";
+import galleryNew64 from "@/assets/gallery-new-64.jpg";
+import galleryNew65 from "@/assets/gallery-new-65.jpg";
+import galleryNew66 from "@/assets/gallery-new-66.jpg";
+import galleryNew67 from "@/assets/gallery-new-67.jpg";
+import galleryNew68 from "@/assets/gallery-new-68.jpg";
+import galleryNew69 from "@/assets/gallery-new-69.jpg";
+import galleryNew70 from "@/assets/gallery-new-70.jpg";
 import galleryEvent1 from "@/assets/gallery-event-1.jpg";
 import galleryEvent2 from "@/assets/gallery-event-2.jpg";
 import galleryEvent3 from "@/assets/gallery-event-3.jpg";
@@ -180,6 +188,14 @@ const Gallery = () => {
         { src: galleryNew60, alt: "YAC event", caption: "YAC Event - Coming together in unity" },
         { src: galleryNew61, alt: "YAC community photo", caption: "YAC Community - Shared cultural pride" },
         { src: galleryNew62, alt: "YAC gathering photo", caption: "YAC Gathering - Tradition and togetherness" },
+        { src: galleryNew63, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
+        { src: galleryNew64, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
+        { src: galleryNew65, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
+        { src: galleryNew66, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
+        { src: galleryNew67, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
+        { src: galleryNew68, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
+        { src: galleryNew69, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
+        { src: galleryNew70, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
       ],
     },
     {
