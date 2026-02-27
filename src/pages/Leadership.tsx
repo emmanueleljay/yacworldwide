@@ -10,6 +10,7 @@ import drGodwin from "@/assets/dr-godwin-omolola.jpg";
 import drAlbert from "@/assets/dr-albert-ayeni.jpg";
 import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 import msAbby from "@/assets/ms-abby.jpg";
+import drBola from "@/assets/dr-bola-omotosho.jpg";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
 const Leadership = () => {
@@ -56,6 +57,12 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
       role: "Executive Founding Member",
       image: msAbby,
       bio: "Ms Abby is an RN & a Midwife for over 45 years. Her nursing education started at Lagos University Teaching Hospital, Lagos. Her BSN & MSN was completed at Wagner College on Staten Island, and she is currently pursuing a Ph.D in International Business at California Intercontinental University, expected to finish in February 2027. She is the CEO of Fadmo Health and Homecare Agency, Fadmo Logistics USA and Nigeria. She is married with three children and three grandchildren.",
+    },
+    {
+      name: "Dr. Bola Omotosho",
+      role: "Member",
+      image: drBola,
+      bio: "Dr Bola Omotosho graduated with honors, earning both a Bachelor of Science and a Doctor of Medicine from Obafemi Awolowo University in Nigeria, formerly known as the University of Ife. His journey continued with further training in Anesthesiology, leading to a remarkable medical career with the Nigerian Navy. In the late 1990s, he took a bold step to relocate to the Bronx, USA, where he pursued his passion for medicine with extensive training in Hematology/Oncology and Infectious Disease as a clinical researcher. With over four decades of experience, his career as a physician reflects a rich tapestry of service in military hospitals, major metropolitan hospitals, and private teaching hospitals. In 2024, he took on the role of Senior Advisor for Community Partnerships with the Department of Health and Mental Hygiene in New York City, continuing to inspire and make a difference in the community.",
     },
   ];
 
