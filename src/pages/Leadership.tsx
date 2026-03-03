@@ -127,7 +127,7 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
                   <img
                     src={person.image}
                     alt={person.name}
-                    className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -166,7 +166,7 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
                   <img
                     src={person.image}
                     alt={person.name}
-                    className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
