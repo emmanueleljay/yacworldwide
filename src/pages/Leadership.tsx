@@ -67,7 +67,7 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
     },
     {
       name: "Adeniyi Ogunkoya, M.D.",
-      role: "Member",
+      role: "Founding Member",
       image: drAdeniyi,
       bio: `Adeniyi Ogunkoya, M.D., has practiced in the medical profession for over 3 decades, establishing as a front runner in the field of internal medicine, in the United States, and possessing cognate experiences and expertise in various aspects of medical profession where he excelled in the various aspects of medical management practices, including management of top-rated and world class hospitals, Teaching hospitals, health care medical facilities, in the field of primary care development and management at several levels. Dr. Ogunkoya has held various teaching and training experiences in various capacities at the University teaching hospitals in the state of New Jersey, United States. Dr. Ogunkoya has held several administrative and managerial positions, including head and leadership roles, at various hospitals, healthcare facilities, and primary healthcare centers over the past three decades. Dr. Ogunkoya is a medical director, medical consultant, professional medical instructor, medical specialist, and medical project developer. Dr. Ogunkoya is a graduate of the State University of New York (SUNY) Downstate medical school in Brooklyn, New York, and also Residency and Fellowship program at the University of Medicine and Dentistry (UMDNJ), New Jersey Medical School in combined internal medicine and pediatrics, followed by a fellowship in allergy and immunology from 1981 to 1988.
 
