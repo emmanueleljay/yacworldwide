@@ -11,6 +11,7 @@ import drAlbert from "@/assets/dr-albert-ayeni.jpg";
 import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 import msAbby from "@/assets/ms-abby.jpg";
 import drBola from "@/assets/dr-bola-omotosho.jpg";
+import drAdeniyi from "@/assets/dr-adeniyi-ogunkoya.jpg";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
 const Leadership = () => {
@@ -63,6 +64,18 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
       role: "Member",
       image: drBola,
       bio: "Dr Bola Omotosho graduated with honors, earning both a Bachelor of Science and a Doctor of Medicine from Obafemi Awolowo University in Nigeria, formerly known as the University of Ife. His journey continued with further training in Anesthesiology, leading to a remarkable medical career with the Nigerian Navy. In the late 1990s, he took a bold step to relocate to the Bronx, USA, where he pursued his passion for medicine with extensive training in Hematology/Oncology and Infectious Disease as a clinical researcher. With over four decades of experience, his career as a physician reflects a rich tapestry of service in military hospitals, major metropolitan hospitals, and private teaching hospitals. In 2024, he took on the role of Senior Advisor for Community Partnerships with the Department of Health and Mental Hygiene in New York City, continuing to inspire and make a difference in the community.",
+    },
+    {
+      name: "Adeniyi Ogunkoya, M.D.",
+      role: "Member",
+      image: drAdeniyi,
+      bio: `Adeniyi Ogunkoya, M.D., has practiced in the medical profession for over 3 decades, establishing as a front runner in the field of internal medicine, in the United States, and possessing cognate experiences and expertise in various aspects of medical profession where he excelled in the various aspects of medical management practices, including management of top-rated and world class hospitals, Teaching hospitals, health care medical facilities, in the field of primary care development and management at several levels. Dr. Ogunkoya has held various teaching and training experiences in various capacities at the University teaching hospitals in the state of New Jersey, United States. Dr. Ogunkoya has held several administrative and managerial positions, including head and leadership roles, at various hospitals, healthcare facilities, and primary healthcare centers over the past three decades. Dr. Ogunkoya is a medical director, medical consultant, professional medical instructor, medical specialist, and medical project developer. Dr. Ogunkoya is a graduate of the State University of New York (SUNY) Downstate medical school in Brooklyn, New York, and also Residency and Fellowship program at the University of Medicine and Dentistry (UMDNJ), New Jersey Medical School in combined internal medicine and pediatrics, followed by a fellowship in allergy and immunology from 1981 to 1988.
+
+Dr Adeniyi Ogunkoya was an executive and founding member of NIDO (Nigerians in the Diaspora Organization) at the National level and also the inaugural and founding member of NIDO, New Jersey.
+
+In Nigeria, Dr. Ogunkoya has conducted several Medical missions, notable ones in Kaduna and another in Onitsha, hosted by the OBI of ONITSHA. Dr. Ogunkoya was a member of the presidential committee to set up six world-class hospitals in the six geopolitical zones in Nigeria. He was also an Executive Director on the board of Transcorp in Nigeria. Now the Visioneer of a 200-bed world-class hospital just outside of Lagos on a 100-acre land.
+
+Dr. Ogunkoya is passionate about his cultural background and wishes to continue to promote the YORUBA culture as a member of the Yoruba Action Council (YAC).`,
     },
   ];
 
