@@ -11,6 +11,7 @@ import drAlbert from "@/assets/dr-albert-ayeni.jpg";
 import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 import msAbby from "@/assets/ms-abby.jpg";
 import drBola from "@/assets/dr-bola-omotosho.jpg";
+import drAdeniyi from "@/assets/dr-adeniyi-ogunkoya.jpg";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
 const Leadership = () => {
