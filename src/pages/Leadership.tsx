@@ -130,6 +130,23 @@ Dr. Ogunkoya is passionate about his cultural background and wishes to continue 
             </h2>
           </AnimatedSection>
 
+          {/* Patron */}
+          <AnimatedSection className="flex justify-center mb-16">
+            <div className="group max-w-md text-center">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img
+                  src={kabiyesiOlowu}
+                  alt="Kabiyesi Olowu of Owu Kingdom"
+                  className="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <h3 className="font-serif text-2xl font-semibold text-foreground mb-1">
+                Kabiyesi Olowu of Owu Kingdom
+              </h3>
+              <p className="text-primary font-bold text-lg">Our Patron</p>
+            </div>
+          </AnimatedSection>
+
           {/* Founding Leaders - Side by Side */}
           <AnimatedList
             className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16"
