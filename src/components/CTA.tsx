@@ -28,10 +28,12 @@ const CTA = () => {
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                 {t("cta.events.description")}
               </p>
-              <Button variant="outline" size="lg" className="group">
-                {t("cta.events.button")}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/gallery">
+                <Button variant="outline" size="lg" className="group">
+                  {t("cta.events.button")}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           </AnimatedSection>
 
