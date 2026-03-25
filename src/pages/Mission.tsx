@@ -162,12 +162,12 @@ const Mission = () => {
               <p className="text-muted-foreground mb-8">
                 Be part of a global movement dedicated to the advancement and empowerment of Yoruba people everywhere.
               </p>
-              <a
-                href="/membership"
+              <Link
+                to="/membership"
                 className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-colors"
               >
                 Become a Member
-              </a>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
