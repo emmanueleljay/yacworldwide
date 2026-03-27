@@ -12,6 +12,7 @@ import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 import msAbby from "@/assets/ms-abby.jpg";
 import drBola from "@/assets/dr-bola-omotosho.jpg";
 import drAdeniyi from "@/assets/dr-adeniyi-ogunkoya.jpg";
+import princeDepo from "@/assets/leadership-depo-akande.jpeg";
 import kabiyesiOlowu from "@/assets/kabiyesi-olowu.png";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
@@ -65,6 +66,14 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
       role: "Member",
       image: drBola,
       bio: "Dr Bola Omotosho graduated with honors, earning both a Bachelor of Science and a Doctor of Medicine from Obafemi Awolowo University in Nigeria, formerly known as the University of Ife. His journey continued with further training in Anesthesiology, leading to a remarkable medical career with the Nigerian Navy. In the late 1990s, he took a bold step to relocate to the Bronx, USA, where he pursued his passion for medicine with extensive training in Hematology/Oncology and Infectious Disease as a clinical researcher. With over four decades of experience, his career as a physician reflects a rich tapestry of service in military hospitals, major metropolitan hospitals, and private teaching hospitals. In 2024, he took on the role of Senior Advisor for Community Partnerships with the Department of Health and Mental Hygiene in New York City, continuing to inspire and make a difference in the community.",
+    },
+    {
+      name: "Prince Depo Akande",
+      role: "Founding Member",
+      image: princeDepo,
+      bio: `Prince Depo Akande, Msc Banking and Finance) FCIB (Fellow, Chartered Institute of Bankers of Nigeria) is a Finance Executive with over 30 years experience of Corporate and Investment Banking. At the early stage in the US, he worked with Merrill Lynch Investment Managers as an Assistant Vice President, he and others were responsible for managing portfolio of over 600 billions in assets, he left Merrill Lynch in 2003 to start his own business and presently the President and CEO of Pro Settlement Solutions, LLC, a title and settlement company based in Edison in New Jersey. He also sits on the board of various companies where he contributes to the growth of the companies.
+
+Prince Akande is a community and a political enthusiast leader in Franklin Township. He is happily married with children.`,
     },
     {
       name: "Adeniyi Ogunkoya, M.D.",
