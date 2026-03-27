@@ -12,6 +12,7 @@ import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 import msAbby from "@/assets/ms-abby.jpg";
 import drBola from "@/assets/dr-bola-omotosho.jpg";
 import drAdeniyi from "@/assets/dr-adeniyi-ogunkoya.jpg";
+import princeDepo from "@/assets/leadership-depo-akande.jpeg";
 import kabiyesiOlowu from "@/assets/kabiyesi-olowu.png";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
