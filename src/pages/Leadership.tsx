@@ -1,10 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Mail, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { AnimatedSection, AnimatedList } from "@/hooks/useScrollAnimation";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 import drGodwin from "@/assets/dr-godwin-omolola.jpg";
 import drAlbert from "@/assets/dr-albert-ayeni.jpg";
@@ -16,10 +24,38 @@ import princeDepo from "@/assets/leadership-depo-akande.jpeg";
 import kabiyesiOlowu from "@/assets/kabiyesi-olowu.png";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
+interface Leader {
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+  tagline?: string;
+}
+
+const LeaderCard = ({ person, onViewBio }: { person: Leader; onViewBio: () => void }) => (
+  <div className="group text-center">
+    <div className="relative overflow-hidden rounded-2xl mb-4">
+      <img
+        src={person.image}
+        alt={person.name}
+        className="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    <h3 className="font-serif text-xl font-semibold text-foreground mb-1">
+      {person.name}
+    </h3>
+    <p className="text-primary font-bold mb-3">{person.role}</p>
+    <Button variant="outline" size="sm" onClick={onViewBio}>
+      View Bio
+    </Button>
+  </div>
+);
+
 const Leadership = () => {
   const { t } = useTranslation();
-  // Founding leaders displayed side by side
-  const foundingLeaders = [
+  const [selectedLeader, setSelectedLeader] = useState<Leader | null>(null);
+
+  const foundingLeaders: Leader[] = [
     {
       name: "Dr. Akin Mo' Awofolaju",
       role: "Founding President",
@@ -47,8 +83,7 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
     },
   ];
 
-  // Other executive board members
-  const executives = [
+  const executives: Leader[] = [
     {
       name: "Dr. Godwin Babs Oloyede Omolola",
       role: "Executive Founding Member",
@@ -142,7 +177,7 @@ Dr. Ogunkoya is passionate about his cultural background and wishes to continue 
           {/* Patron */}
           <AnimatedSection className="flex justify-center mb-16">
             <div className="group max-w-md text-center">
-              <div className="relative overflow-hidden rounded-2xl mb-6">
+              <div className="relative overflow-hidden rounded-2xl mb-4">
                 <img
                   src={kabiyesiOlowu}
                   alt="Kabiyesi Olowu of Owu Kingdom"
@@ -162,77 +197,58 @@ Dr. Ogunkoya is passionate about his cultural background and wishes to continue 
             staggerDelay={200}
           >
             {foundingLeaders.map((person) => (
-              <div key={person.name} className="group">
-                <div className="relative overflow-hidden rounded-2xl mb-6">
-                  <img
-                    src={person.image}
-                    alt={person.name}
-                    className="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="flex gap-3">
-                      <button className="w-10 h-10 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
-                        <Linkedin className="w-5 h-5 text-primary-foreground" />
-                      </button>
-                      <button className="w-10 h-10 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
-                        <Mail className="w-5 h-5 text-primary-foreground" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-1">
-                  {person.name}
-                </h3>
-                <p className="text-primary font-bold mb-2">{person.role}</p>
-                {person.tagline && (
-                  <p className="text-sm text-muted-foreground italic mb-3">{person.tagline}</p>
-                )}
-                <p className="text-muted-foreground leading-relaxed text-sm whitespace-pre-line">
-                  {person.bio}
-                </p>
-              </div>
+              <LeaderCard
+                key={person.name}
+                person={person}
+                onViewBio={() => setSelectedLeader(person)}
+              />
             ))}
           </AnimatedList>
 
           {/* Other Executive Board Members */}
           <AnimatedList
-            className="grid md:grid-cols-2 gap-8 lg:gap-12"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
             staggerDelay={200}
           >
             {executives.map((person) => (
-              <div key={person.name} className="group">
-                <div className="relative overflow-hidden rounded-2xl mb-6">
-                  <img
-                    src={person.image}
-                    alt={person.name}
-                    className="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="flex gap-3">
-                      <button className="w-10 h-10 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
-                        <Linkedin className="w-5 h-5 text-primary-foreground" />
-                      </button>
-                      <button className="w-10 h-10 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
-                        <Mail className="w-5 h-5 text-primary-foreground" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-1">
-                  {person.name}
-                </h3>
-                <p className="text-primary font-bold mb-2">{person.role}</p>
-                <p className="text-muted-foreground leading-relaxed text-sm whitespace-pre-line">
-                  {person.bio}
-                </p>
-              </div>
+              <LeaderCard
+                key={person.name}
+                person={person}
+                onViewBio={() => setSelectedLeader(person)}
+              />
             ))}
           </AnimatedList>
         </div>
       </section>
 
+      {/* Bio Dialog */}
+      <Dialog open={!!selectedLeader} onOpenChange={(open) => !open && setSelectedLeader(null)}>
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+          {selectedLeader && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-4 mb-2">
+                  <img
+                    src={selectedLeader.image}
+                    alt={selectedLeader.name}
+                    className="w-16 h-16 rounded-full object-cover object-top"
+                  />
+                  <div>
+                    <DialogTitle className="text-xl font-serif">{selectedLeader.name}</DialogTitle>
+                    <p className="text-primary font-bold text-sm">{selectedLeader.role}</p>
+                  </div>
+                </div>
+                {selectedLeader.tagline && (
+                  <p className="text-sm text-muted-foreground italic">{selectedLeader.tagline}</p>
+                )}
+              </DialogHeader>
+              <DialogDescription className="text-muted-foreground leading-relaxed whitespace-pre-line text-sm">
+                {selectedLeader.bio}
+              </DialogDescription>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-hero-gradient">
