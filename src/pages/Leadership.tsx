@@ -193,7 +193,7 @@ Dr. Ogunkoya is passionate about his cultural background and wishes to continue 
 
           {/* Founding Leaders - Side by Side */}
           <AnimatedList
-            className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16"
             staggerDelay={200}
           >
             {foundingLeaders.map((person) => (
