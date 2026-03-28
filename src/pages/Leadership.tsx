@@ -191,26 +191,12 @@ Dr. Ogunkoya is passionate about his cultural background and wishes to continue 
             </div>
           </AnimatedSection>
 
-          {/* Founding Leaders - Side by Side */}
-          <AnimatedList
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16"
-            staggerDelay={200}
-          >
-            {foundingLeaders.map((person) => (
-              <LeaderCard
-                key={person.name}
-                person={person}
-                onViewBio={() => setSelectedLeader(person)}
-              />
-            ))}
-          </AnimatedList>
-
-          {/* Other Executive Board Members */}
+          {/* All Leaders */}
           <AnimatedList
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
             staggerDelay={200}
           >
-            {executives.map((person) => (
+            {[...foundingLeaders, ...executives].map((person) => (
               <LeaderCard
                 key={person.name}
                 person={person}
