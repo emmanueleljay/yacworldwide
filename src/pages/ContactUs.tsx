@@ -37,7 +37,7 @@ const ContactUs = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_PLACEHOLDER",
+          access_key: "67f89d63-cc74-41c6-9ddd-678ddf4116ef",
           to: "Info@yacworldwide.org",
           from_name: formData.name,
           replyto: formData.email,
