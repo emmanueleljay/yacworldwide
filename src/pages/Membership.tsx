@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { format } from "date-fns";
@@ -12,17 +12,57 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
 import membershipImage from "@/assets/membership-banner.jpg";
 
 const Membership = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
   const [dateOfBirth, setDateOfBirth] = useState<Date>();
   const [honorDeclaration, setHonorDeclaration] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/donate");
+    if (!honorDeclaration) {
+      toast({ title: "Please accept the honor declaration before submitting.", variant: "destructive" });
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      const formData = new FormData(formRef.current!);
+      const data: Record<string, string> = {
+        access_key: "67f89d63-cc74-41c6-9ddd-678ddf4116ef",
+        subject: "New YAC Membership Application",
+        from_name: "YAC Membership Form",
+        to: "info@yacworldwide.org",
+      };
+      formData.forEach((value, key) => { data[key] = value.toString(); });
+      data["Date of Birth"] = dateOfBirth ? format(dateOfBirth, "PPP") : "Not provided";
+      data["Honor Declaration"] = honorDeclaration ? "Yes" : "No";
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      if (result.success) {
+        toast({ title: "Application submitted successfully!" });
+        formRef.current?.reset();
+        setDateOfBirth(undefined);
+        setHonorDeclaration(false);
+        navigate("/donate");
+      } else {
+        toast({ title: "Failed to submit. Please try again.", variant: "destructive" });
+      }
+    } catch {
+      toast({ title: "An error occurred. Please try again.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const objectives = [
     t("membership.objectives.0", "Advance the progress of Yoruba descendants globally."),
@@ -246,7 +286,7 @@ const Membership = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={100}>
-              <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-warm space-y-8">
+              <form ref={formRef} onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-warm space-y-8">
                 {/* Applicant's Information */}
                 <div>
                   <h3 className="font-serif text-xl font-bold text-foreground mb-6 pb-2 border-b border-border">
@@ -260,6 +300,8 @@ const Membership = () => {
                         </label>
                         <input
                           type="text"
+                          name="First Name"
+                          required
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="First Name"
                         />
@@ -270,6 +312,8 @@ const Membership = () => {
                         </label>
                         <input
                           type="text"
+                          name="Last Name"
+                          required
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Last Name"
                         />
@@ -316,6 +360,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="text"
+                          name="Occupation"
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Occupation"
                         />
@@ -326,6 +371,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="text"
+                          name="Affiliation"
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Affiliation"
                         />
@@ -337,6 +383,7 @@ const Membership = () => {
                       </label>
                       <input
                         type="text"
+                        name="Contact Address"
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Contact Address"
                       />
@@ -348,6 +395,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="tel"
+                          name="Applicant Phone"
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Phone Number"
                         />
@@ -358,6 +406,8 @@ const Membership = () => {
                         </label>
                         <input
                           type="email"
+                          name="Applicant Email"
+                          required
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Email Address"
                         />
@@ -367,7 +417,7 @@ const Membership = () => {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Membership Category
                       </label>
-                      <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
+                      <select name="Membership Category" required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
                         <option value="">Select a category</option>
                         <option value="foundation">Category 1 – Foundation Member - $500</option>
                         <option value="anyam">Category 2 – ANYAM (Adult 35+) - $100</option>
@@ -393,6 +443,7 @@ const Membership = () => {
                       </label>
                       <input
                         type="text"
+                        name="Introducer Name"
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Full Name"
                       />
@@ -404,6 +455,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="tel"
+                          name="Introducer Phone"
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Phone Number"
                         />
@@ -414,6 +466,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="email"
+                          name="Introducer Email"
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Email Address"
                         />
@@ -434,6 +487,7 @@ const Membership = () => {
                       </label>
                       <input
                         type="text"
+                        name="Supporter Name"
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Full Name"
                       />
@@ -445,6 +499,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="tel"
+                          name="Supporter Phone"
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Phone Number"
                         />
@@ -455,6 +510,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="email"
+                          name="Supporter Email"
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Email Address"
                         />
@@ -484,8 +540,8 @@ const Membership = () => {
                   </div>
                 </div>
 
-                <Button type="submit" variant="hero" size="xl" className="w-full">
-                  {t("membership.submit")}
+                <Button type="submit" variant="hero" size="xl" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : t("membership.submit")}
                 </Button>
               </form>
             </AnimatedSection>
