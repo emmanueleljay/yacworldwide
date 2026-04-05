@@ -510,6 +510,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="email"
+                          name="Supporter Email"
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Email Address"
                         />
