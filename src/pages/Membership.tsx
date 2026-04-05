@@ -38,6 +38,7 @@ const Membership = () => {
         subject: "New YAC Membership Application",
         from_name: "YAC Membership Form",
         to: "info@yacworldwide.org",
+        botcheck: "",
       };
       formData.forEach((value, key) => { data[key] = value.toString(); });
       data["Date of Birth"] = dateOfBirth ? format(dateOfBirth, "PPP") : "Not provided";
