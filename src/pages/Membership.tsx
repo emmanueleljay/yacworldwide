@@ -540,8 +540,8 @@ const Membership = () => {
                   </div>
                 </div>
 
-                <Button type="submit" variant="hero" size="xl" className="w-full">
-                  {t("membership.submit")}
+                <Button type="submit" variant="hero" size="xl" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : t("membership.submit")}
                 </Button>
               </form>
             </AnimatedSection>
