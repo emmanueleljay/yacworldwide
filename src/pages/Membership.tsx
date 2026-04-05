@@ -39,6 +39,7 @@ const Membership = () => {
         from_name: "YAC Membership Form",
         to: "info@yacworldwide.org",
         botcheck: "",
+        autoresponse: "Thank you for your YAC Worldwide membership application. We have received your submission and will review it shortly. \n\nKindly proceed to make your membership payment.\n\nBest regards,\nYoruba Action Council (YAC) Worldwide",
       };
       formData.forEach((value, key) => { data[key] = value.toString(); });
       data["Date of Birth"] = dateOfBirth ? format(dateOfBirth, "PPP") : "Not provided";
