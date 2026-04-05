@@ -286,7 +286,7 @@ const Membership = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={100}>
-              <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-warm space-y-8">
+              <form ref={formRef} onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-warm space-y-8">
                 {/* Applicant's Information */}
                 <div>
                   <h3 className="font-serif text-xl font-bold text-foreground mb-6 pb-2 border-b border-border">
@@ -300,6 +300,8 @@ const Membership = () => {
                         </label>
                         <input
                           type="text"
+                          name="First Name"
+                          required
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="First Name"
                         />
