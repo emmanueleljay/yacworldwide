@@ -50,7 +50,7 @@ const Membership = () => {
       });
       const result = await response.json();
       if (result.success) {
-        toast({ title: "Application submitted successfully!" });
+        toast({ title: "Thank you for submitting your application. Kindly make payment now." });
         formRef.current?.reset();
         setDateOfBirth(undefined);
         setHonorDeclaration(false);
