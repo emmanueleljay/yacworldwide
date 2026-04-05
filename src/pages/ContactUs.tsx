@@ -44,7 +44,6 @@ const ContactUs = () => {
           subject: formData.subject,
           message: formData.message,
           botcheck: "",
-          autoresponse: "Thank you for contacting YAC Worldwide. We have received your message and will get back to you shortly. \n\nBest regards,\nYoruba Action Council (YAC) Worldwide",
         }),
       });
 
