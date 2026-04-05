@@ -417,7 +417,7 @@ const Membership = () => {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Membership Category
                       </label>
-                      <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
+                      <select name="Membership Category" required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50">
                         <option value="">Select a category</option>
                         <option value="foundation">Category 1 – Foundation Member - $500</option>
                         <option value="anyam">Category 2 – ANYAM (Adult 35+) - $100</option>
