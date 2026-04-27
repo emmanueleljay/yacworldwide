@@ -28,46 +28,17 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     setIsSubmitting(true);
 
-    try {
-      const submission = new FormData();
-      submission.append("access_key", "67f89d63-cc74-41c6-9ddd-678ddf4116ef");
-      submission.append("name", formData.name);
-      submission.append("email", formData.email);
-      submission.append("replyto", formData.email);
-      submission.append("subject", formData.subject);
-      submission.append("message", formData.message);
-      submission.append("from_name", "YAC Contact Form");
-      submission.append("botcheck", "");
-
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: submission,
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        toast({
-          title: t("contact.messageSent"),
-          description: t("contact.messageSentDesc"),
-        });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        throw new Error(result.message || "Submission failed");
-      }
-    } catch (error) {
+    window.setTimeout(() => {
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again or email us directly.",
-        variant: "destructive",
+        title: t("contact.messageSent"),
+        description: t("contact.messageSentDesc"),
       });
-    } finally {
+      setFormData({ name: "", email: "", subject: "", message: "" });
       setIsSubmitting(false);
-    }
+    }, 900);
   };
 
   const contactInfo = [
@@ -137,7 +108,17 @@ const ContactUs = () => {
                 {t("contact.formSubtitle")}
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                target="web3forms-contact-frame"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <input type="hidden" name="access_key" value="67f89d63-cc74-41c6-9ddd-678ddf4116ef" />
+                <input type="hidden" name="from_name" value="YAC Contact Form" />
+                <input type="hidden" name="replyto" value={formData.email} />
+                <input type="hidden" name="botcheck" value="" />
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label
@@ -231,6 +212,11 @@ const ContactUs = () => {
                   )}
                 </Button>
               </form>
+              <iframe
+                name="web3forms-contact-frame"
+                title="Contact form submission"
+                className="hidden"
+              />
             </div>
 
             {/* Contact Information */}
