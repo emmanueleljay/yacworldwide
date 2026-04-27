@@ -33,19 +33,19 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
+      const submission = new FormData();
+      submission.append("access_key", "67f89d63-cc74-41c6-9ddd-678ddf4116ef");
+      submission.append("name", formData.name);
+      submission.append("email", formData.email);
+      submission.append("replyto", formData.email);
+      submission.append("subject", formData.subject);
+      submission.append("message", formData.message);
+      submission.append("from_name", "YAC Contact Form");
+      submission.append("botcheck", "");
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: "67f89d63-cc74-41c6-9ddd-678ddf4116ef",
-          name: formData.name,
-          email: formData.email,
-          replyto: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          from_name: "YAC Contact Form",
-          botcheck: "",
-        }),
+        body: submission,
       });
 
       const result = await response.json();

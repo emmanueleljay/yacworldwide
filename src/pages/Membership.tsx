@@ -32,21 +32,17 @@ const Membership = () => {
     }
     setIsSubmitting(true);
     try {
-      const formData = new FormData(formRef.current!);
-      const data: Record<string, string> = {
-        access_key: "67f89d63-cc74-41c6-9ddd-678ddf4116ef",
-        subject: "New YAC Membership Application",
-        from_name: "YAC Membership Form",
-        botcheck: "",
-      };
-      formData.forEach((value, key) => { data[key] = value.toString(); });
-      data["Date of Birth"] = dateOfBirth ? format(dateOfBirth, "PPP") : "Not provided";
-      data["Honor Declaration"] = honorDeclaration ? "Yes" : "No";
+      const data = new FormData(formRef.current!);
+      data.append("access_key", "67f89d63-cc74-41c6-9ddd-678ddf4116ef");
+      data.append("subject", "New YAC Membership Application");
+      data.append("from_name", "YAC Membership Form");
+      data.append("botcheck", "");
+      data.append("Date of Birth", dateOfBirth ? format(dateOfBirth, "PPP") : "Not provided");
+      data.append("Honor Declaration", honorDeclaration ? "Yes" : "No");
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: data,
       });
       const result = await response.json();
       if (result.success) {
