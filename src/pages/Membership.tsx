@@ -37,7 +37,6 @@ const Membership = () => {
         access_key: "67f89d63-cc74-41c6-9ddd-678ddf4116ef",
         subject: "New YAC Membership Application",
         from_name: "YAC Membership Form",
-        to: "info@yacworldwide.org",
         botcheck: "",
       };
       formData.forEach((value, key) => { data[key] = value.toString(); });
