@@ -38,11 +38,12 @@ const ContactUs = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: "67f89d63-cc74-41c6-9ddd-678ddf4116ef",
-          to: "Info@yacworldwide.org",
-          from_name: formData.name,
+          name: formData.name,
+          email: formData.email,
           replyto: formData.email,
           subject: formData.subject,
           message: formData.message,
+          from_name: "YAC Contact Form",
           botcheck: "",
         }),
       });
