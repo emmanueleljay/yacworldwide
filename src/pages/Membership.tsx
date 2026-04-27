@@ -267,7 +267,20 @@ const Membership = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={100}>
-              <form ref={formRef} onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-warm space-y-8">
+              <form
+                ref={formRef}
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                target="web3forms-membership-frame"
+                onSubmit={handleSubmit}
+                className="bg-card rounded-2xl p-8 shadow-warm space-y-8"
+              >
+                <input type="hidden" name="access_key" value="67f89d63-cc74-41c6-9ddd-678ddf4116ef" />
+                <input type="hidden" name="subject" value="New YAC Membership Application" />
+                <input type="hidden" name="from_name" value="YAC Membership Form" />
+                <input type="hidden" name="Date of Birth" value={dateOfBirth ? format(dateOfBirth, "PPP") : "Not provided"} />
+                <input type="hidden" name="Honor Declaration" value={honorDeclaration ? "Yes" : "No"} />
+                <input type="hidden" name="botcheck" value="" />
                 {/* Applicant's Information */}
                 <div>
                   <h3 className="font-serif text-xl font-bold text-foreground mb-6 pb-2 border-b border-border">
@@ -525,6 +538,12 @@ const Membership = () => {
                   {isSubmitting ? "Submitting..." : t("membership.submit")}
                 </Button>
               </form>
+              <iframe
+                name="web3forms-membership-frame"
+                title="Membership form submission"
+                className="hidden"
+                onLoad={handleMembershipSubmitted}
+              />
             </AnimatedSection>
           </div>
         </div>
