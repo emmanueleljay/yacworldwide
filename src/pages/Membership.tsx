@@ -24,41 +24,26 @@ const Membership = () => {
   const [honorDeclaration, setHonorDeclaration] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
     if (!honorDeclaration) {
+      e.preventDefault();
       toast({ title: "Please accept the honor declaration before submitting.", variant: "destructive" });
       return;
     }
     setIsSubmitting(true);
-    try {
-      const data = new FormData(formRef.current!);
-      data.append("access_key", "67f89d63-cc74-41c6-9ddd-678ddf4116ef");
-      data.append("subject", "New YAC Membership Application");
-      data.append("from_name", "YAC Membership Form");
-      data.append("botcheck", "");
-      data.append("Date of Birth", dateOfBirth ? format(dateOfBirth, "PPP") : "Not provided");
-      data.append("Honor Declaration", honorDeclaration ? "Yes" : "No");
+  };
 
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: data,
-      });
-      const result = await response.json();
-      if (result.success) {
-        toast({ title: "Thank you for submitting your application. Kindly make payment now." });
-        formRef.current?.reset();
-        setDateOfBirth(undefined);
-        setHonorDeclaration(false);
-        navigate("/donate");
-      } else {
-        toast({ title: "Failed to submit. Please try again.", variant: "destructive" });
-      }
-    } catch {
-      toast({ title: "An error occurred. Please try again.", variant: "destructive" });
-    } finally {
+  const handleMembershipSubmitted = () => {
+    if (!isSubmitting) return;
+
+    toast({ title: "Thank you for submitting your application. Kindly make payment now." });
+    formRef.current?.reset();
+    setDateOfBirth(undefined);
+    setHonorDeclaration(false);
+    window.setTimeout(() => {
       setIsSubmitting(false);
-    }
+      navigate("/donate");
+    }, 600);
   };
   const objectives = [
     t("membership.objectives.0", "Advance the progress of Yoruba descendants globally."),
