@@ -21,6 +21,7 @@ import msAbby from "@/assets/ms-abby.jpg";
 import drBola from "@/assets/dr-bola-omotosho.jpg";
 import drAdeniyi from "@/assets/dr-adeniyi-ogunkoya.jpg";
 import princeDepo from "@/assets/leadership-depo-akande.jpeg";
+import foundingMember1 from "@/assets/founding-member-1.jpeg";
 import kabiyesiOlowu from "@/assets/kabiyesi-olowu.png";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
@@ -121,6 +122,27 @@ Dr Adeniyi Ogunkoya was an executive and founding member of NIDO (Nigerians in t
 In Nigeria, Dr. Ogunkoya has conducted several Medical missions, notable ones in Kaduna and another in Onitsha, hosted by the OBI of ONITSHA. Dr. Ogunkoya was a member of the presidential committee to set up six world-class hospitals in the six geopolitical zones in Nigeria. He was also an Executive Director on the board of Transcorp in Nigeria. Now the Visioneer of a 200-bed world-class hospital just outside of Lagos on a 100-acre land.
 
 Dr. Ogunkoya is passionate about his cultural background and wishes to continue to promote the YORUBA culture as a member of the Yoruba Action Council (YAC).`,
+    },
+    {
+      name: "Name Withheld",
+      role: "Founding Member",
+      image: foundingMember1,
+      bio: `Academic Qualifications:
+- BSc, Civil Engineering
+- MBA, Finance
+- Honorary Doctorate in Theology
+
+Career Highlights:
+- Chief Engineer, Mobil Oil East
+- Engineering Manager, Mobil Oil Nigeria
+- Constructed and completed the Aviation Depot, Port Harcourt
+- Took part in the Mobil House construction, Lagos
+- Built the Obanikoro Filling Station at a record six-month completion — one of the fastest in the lower part of the world
+- Built a Plastic Plant and a Lube Oil Plant, among others
+- Constructed over 40 retail outlets across Nigeria
+- Worked for the NYC Department of Buildings in Manhattan for 20 years
+
+Now retired and resting peacefully.`,
     },
   ];
 
