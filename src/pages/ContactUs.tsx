@@ -21,6 +21,12 @@ const ContactUs = () => {
     message: "",
   });
 
+  const isPlaceholderEmail = (email: string) => {
+    const normalizedEmail = email.trim().toLowerCase();
+    const domain = normalizedEmail.split("@")[1];
+    return normalizedEmail === "test@example.com" || ["example.com", "example.net", "example.org"].includes(domain);
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -28,7 +34,17 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    if (isPlaceholderEmail(formData.email)) {
+      e.preventDefault();
+      toast({
+        title: "Please use a real email address",
+        description: "Example or test email addresses bounce and prevent reliable delivery.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     window.setTimeout(() => {
@@ -117,7 +133,6 @@ const ContactUs = () => {
               >
                 <input type="hidden" name="access_key" value="67f89d63-cc74-41c6-9ddd-678ddf4116ef" />
                 <input type="hidden" name="from_name" value="YAC Contact Form" />
-                <input type="hidden" name="replyto" value={formData.email} />
                 <input type="hidden" name="botcheck" value="" />
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
