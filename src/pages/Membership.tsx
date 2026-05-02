@@ -24,12 +24,32 @@ const Membership = () => {
   const [honorDeclaration, setHonorDeclaration] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const isPlaceholderEmail = (email: string) => {
+    const normalizedEmail = email.trim().toLowerCase();
+    const domain = normalizedEmail.split("@")[1];
+    return normalizedEmail === "test@example.com" || ["example.com", "example.net", "example.org"].includes(domain);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
+    const form = e.currentTarget as HTMLFormElement;
+    const applicantEmail = String(new FormData(form).get("email") || "");
+
     if (!honorDeclaration) {
       e.preventDefault();
       toast({ title: "Please accept the honor declaration before submitting.", variant: "destructive" });
       return;
     }
+
+    if (isPlaceholderEmail(applicantEmail)) {
+      e.preventDefault();
+      toast({
+        title: "Please use a real email address",
+        description: "Example or test email addresses bounce and prevent reliable delivery.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
   };
 
@@ -400,7 +420,7 @@ const Membership = () => {
                         </label>
                         <input
                           type="email"
-                          name="Applicant Email"
+                          name="email"
                           required
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                           placeholder="Email Address"
