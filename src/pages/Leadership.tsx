@@ -22,6 +22,7 @@ import drBola from "@/assets/dr-bola-omotosho.jpg";
 import drAdeniyi from "@/assets/dr-adeniyi-ogunkoya.jpg";
 import princeDepo from "@/assets/leadership-depo-akande.jpeg";
 import foundingMember1 from "@/assets/founding-member-1.jpeg";
+import adeyemiOmoniyi from "@/assets/adeyemi-omoniyi.png";
 import kabiyesiOlowu from "@/assets/kabiyesi-olowu.png";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
@@ -143,6 +144,12 @@ Career Highlights:
 - Worked for the NYC Department of Buildings in Manhattan for 20 years
 
 Now retired and resting peacefully.`,
+    },
+    {
+      name: "Adeyemi Omoniyi",
+      role: "Member",
+      image: adeyemiOmoniyi,
+      bio: `Adeyemi Omoniyi has a stint in Healthcare IT with 6+ years of experience helping hospitals optimize and upgrade Healthcare software. With a deep passion for business, he owns a downstream oil and gas venture in Nigeria.`,
     },
   ];
 
