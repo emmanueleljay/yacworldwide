@@ -59,7 +59,7 @@ const Leadership = () => {
 
   const foundingLeaders: Leader[] = [
     {
-      name: "Dr. Akin Mo' Awofolaju",
+      name: "Hon. Dr. Akin Mo' Awofolaju",
       role: "Founding President",
       tagline: "Neuroeconomist | Fortune 100 Executive | Global Business Strategy Consultant",
       image: drAkin,
@@ -78,7 +78,7 @@ Specializing in mergers and acquisitions, managing numerous organizations in sen
 Awofolaju has served in various C-level and Director capacities with Fortune 500 companies such as Verizon Wireless, Apple Inc., Altice, and Comcast. While at Verizon Wireless, the largest U.S. wireless communication company, he was a leading Executive Board Director, managing over US$2.5 billion in investments (Tri-State regions) and overseeing more than 3,000 employees for over 10 years.`,
     },
     {
-      name: "Dr. Albert Ayeni",
+      name: "Hon. Dr. Albert Ayeni",
       role: "Founding General Secretary",
       image: drAlbert,
       bio: "Dr. Albert Ayeni was born in Lagos and raised in Iffe-Ijumu, Kogi State. He earned his Ph.D. from Cornell University and served on the faculty at the University of Ibadan for 17 years before joining Rutgers University in 1995. Currently serving as Ethnic Crops Research Specialist and Leader of Entrepreneurship Ag Program at Rutgers' School of Environmental and Biological Sciences. He is a consultant to APLU and has led planning committees for NIDO Americas World Conference and multiple education summits.",
@@ -87,25 +87,25 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
 
   const executives: Leader[] = [
     {
-      name: "Dr. Godwin Babs Oloyede Omolola",
+      name: "Hon. Dr. Godwin Babs Oloyede Omolola",
       role: "Executive Founding Member",
       image: drGodwin,
       bio: "Dr. Godwin Babs Oloyede Omolola was born in Lagos to the Sokoti Family from Igbotako, Ondo State. He earned his D.Sc. in Computer Engineering and Digital Security from Colorado Technical University. With over 25 years of experience as a Cybersecurity Solution Architect and Risk Management Practitioner, he has worked with Fortune 500 companies including Chase Manhattan Bank, IBM, AT&T, and various government agencies. He is a member of ISACA, ISC2, FBI InfraGard, and contributes to emerging technologies under Cisco, IEEE, MITRE, and CSA.",
     },
     {
-      name: "Ms. Abby Agboola Arogundade",
+      name: "Hon. Ms. Abby Agboola Arogundade",
       role: "Executive Founding Member",
       image: msAbby,
       bio: "Ms Abby is an RN & a Midwife for over 45 years. Her nursing education started at Lagos University Teaching Hospital, Lagos. Her BSN & MSN was completed at Wagner College on Staten Island, and she is currently pursuing a Ph.D in International Business at California Intercontinental University, expected to finish in February 2027. She is the CEO of Fadmo Health and Homecare Agency, Fadmo Logistics USA and Nigeria. She is married with three children and three grandchildren.",
     },
     {
-      name: "Dr. Bola Omotosho",
+      name: "Hon. Dr. Bola Omotosho",
       role: "Member",
       image: drBola,
       bio: "Dr Bola Omotosho graduated with honors, earning both a Bachelor of Science and a Doctor of Medicine from Obafemi Awolowo University in Nigeria, formerly known as the University of Ife. His journey continued with further training in Anesthesiology, leading to a remarkable medical career with the Nigerian Navy. In the late 1990s, he took a bold step to relocate to the Bronx, USA, where he pursued his passion for medicine with extensive training in Hematology/Oncology and Infectious Disease as a clinical researcher. With over four decades of experience, his career as a physician reflects a rich tapestry of service in military hospitals, major metropolitan hospitals, and private teaching hospitals. In 2024, he took on the role of Senior Advisor for Community Partnerships with the Department of Health and Mental Hygiene in New York City, continuing to inspire and make a difference in the community.",
     },
     {
-      name: "Prince Depo Akande",
+      name: "Hon. Prince Depo Akande",
       role: "Founding Member",
       image: princeDepo,
       bio: `Prince Depo Akande, Msc Banking and Finance) FCIB (Fellow, Chartered Institute of Bankers of Nigeria) is a Finance Executive with over 30 years experience of Corporate and Investment Banking. At the early stage in the US, he worked with Merrill Lynch Investment Managers as an Assistant Vice President, he and others were responsible for managing portfolio of over 600 billions in assets, he left Merrill Lynch in 2003 to start his own business and presently the President and CEO of Pro Settlement Solutions, LLC, a title and settlement company based in Edison in New Jersey. He also sits on the board of various companies where he contributes to the growth of the companies.
@@ -113,7 +113,7 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
 Prince Akande is a community and a political enthusiast leader in Franklin Township. He is happily married with children.`,
     },
     {
-      name: "Adeniyi Ogunkoya, M.D.",
+      name: "Hon. Adeniyi Ogunkoya, M.D.",
       role: "Founding Member",
       image: drAdeniyi,
       bio: `Adeniyi Ogunkoya, M.D., has practiced in the medical profession for over 3 decades, establishing as a front runner in the field of internal medicine, in the United States, and possessing cognate experiences and expertise in various aspects of medical profession where he excelled in the various aspects of medical management practices, including management of top-rated and world class hospitals, Teaching hospitals, health care medical facilities, in the field of primary care development and management at several levels. Dr. Ogunkoya has held various teaching and training experiences in various capacities at the University teaching hospitals in the state of New Jersey, United States. Dr. Ogunkoya has held several administrative and managerial positions, including head and leadership roles, at various hospitals, healthcare facilities, and primary healthcare centers over the past three decades. Dr. Ogunkoya is a medical director, medical consultant, professional medical instructor, medical specialist, and medical project developer. Dr. Ogunkoya is a graduate of the State University of New York (SUNY) Downstate medical school in Brooklyn, New York, and also Residency and Fellowship program at the University of Medicine and Dentistry (UMDNJ), New Jersey Medical School in combined internal medicine and pediatrics, followed by a fellowship in allergy and immunology from 1981 to 1988.
@@ -146,7 +146,7 @@ Career Highlights:
 Now retired and resting peacefully.`,
     },
     {
-      name: "Adeyemi Omoniyi",
+      name: "Hon. Adeyemi Omoniyi",
       role: "Member",
       image: adeyemiOmoniyi,
       bio: `Adeyemi Omoniyi has a stint in Healthcare IT with 6+ years of experience helping hospitals optimize and upgrade Healthcare software. With a deep passion for business, he owns a downstream oil and gas venture in Nigeria.`,
