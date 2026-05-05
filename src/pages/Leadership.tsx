@@ -125,7 +125,7 @@ In Nigeria, Dr. Ogunkoya has conducted several Medical missions, notable ones in
 Dr. Ogunkoya is passionate about his cultural background and wishes to continue to promote the YORUBA culture as a member of the Yoruba Action Council (YAC).`,
     },
     {
-      name: "Name Withheld",
+      name: "Hon. (Eng.) Simeon Awofesobi",
       role: "Founding Member",
       image: foundingMember1,
       bio: `Academic Qualifications:
