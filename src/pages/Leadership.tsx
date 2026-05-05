@@ -147,7 +147,7 @@ Now retired and resting peacefully.`,
     },
     {
       name: "Hon. Adeyemi Omoniyi",
-      role: "Member",
+      role: "Founding Member",
       image: adeyemiOmoniyi,
       bio: `Adeyemi Omoniyi has a stint in Healthcare IT with 6+ years of experience helping hospitals optimize and upgrade Healthcare software. With a deep passion for business, he owns a downstream oil and gas venture in Nigeria.`,
     },
