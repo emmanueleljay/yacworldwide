@@ -13,6 +13,21 @@ import oduduwaShrine from "@/assets/oduduwa-shrine.jpg";
 const AboutIleIfe = () => {
   const { t } = useTranslation();
 
+  const yorubaMonths = [
+    { yoruba: "Ṣẹ́rẹ́", english: "January" },
+    { yoruba: "Èrèlè", english: "February" },
+    { yoruba: "Ẹrẹ̀nà", english: "March" },
+    { yoruba: "Igbe", english: "April" },
+    { yoruba: "Ẹ̀bíbì", english: "May" },
+    { yoruba: "Òkúdù", english: "June" },
+    { yoruba: "Agẹmọ", english: "July" },
+    { yoruba: "Ògún", english: "August" },
+    { yoruba: "Ọwéwè", english: "September" },
+    { yoruba: "Ọ̀wàrà", english: "October" },
+    { yoruba: "Belú", english: "November" },
+    { yoruba: "Ọ̀pẹ", english: "December" },
+  ];
+
   const artifacts = [
     {
       icon: Crown,
@@ -145,6 +160,50 @@ const AboutIleIfe = () => {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Yoruba Months Section */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up">
+            <div className="text-center mb-12">
+              <span className="text-primary font-medium tracking-wide uppercase text-sm">
+                {t("ileIfe.monthsLabel", "Language & Calendar")}
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
+                {t("ileIfe.monthsTitle", "Names of Months in Yorùbá")}
+              </h2>
+              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                {t(
+                  "ileIfe.monthsSubtitle",
+                  "The twelve months of the year as they are known in the Yorùbá language."
+                )}
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={100}>
+            <div className="max-w-3xl mx-auto overflow-hidden rounded-2xl border border-border shadow-lg">
+              <div className="grid grid-cols-[3rem_1fr_1fr] bg-primary text-primary-foreground font-semibold text-sm md:text-base">
+                <div className="px-3 py-3 text-center">S/N</div>
+                <div className="px-4 py-3">Yorùbá</div>
+                <div className="px-4 py-3">English</div>
+              </div>
+              {yorubaMonths.map((month, index) => (
+                <div
+                  key={month.english}
+                  className={`grid grid-cols-[3rem_1fr_1fr] items-center border-t border-border ${
+                    index % 2 === 0 ? "bg-background" : "bg-secondary/30"
+                  }`}
+                >
+                  <div className="px-3 py-3 text-center font-bold text-primary">{index + 1}</div>
+                  <div className="px-4 py-3 font-bold text-lg text-foreground">{month.yoruba}</div>
+                  <div className="px-4 py-3 text-muted-foreground">{month.english}</div>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
