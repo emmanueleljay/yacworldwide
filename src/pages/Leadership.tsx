@@ -78,7 +78,7 @@ Specializing in mergers and acquisitions, managing numerous organizations in sen
 Awofolaju has served in various C-level and Director capacities with Fortune 500 companies such as Verizon Wireless, Apple Inc., Altice, and Comcast. While at Verizon Wireless, the largest U.S. wireless communication company, he was a leading Executive Board Director, managing over US$2.5 billion in investments (Tri-State regions) and overseeing more than 3,000 employees for over 10 years.`,
     },
     {
-      name: "Hon. Dr. Albert Ayeni",
+      name: "Hon. Prof. Albert Ayeni",
       role: "Founding General Secretary",
       image: drAlbert,
       bio: "Dr. Albert Ayeni was born in Lagos and raised in Iffe-Ijumu, Kogi State. He earned his Ph.D. from Cornell University and served on the faculty at the University of Ibadan for 17 years before joining Rutgers University in 1995. Currently serving as Ethnic Crops Research Specialist and Leader of Entrepreneurship Ag Program at Rutgers' School of Environmental and Biological Sciences. He is a consultant to APLU and has led planning committees for NIDO Americas World Conference and multiple education summits.",
