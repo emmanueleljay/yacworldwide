@@ -45,7 +45,7 @@ const FAQ = () => {
       questions: [
         {
           question: t("faq.categories.membership.q1.question", "Who can become a member of YAC?"),
-          answer: t("faq.categories.membership.q1.answer", "Membership is open to all Yoruba descendants by birth or marriage who share our vision of advancing the Yoruba nation. We welcome members from all professions and backgrounds who are committed to our mission."),
+          answer: t("faq.categories.membership.q1.answer", "Membership is open to all Yoruba descendants by birth or marriage who share our vision of advancing the Yoruba World. We welcome members from all professions and backgrounds who are committed to our mission."),
         },
         {
           question: t("faq.categories.membership.q2.question", "What are the membership categories?"),

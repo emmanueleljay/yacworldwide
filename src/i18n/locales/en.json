@@ -68,7 +68,7 @@
       },
       "global": {
         "title": "Global Reach",
-        "description": "Operating as a link between the Yoruba Nation, the diaspora, and global interaction for worldwide development."
+        "description": "Operating as a link between the Yoruba World, the diaspora, and global interaction for worldwide development."
       },
       "cultural": {
         "title": "Cultural Preservation",
@@ -95,7 +95,7 @@
     "donate": {
       "label": "Support Us",
       "title": "Together, Let's Make Change Happen",
-      "description": "Your generous contribution helps us continue our mission of advancing the Yoruba nation, supporting education, and preserving our cultural heritage.",
+      "description": "Your generous contribution helps us continue our mission of advancing the Yoruba World, supporting education, and preserving our cultural heritage.",
       "button": "Make a Donation"
     }
   },
@@ -169,7 +169,7 @@
   "leadership": {
     "badge": "Our Team",
     "title": "Leadership & Board",
-    "subtitle": "Meet the dedicated individuals who guide YAC's mission to advance the progress of the Yoruba nation and preserve our rich cultural heritage.",
+    "subtitle": "Meet the dedicated individuals who guide YAC's mission to advance the progress of the Yoruba World and preserve our rich cultural heritage.",
     "executiveLabel": "Our Members",
     "executiveTitle": "Foundation Members",
     "ctaTitle": "Join Our Mission",
@@ -345,7 +345,7 @@
         "impact": { "title": "See the Impact", "desc": "Witness the transformation your support creates" }
       },
       "ctaTitle": "Change a Life Today",
-      "ctaText": "Every donation, no matter the size, helps a student move closer to their dreams. Join us in building the future leaders of the Yoruba nation."
+      "ctaText": "Every donation, no matter the size, helps a student move closer to their dreams. Join us in building the future leaders of the Yoruba World."
     },
     "culture": {
       "badge": "Cultural Promotion",
@@ -453,7 +453,7 @@
         "title": "Membership",
         "q1": {
           "question": "Who can become a member of YAC?",
-          "answer": "Membership is open to all Yoruba descendants by birth or marriage who share our vision of advancing the Yoruba nation. We welcome members from all professions and backgrounds who are committed to our mission."
+          "answer": "Membership is open to all Yoruba descendants by birth or marriage who share our vision of advancing the Yoruba World. We welcome members from all professions and backgrounds who are committed to our mission."
         },
         "q2": {
           "question": "What are the membership categories?",

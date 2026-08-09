@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Vision = () => {
   const objectives = [
     {
-      text: "To advance and enhance the progress of the Yoruba nation",
+      text: "To advance and enhance the progress of the Yoruba World",
       icon: Sparkles,
     },
     {
@@ -20,7 +20,7 @@ const Vision = () => {
       icon: Handshake,
     },
     {
-      text: "Operate as a link between the Yoruba Nation, the diaspora, and global interaction",
+      text: "Operate as a link between the Yoruba World, the diaspora, and global interaction",
       icon: Link2,
     },
     {
