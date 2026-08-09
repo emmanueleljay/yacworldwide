@@ -54,7 +54,7 @@
   },
   "about": {
     "sectionTitle": "À Propos de Nous",
-    "heading": "Faire Progresser la Nation Yoruba",
+    "heading": "Faire Progresser le Monde Yoruba",
     "description": "Le Conseil d'Action Yoruba (YAC) a été constitué au New Jersey, États-Unis, le 29 mai 2018 par des professionnels Yoruba partageant les mêmes idées pour promouvoir les intérêts Yoruba, maintenir et améliorer notre patrimoine à travers la refonte politique et socio-économique.",
     "values": {
       "mission": {
@@ -67,7 +67,7 @@
       },
       "global": {
         "title": "Portée Mondiale",
-        "description": "Opérer comme un lien entre la Nation Yoruba, la diaspora et l'interaction mondiale pour le développement mondial."
+        "description": "Opérer comme un lien entre le Monde Yoruba, la diaspora et l'interaction mondiale pour le développement mondial."
       },
       "cultural": {
         "title": "Préservation Culturelle",
@@ -94,7 +94,7 @@
     "donate": {
       "label": "Soutenez-Nous",
       "title": "Ensemble, Faisons le Changement",
-      "description": "Votre généreuse contribution nous aide à poursuivre notre mission de faire progresser la nation Yoruba, soutenir l'éducation et préserver notre patrimoine culturel.",
+      "description": "Votre généreuse contribution nous aide à poursuivre notre mission de faire progresser le monde Yoruba, soutenir l'éducation et préserver notre patrimoine culturel.",
       "button": "Faire un Don"
     }
   },
@@ -168,7 +168,7 @@
   "leadership": {
     "badge": "Notre Équipe",
     "title": "Direction & Conseil",
-    "subtitle": "Rencontrez les personnes dévouées qui guident la mission du YAC pour faire progresser la nation Yoruba et préserver notre riche patrimoine culturel.",
+    "subtitle": "Rencontrez les personnes dévouées qui guident la mission du YAC pour faire progresser le monde Yoruba et préserver notre riche patrimoine culturel.",
     "executiveLabel": "Équipe Exécutive",
     "executiveTitle": "Direction Exécutive",
     "ctaTitle": "Rejoignez Notre Mission",
@@ -344,7 +344,7 @@
         "impact": { "title": "Voir l'Impact", "desc": "Soyez témoin de la transformation que crée votre soutien" }
       },
       "ctaTitle": "Changez une Vie Aujourd'hui",
-      "ctaText": "Chaque don, quelle que soit sa taille, aide un étudiant à se rapprocher de ses rêves. Rejoignez-nous pour construire les futurs leaders de la nation Yoruba."
+      "ctaText": "Chaque don, quelle que soit sa taille, aide un étudiant à se rapprocher de ses rêves. Rejoignez-nous pour construire les futurs leaders de le monde Yoruba."
     },
     "culture": {
       "badge": "Promotion Culturelle",
@@ -452,7 +452,7 @@
         "title": "Adhésion",
         "q1": {
           "question": "Qui peut devenir membre de YAC?",
-          "answer": "L'adhésion est ouverte à tous les descendants Yoruba par naissance ou mariage qui partagent notre vision de faire progresser la nation Yoruba. Nous accueillons des membres de toutes professions et origines qui sont engagés dans notre mission."
+          "answer": "L'adhésion est ouverte à tous les descendants Yoruba par naissance ou mariage qui partagent notre vision de faire progresser le monde Yoruba. Nous accueillons des membres de toutes professions et origines qui sont engagés dans notre mission."
         },
         "q2": {
           "question": "Quelles sont les catégories d'adhésion?",
