@@ -16,7 +16,7 @@ import {
 
 import drGodwin from "@/assets/dr-godwin-omolola.jpg";
 import drAlbert from "@/assets/dr-albert-ayeni.jpg";
-import princessNubi from "@/assets/princess-nubi-olagbegi-apampa.jpeg.asset.json";
+import princessNubi from "@/assets/princess-nubi-olagbegi-apampa.jpeg";
 import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 import msAbby from "@/assets/ms-abby.jpg";
 import drBola from "@/assets/dr-bola-omotosho.jpg";
@@ -87,7 +87,7 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
     {
       name: "Hon. Princess (Dr.) Adenubi (Nubi) Joy Olagbegi-Apampa",
       role: "Founding Member",
-      image: princessNubi.url,
+      image: princessNubi,
       bio: "Princess (Dr.) Adenubi (Nubi) Joy Olagbegi-Apampa is a U.S.-based entrepreneur, human resource management expert, and cleric. Hailing from the royal Olateru-Olagbegi dynasty in Owo, Ondo State, Nigeria, she grew up in a large polygamous family. Based in New Jersey, she works in healthcare HR, entrepreneurship, and ministry. In April 2025, she and her husband, Dr. (Prince) Abila A. Apampa, officially opened the ultra-modern Princess Nubi Plaza (Seliat Hall) in Lagelu Estate, Ibadan, Oyo State. During the launch, she encouraged Nigerians in the Diaspora to return home and invest in developing their country.",
     },
   ];
