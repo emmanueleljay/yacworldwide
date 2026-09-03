@@ -16,7 +16,7 @@ import {
 
 import drGodwin from "@/assets/dr-godwin-omolola.jpg";
 import drAlbert from "@/assets/dr-albert-ayeni.jpg";
-import princessNubi from "@/assets/princess-nubi-olagbegi-apampa.jpeg.asset.json";
+import princessNubi from "@/assets/princess-nubi-olagbegi-apampa.jpeg";
 import drAkin from "@/assets/dr-akin-awofolaju.jpg";
 import msAbby from "@/assets/ms-abby.jpg";
 import drBola from "@/assets/dr-bola-omotosho.jpg";
