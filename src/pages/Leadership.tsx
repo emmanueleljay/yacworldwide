@@ -88,7 +88,13 @@ Awofolaju has served in various C-level and Director capacities with Fortune 500
       name: "Hon. Princess (Dr.) Adenubi (Nubi) Joy Olagbegi-Apampa",
       role: "Founding Vice President",
       image: princessNubi,
-      bio: "Princess (Dr.) Adenubi (Nubi) Joy Olagbegi-Apampa is a U.S.-based entrepreneur, human resource management expert, and cleric. Hailing from the royal Olateru-Olagbegi dynasty in Owo, Ondo State, Nigeria, she grew up in a large polygamous family. Based in New Jersey, she works in healthcare HR, entrepreneurship, and ministry. In April 2025, she and her husband, Dr. (Prince) Abila A. Apampa, officially opened the ultra-modern Princess Nubi Plaza (Seliat Hall) in Lagelu Estate, Ibadan, Oyo State. During the launch, she encouraged Nigerians in the Diaspora to return home and invest in developing their country.",
+      bio: `Princess Joy Nubi Adesumola Olagbegi-Apampa was born into the distinguished lineage of His Royal Highness, Sir James Olateru Olagbegi, the revered Olowo of Owo Kingdom, knighted as Knight of the British Empire by the late Queen Elizabeth of England, along with her mother, Chief Yeyewangwe Caroline Mikoriola Olateru Olagbegi from High Chief Sashere Adetula of Owo.
+
+Princess Joy Olagbegi-Apampa was the former Chief Executive Director of Joys Cosmetology School of Hair Design, Joys Nature Cosmetics, owner of Subway franchise, and Administrative Director of Academy of Training and Employment.
+
+Presently she is the Executive Director of Dream Heritage and Executive Director of Nubi Consultant Corporation. Ms Joy has established herself as a celebrated figure in both her native Nigeria and as a naturalised American citizen residing in New Jersey.
+
+Ms Joy is an accomplished entrepreneur, educator, community advocate and philanthropist. She has forged a remarkable path. She shares her life with Prince Abimbola Apampa, a respected High Chief in the land of Ibadan, together embracing a journey blessed with profound achievements and contributions.`,
     },
   ];
 
