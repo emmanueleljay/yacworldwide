@@ -24,6 +24,7 @@ import drAdeniyi from "@/assets/dr-adeniyi-ogunkoya.jpg";
 import princeDepo from "@/assets/leadership-depo-akande.jpeg";
 import foundingMember1 from "@/assets/founding-member-1.jpeg";
 import adeyemiOmoniyi from "@/assets/adeyemi-omoniyi.png";
+import oluwaseyiOgunyinka from "@/assets/oluwaseyi-ogunyinka.png";
 import kabiyesiOlowu from "@/assets/kabiyesi-olowu.png";
 import leadershipFeature from "@/assets/leadership-feature.jpg";
 
@@ -163,6 +164,37 @@ Now retired and resting peacefully.`,
       role: "Founding Member",
       image: adeyemiOmoniyi,
       bio: `Adeyemi Omoniyi has a stint in Healthcare IT with 6+ years of experience helping hospitals optimize and upgrade Healthcare software. With a deep passion for business, he owns a downstream oil and gas venture in Nigeria.`,
+    },
+    {
+      name: "Hon. (Chief) Oluwaseyi Ogunyinka",
+      role: "Founding Member/Social Secretary",
+      image: oluwaseyiOgunyinka,
+      bio: `Honourable (Chief) Oluwaseyi Ogunyinka was born in Ibadan, Oyo State, Nigeria, West Africa.
+
+He worked at WAEC Abeokuta, Ogun State, Nigeria from 1995 for about 7 years.
+
+He has had a stint in politics and has been a Human Resource Consultant for the State of New Jersey for about 22 years now.
+
+He is a businessman and a farmer back home in Nigeria and holds a Chieftaincy title from Ukwa-Nkporo, an autonomous community in Abia State, Nigeria, as Nwanne Dinamba 1 of Ukwa-Nkporo, Abia State.
+
+He is currently a member of about 10 different associations, including the following:
+
+A Social Secretary and foundation member of Yoruba Action Council (YAC), New Jersey, USA.
+
+(1) Nigeria Social Club of New Jersey – Immediate Past President.
+(2) United Nigeria Association of New Jersey – Ex Vice President.
+(3) Prospect High School, Abanla, Ibadan, Oyo State, Nigeria, USA/North America Branch – Currently the President.
+(4) Ibadan Descendants Union of North America – Ex National PRO.
+(5) Ibadan Descendants Union of New Jersey – Ex General Secretary and Social Secretary of the Chapter.
+(6) Egbe Omo Yoruba of North America – Ex Education Committee member.
+(7) Egbe Omo Yoruba of Staten Island, New York – Ex Vice President.
+(8) International Personnel Management Association (IPMA) – Member; Ex Assistant Treasurer of New Jersey Chapter.
+(9) Ex member, NIDO – New Jersey Chapter.
+(10) Member, NAPAC – New Jersey Chapter.
+
+He is a philanthropist who, with his wife, engages in giving to indigents in education and social responsibilities in local communities in Nigeria.
+
+Honourable (Chief) Oluwaseyi Ogunyinka is married with children and is a young grandpa of 3 grandchildren.`,
     },
   ];
 
