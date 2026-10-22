@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import Anthem from "@/components/Anthem";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import AnnouncementPopup from "@/components/AnnouncementPopup";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Anthem />
       <CTA />
       <Footer />
+      <AnnouncementPopup />
     </main>
   );
 };

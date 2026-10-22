@@ -112,6 +112,9 @@ import galleryEvent7 from "@/assets/gallery-event-7.jpg";
 import galleryEvent8 from "@/assets/gallery-event-8.jpg";
 import galleryEvent9 from "@/assets/gallery-event-9.jpg";
 import galleryEvent10 from "@/assets/gallery-event-10.jpg";
+import eventFlyerMain from "@/assets/event-flyer-main.jpeg";
+import eventFlyerOgunyinka from "@/assets/event-flyer-ogunyinka.jpeg";
+import eventFlyerAyeni from "@/assets/event-flyer-ayeni.jpeg";
 
 interface GalleryImage {
   src: string;
