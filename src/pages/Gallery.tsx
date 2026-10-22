@@ -112,6 +112,9 @@ import galleryEvent7 from "@/assets/gallery-event-7.jpg";
 import galleryEvent8 from "@/assets/gallery-event-8.jpg";
 import galleryEvent9 from "@/assets/gallery-event-9.jpg";
 import galleryEvent10 from "@/assets/gallery-event-10.jpg";
+import eventFlyerMain from "@/assets/event-flyer-main.jpeg";
+import eventFlyerOgunyinka from "@/assets/event-flyer-ogunyinka.jpeg";
+import eventFlyerAyeni from "@/assets/event-flyer-ayeni.jpeg";
 
 interface GalleryImage {
   src: string;
@@ -125,6 +128,14 @@ const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const galleryCategories = [
+    {
+      title: "Upcoming Events",
+      images: [
+        { src: eventFlyerMain, alt: "11th Annual Nigerian Independence Day Celebration flyer", caption: "Upcoming Event - 11th Annual Nigerian Independence Day Celebration & Dinner Awards Night. Theme: New Beginning Leaders Summit. Saturday, October 31, 2026 | Holiday Inn, 750 West Edge Road, Linden, NJ | 4PM - 9PM. Powered by Lord and Nikes." },
+        { src: eventFlyerOgunyinka, alt: "Hon. Chief Oluwaseyi Ogunyinka invitation flyer", caption: "Upcoming Event - Hon. (Chief) Oluwaseyi Ogunyinka, Pacesetter, specially invites you to the 11th Annual Nigerian Independence Day Celebration. Saturday, October 31, 2026, Linden, NJ." },
+        { src: eventFlyerAyeni, alt: "Hon. Prof. Albert Ayeni invitation flyer", caption: "Upcoming Event - Hon. Prof. Albert Ayeni, The Real Dr. Pepper, Gate Keeper, specially invites you to the 11th Annual Nigerian Independence Day Celebration. Saturday, October 31, 2026, Linden, NJ." },
+      ],
+    },
     {
       title: "YAC Events & Gatherings",
       images: [
