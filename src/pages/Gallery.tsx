@@ -129,6 +129,14 @@ const Gallery = () => {
 
   const galleryCategories = [
     {
+      title: "Upcoming Events",
+      images: [
+        { src: eventFlyerMain, alt: "11th Annual Nigerian Independence Day Celebration flyer", caption: "Upcoming Event - 11th Annual Nigerian Independence Day Celebration & Dinner Awards Night. Theme: New Beginning Leaders Summit. Saturday, October 31, 2026 | Holiday Inn, 750 West Edge Road, Linden, NJ | 4PM - 9PM. Powered by Lord and Nikes." },
+        { src: eventFlyerOgunyinka, alt: "Hon. Chief Oluwaseyi Ogunyinka invitation flyer", caption: "Upcoming Event - Hon. (Chief) Oluwaseyi Ogunyinka, Pacesetter, specially invites you to the 11th Annual Nigerian Independence Day Celebration. Saturday, October 31, 2026, Linden, NJ." },
+        { src: eventFlyerAyeni, alt: "Hon. Prof. Albert Ayeni invitation flyer", caption: "Upcoming Event - Hon. Prof. Albert Ayeni, The Real Dr. Pepper, Gate Keeper, specially invites you to the 11th Annual Nigerian Independence Day Celebration. Saturday, October 31, 2026, Linden, NJ." },
+      ],
+    },
+    {
       title: "YAC Events & Gatherings",
       images: [
         { src: galleryEvent1, alt: "YAC community event", caption: "YAC Community Event - Members gathered for cultural celebration" },
