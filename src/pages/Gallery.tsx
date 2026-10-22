@@ -88,6 +88,16 @@ import galleryNew67 from "@/assets/gallery-new-67.jpg";
 import galleryNew68 from "@/assets/gallery-new-68.jpg";
 import galleryNew69 from "@/assets/gallery-new-69.jpg";
 import galleryNew70 from "@/assets/gallery-new-70.jpg";
+import galleryNew71 from "@/assets/gallery-new-71.jpg";
+import galleryNew72 from "@/assets/gallery-new-72.jpg";
+import galleryNew73 from "@/assets/gallery-new-73.jpg";
+import galleryNew74 from "@/assets/gallery-new-74.jpg";
+import galleryNew75 from "@/assets/gallery-new-75.jpg";
+import galleryNew76 from "@/assets/gallery-new-76.jpg";
+import galleryNew77 from "@/assets/gallery-new-77.jpg";
+import galleryNew78 from "@/assets/gallery-new-78.jpg";
+import galleryNew79 from "@/assets/gallery-new-79.jpg";
+import galleryNew80 from "@/assets/gallery-new-80.jpg";
 import galleryEvent1 from "@/assets/gallery-event-1.jpg";
 import galleryEvent2 from "@/assets/gallery-event-2.jpg";
 import galleryEvent3 from "@/assets/gallery-event-3.jpg";
@@ -196,6 +206,16 @@ const Gallery = () => {
         { src: galleryNew68, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
         { src: galleryNew69, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
         { src: galleryNew70, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
+        { src: galleryNew71, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew72, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew73, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew74, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew75, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew76, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew77, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew78, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew79, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew80, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
       ],
     },
     {
