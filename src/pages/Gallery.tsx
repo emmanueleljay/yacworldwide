@@ -98,6 +98,10 @@ import galleryNew77 from "@/assets/gallery-new-77.jpg";
 import galleryNew78 from "@/assets/gallery-new-78.jpg";
 import galleryNew79 from "@/assets/gallery-new-79.jpg";
 import galleryNew80 from "@/assets/gallery-new-80.jpg";
+import galleryNew81 from "@/assets/gallery-new-81.jpg";
+import galleryNew82 from "@/assets/gallery-new-82.jpg";
+import galleryNew83 from "@/assets/gallery-new-83.jpg";
+import galleryNew84 from "@/assets/gallery-new-84.jpg";
 import galleryEvent1 from "@/assets/gallery-event-1.jpg";
 import galleryEvent2 from "@/assets/gallery-event-2.jpg";
 import galleryEvent3 from "@/assets/gallery-event-3.jpg";
@@ -206,16 +210,20 @@ const Gallery = () => {
         { src: galleryNew68, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
         { src: galleryNew69, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
         { src: galleryNew70, alt: "NIDO-NJ Nigeria Independence Day celebration", caption: "Nigeria communities in New Jersey!!! NIDO-NJ Celebrating Nigeria Independence Day 2025 with Awards, Recognitions etc" },
-        { src: galleryNew71, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew72, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew73, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew74, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew75, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew76, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew77, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew78, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew79, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
-        { src: galleryNew80, alt: "75th birthday celebration", caption: "75th Birthday Celebration - Family, friends and members gathered in celebration" },
+        { src: galleryNew71, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew72, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew73, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew74, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew75, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew76, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew77, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew78, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew79, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew80, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew81, alt: "Special 75th birthday wishes to Dr (Chief) & Dr's Apampa", caption: "Special 75th Birthday Wishes to Dr (Chief) & Dr's Apampa - From Dr. Akin Awofolaju, President, Yoruba Action Council" },
+        { src: galleryNew82, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew83, alt: "75th birthday celebration of Dr (Chief) & Dr's Apampa", caption: "75th Birthday Celebration of Dr (Chief) & Dr's Apampa - Family, friends and members gathered in celebration" },
+        { src: galleryNew84, alt: "Happy 80th birthday Hon. Engr. Simeon Awofesobi", caption: "Happy 80th Birthday to Hon. Engr. Simeon Awofesobi - A life of service, wisdom, grace and impact. On behalf of the Yoruba Action Council" },
       ],
     },
     {
